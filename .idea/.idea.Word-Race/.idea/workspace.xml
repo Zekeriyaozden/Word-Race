@@ -11,12 +11,17 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/AIController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/LattersController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
       <option value="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/AIController.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/LettersController.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/LattersController.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="2ALaX7nMpAflu6fvhSwVNGOdx6e" />
@@ -60,7 +65,7 @@
       <option name="presentableId" value="Default" />
       <updated>1654791360156</updated>
       <workItem from="1654791373712" duration="873000" />
-      <workItem from="1654793338694" duration="2642000" />
+      <workItem from="1654793338694" duration="7183000" />
     </task>
     <servers />
   </component>
