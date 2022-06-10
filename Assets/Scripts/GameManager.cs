@@ -6,6 +6,10 @@ public class GameManager : MonoBehaviour
 {
     public float speedMainChar;
     public float speedAIChar;
+    public GameObject Player;
+    public GameObject AI;
+    public GameObject referanceParentPlayer;
+    public GameObject referanceParentAI;
     void Start()
     {
         

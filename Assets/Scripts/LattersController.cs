@@ -9,15 +9,18 @@ public class LattersController : MonoBehaviour
     private float distanceZ;
     private Quaternion qt;
     private float xAngle;
+    public string ownership;
 
     void Start()
     {
         distanceZ = gameObject.transform.position.z - referance.gameObject.transform.position.z;
     }
 
-    private void Update()
+    private void LateUpdate()
     {
-        gameObject.transform.position = new Vector3(gameObject.transform.position.x,gameObject.transform.position.y,distanceZ);
+        gameObject.transform.position = new Vector3(referance.gameObject.transform.position.x,gameObject.transform.position.y,distanceZ + referance.gameObject.transform.position.z);
+        
+        
     }
     
 
