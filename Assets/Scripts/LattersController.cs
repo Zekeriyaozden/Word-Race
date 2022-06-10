@@ -7,8 +7,9 @@ public class LattersController : MonoBehaviour
 {
     public GameObject referance;
     private float distanceZ;
-    
-    
+    private Quaternion qt;
+    private float xAngle;
+
     void Start()
     {
         distanceZ = gameObject.transform.position.z - referance.gameObject.transform.position.z;
@@ -16,12 +17,31 @@ public class LattersController : MonoBehaviour
 
     private void Update()
     {
-        gameObject.transform.Translate(new Vector3(0,0,1) * Time.deltaTime * referance.GetComponent<AIController>().speed , Space.Self);
+        gameObject.transform.position = new Vector3(gameObject.transform.position.x,gameObject.transform.position.y,distanceZ);
     }
-
-    void LateUpdate()
-    {
-
-    }
+    
 
 }
+
+/*
+ *
+ *
+ *     public GameObject referance;
+    private float distanceZ;
+    private Quaternion qt;
+    private float xAngle;
+
+    void Start()
+    {
+        distanceZ = gameObject.transform.position.z - referance.gameObject.transform.position.z;
+    }
+
+    private void Update()
+    {
+        xAngle = (Mathf.Cos((referance.gameObject.transform.eulerAngles.y)*Mathf.Deg2Rad));
+        Debug.Log(gameObject.transform.position.z - referance.gameObject.transform.position.z);
+        gameObject.transform.Translate(new Vector3(0f, 0f, xAngle) * Time.deltaTime * referance.gameObject.GetComponent<PlayerController>()._speed , Space.Self);
+    }
+    
+
+ */

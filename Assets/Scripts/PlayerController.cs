@@ -6,11 +6,12 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     private GameObject gameManager;
-    private float _speed;
+    public float _speed;
     private Vector3 _mousePosStart;
     private bool isTouched;
     private float xCordinate;
-    private Vector3 _lookAtV3;
+    public Quaternion lookAt;
+    //private Vector3 _lookAtV3;
     void Start()
     {
         gameManager = GameObject.Find("GameManager");
@@ -49,7 +50,7 @@ public class PlayerController : MonoBehaviour
                 {
                     _mousePosStart.x = Input.mousePosition.x - 80;
                 }
-                xCordinate = (1f/80f) * (Input.mousePosition.x - _mousePosStart.x);
+                xCordinate = (45f/80f) * (Input.mousePosition.x - _mousePosStart.x);
             }
             
             if (Input.mousePosition.x < _mousePosStart.x)
@@ -59,12 +60,16 @@ public class PlayerController : MonoBehaviour
                 {
                     _mousePosStart.x = Input.mousePosition.x + 80;
                 }
-                xCordinate = (1f/80f) * (Input.mousePosition.x - _mousePosStart.x);
+                xCordinate = (45f/80f) * (Input.mousePosition.x - _mousePosStart.x);
             }
         }
         
-        _lookAtV3 = gameObject.transform.position + new Vector3(xCordinate, 0f, 1f);
-        gameObject.transform.LookAt(_lookAtV3);
+        //_lookAtV3 = gameObject.transform.position + new Vector3(xCordinate, 0f, 1f);
+        gameObject.transform.rotation = Quaternion.Euler(transform.eulerAngles.x , xCordinate , 0f);
+  
+        
+        
+        
         gameObject.transform.Translate(0,0,1f * _speed * Time.deltaTime,Space.Self);
         
     }
