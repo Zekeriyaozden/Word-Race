@@ -21,6 +21,8 @@ public class CollectController : MonoBehaviour
 
     private void ownerPlayer()
     {
+        Debug.Log(gameObject.name);
+        gameObject.GetComponent<AITarget>().targetable = false;
         gameObject.transform.SetParent(gm.GetComponent<GameManager>().referanceParentPlayer.transform);
         gameObject.GetComponent<LattersController>().enabled = true;
         gameObject.GetComponent<LattersController>().referance = gm.GetComponent<GameManager>().Player;
@@ -32,17 +34,20 @@ public class CollectController : MonoBehaviour
         gameObject.transform.position =
             gm.GetComponent<GameManager>().referanceParentPlayer.GetComponent<ParentPlayerController>().last.transform
                 .position + new Vector3(0, 0, 1.3f);
+        gameObject.transform.SetParent(gm.GetComponent<GameManager>().referanceParentPlayer.transform);
        // gameObject.transform.rotation = gm.GetComponent<GameManager>().referanceParentPlayer
          //   .GetComponent<ParentPlayerController>().last.transform.rotation;
-        gm.GetComponent<GameManager>().referanceParentPlayer.GetComponent<ParentPlayerController>().last = gameObject;
-        gm.GetComponent<GameManager>().referanceParentPlayer.GetComponent<ParentPlayerController>().PlayerStack.Push(gameObject);
-        gameObject.GetComponent<BoxCollider>().isTrigger = false;
+         gm.GetComponent<GameManager>().referanceParentPlayer.GetComponent<ParentPlayerController>().PlayerStack.Push(gameObject);
+         gameObject.GetComponent<LattersController>().node = gm.GetComponent<GameManager>().referanceParentPlayer
+             .GetComponent<ParentPlayerController>().last;
+         gm.GetComponent<GameManager>().referanceParentPlayer.GetComponent<ParentPlayerController>().last = gameObject;
         gameObject.GetComponent<Rigidbody>().useGravity = true;
         gameObject.GetComponent<CollectController>().enabled = false;
     }
 
     private void ownerAI()
     {
+        gameObject.GetComponent<AITarget>().targetable = false;
         gameObject.transform.SetParent(gm.GetComponent<GameManager>().referanceParentAI.transform);
         gameObject.GetComponent<LattersController>().enabled = true;
         gameObject.GetComponent<LattersController>().referance = gm.GetComponent<GameManager>().AI;
@@ -58,13 +63,12 @@ public class CollectController : MonoBehaviour
        //     .GetComponent<ParentAIController>().last.transform.rotation;
         gm.GetComponent<GameManager>().referanceParentAI.GetComponent<ParentAIController>().last = gameObject;
         gm.GetComponent<GameManager>().referanceParentAI.GetComponent<ParentAIController>().AIStack.Push(gameObject);
-        gameObject.GetComponent<BoxCollider>().isTrigger = false;
+        gameObject.GetComponent<BoxCollider>().enabled = false;
         gameObject.GetComponent<Rigidbody>().useGravity = true;
         gameObject.GetComponent<CollectController>().enabled = false;
     }
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log(other.tag);
         if (other.tag == "Letter")
         {
             if (other.gameObject.GetComponent<LattersController>().ownership == "Player")

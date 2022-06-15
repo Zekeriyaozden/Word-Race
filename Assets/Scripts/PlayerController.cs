@@ -38,7 +38,6 @@ public class PlayerController : MonoBehaviour
         {
             _mousePosStart = Vector3.zero;
             xCordinate = 0;
-            Debug.Log("buttonUp");
         }
 
         if (_mousePosStart != Vector3.zero)

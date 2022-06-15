@@ -6,6 +6,8 @@ using UnityEngine;
 public class LattersController : MonoBehaviour
 {
     public GameObject referance;
+    public GameObject node;
+    private float lerpSpeed;
     private float distanceZ;
     private Quaternion qt;
     private float xAngle;
@@ -13,13 +15,18 @@ public class LattersController : MonoBehaviour
 
     void Start()
     {
+        lerpSpeed = GameObject.Find("GameManager").GetComponent<GameManager>().lerpSpeed;
         distanceZ = gameObject.transform.position.z - referance.gameObject.transform.position.z;
     }
 
     private void LateUpdate()
     {
-        gameObject.transform.position = new Vector3(referance.gameObject.transform.position.x,gameObject.transform.position.y,distanceZ + referance.gameObject.transform.position.z);
-        
+        lerpSpeed = GameObject.Find("GameManager").GetComponent<GameManager>().lerpSpeed;
+        gameObject.transform.position = new Vector3((Mathf.Lerp(node.gameObject.transform.position.x , gameObject.transform.position.x,Time.deltaTime * lerpSpeed)),gameObject.transform.position.y,distanceZ + referance.gameObject.transform.position.z);
+        if (gameObject.transform.rotation.x > 30)
+        {
+            gameObject.transform.eulerAngles = new Vector3(30f, 180f, 0f);
+        }
         
     }
     

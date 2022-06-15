@@ -8,6 +8,7 @@
       <e p="Assets" t="Include">
         <e p="Scripts" t="Include">
           <e p="AIController.cs" t="Include" />
+          <e p="AITarget.cs" t="Include" />
           <e p="CollectController.cs" t="Include" />
           <e p="GameManager.cs" t="Include" />
           <e p="LattersController.cs" t="Include" />

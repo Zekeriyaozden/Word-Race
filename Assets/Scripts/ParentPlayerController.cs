@@ -16,13 +16,6 @@ public class ParentPlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(PlayerStack.Count);
-        if (PlayerStack.Count > 3)
-        {
-            while (PlayerStack.Count >= 0)
-            {
-                Debug.Log(PlayerStack.Pop());
-            }
-        }
+
     }
 }

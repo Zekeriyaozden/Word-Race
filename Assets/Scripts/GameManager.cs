@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
+    public float lerpSpeed;
     public float speedMainChar;
     public float speedAIChar;
     public GameObject Player;
