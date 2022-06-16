@@ -24,6 +24,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/LattersController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ParentAIController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/AITarget.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CameraController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
@@ -32,12 +33,14 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/ParentAIController.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/ReferanceController.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/AITarget.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/ParentPlayerController.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/LattersController.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/CollectController.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/AIController.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/ParentPlayerController.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/CollectController.cs" />
+      <option value="$PROJECT_DIR$/Assets/CameraController.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/LattersController.cs" />
+      <option value="$PROJECT_DIR$/Assets/ObstacleController.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="2ALaX7nMpAflu6fvhSwVNGOdx6e" />
@@ -83,6 +86,7 @@
       <workItem from="1654791373712" duration="873000" />
       <workItem from="1654793338694" duration="24316000" />
       <workItem from="1654982864708" duration="12803000" />
+      <workItem from="1655332366256" duration="6841000" />
     </task>
     <servers />
   </component>

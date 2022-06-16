@@ -5,11 +5,12 @@ using UnityEngine;
 public class ParentPlayerController : MonoBehaviour
 {
 
-    public  Stack<GameObject> PlayerStack = new Stack<GameObject>();
+    public  List<GameObject> PlayerStack = new List<GameObject>();
     public GameObject last;
+    public GameObject referance;
     void Start()
     {
-        PlayerStack.Push(last);
+        PlayerStack.Add(last);
        
     }
 

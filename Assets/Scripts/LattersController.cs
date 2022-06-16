@@ -22,7 +22,8 @@ public class LattersController : MonoBehaviour
     private void LateUpdate()
     {
         lerpSpeed = GameObject.Find("GameManager").GetComponent<GameManager>().lerpSpeed;
-        gameObject.transform.position = new Vector3((Mathf.Lerp(node.gameObject.transform.position.x , gameObject.transform.position.x,Time.deltaTime * lerpSpeed)),gameObject.transform.position.y,distanceZ + referance.gameObject.transform.position.z);
+  
+        gameObject.transform.position = new Vector3((Mathf.Lerp( gameObject.transform.position.x,node.gameObject.transform.position.x ,Time.deltaTime * lerpSpeed)),gameObject.transform.position.y,distanceZ + referance.gameObject.transform.position.z);
         if (gameObject.transform.rotation.x > 30)
         {
             gameObject.transform.eulerAngles = new Vector3(30f, 180f, 0f);
