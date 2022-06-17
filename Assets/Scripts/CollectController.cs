@@ -32,22 +32,17 @@ public class CollectController : MonoBehaviour
             gameObject.GetComponent<LattersController>().enabled = true;
             gameObject.GetComponent<LattersController>().referance = gm.GetComponent<GameManager>().Player;
             gameObject.GetComponent<LattersController>().ownership = "Player";
-            /* X = Mathf.Cos(gm.GetComponent<GameManager>().referanceParentPlayer.GetComponent<ParentPlayerController>().last.transform
-                 .rotation.eulerAngles.x) * 1.3f;
-             Y =         X = Mathf.Sin(gm.GetComponent<GameManager>().referanceParentPlayer.GetComponent<ParentPlayerController>().last.transform
-                 .rotation.eulerAngles.x) * 1.3f;*/
             gameObject.transform.position = ((gm.GetComponent<GameManager>().referanceParentPlayer
                 .GetComponent<ParentPlayerController>().PlayerStack.Count + 1) * new Vector3(0, 0, 1.3f)) + (gm
                 .GetComponent<GameManager>().referanceParentPlayer
                 .GetComponent<ParentPlayerController>().referance.transform.position);
-            // gameObject.transform.rotation = gm.GetComponent<GameManager>().referanceParentPlayer
-            //   .GetComponent<ParentPlayerController>().last.transform.rotation;
             gm.GetComponent<GameManager>().referanceParentPlayer.GetComponent<ParentPlayerController>().PlayerStack
                 .Add(gameObject);
             gameObject.GetComponent<LattersController>().node = gm.GetComponent<GameManager>().referanceParentPlayer
                 .GetComponent<ParentPlayerController>().PlayerStack[gm.GetComponent<GameManager>().referanceParentPlayer
                     .GetComponent<ParentPlayerController>().PlayerStack.Count - 2];
             gameObject.GetComponent<Rigidbody>().useGravity = true;
+            gm.GetComponent<CollectAnimations>().PlayerCollectAnim();
             gameObject.GetComponent<CollectController>().enabled = false;
         }
     }

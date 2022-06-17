@@ -8,12 +8,15 @@ public class PlayerController : MonoBehaviour
     private GameObject gameManager;
     public float _speed;
     private Vector3 _mousePosStart;
+    public float speedTmp;
+    public bool isJumping;
     private bool isTouched;
     private float xCordinate;
     public Quaternion lookAt;
     //private Vector3 _lookAtV3;
     void Start()
     {
+        isJumping = false;
         gameManager = GameObject.Find("GameManager");
         _speed = gameManager.GetComponent<GameManager>().speedMainChar;
         xCordinate = 0;
@@ -22,6 +25,15 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (isJumping)
+        {
+            if (gameObject.transform.position.y < 0.3f)
+            {
+                isJumping = false;
+                gameManager.GetComponent<GameManager>().speedMainChar = speedTmp;
+            }
+        }
+        _speed = gameManager.GetComponent<GameManager>().speedMainChar;
         Control();
 
     }
