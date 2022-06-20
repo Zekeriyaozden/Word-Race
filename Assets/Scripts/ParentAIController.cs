@@ -4,11 +4,13 @@ using UnityEngine;
 
 public class ParentAIController : MonoBehaviour
 {
-    public  Stack<GameObject> AIStack = new Stack<GameObject>();
+    public  List<GameObject> AIStack = new List<GameObject>();
     public GameObject last;
+    public GameObject referance;
+
     void Start()
     {
-        AIStack.Push(last);
+        AIStack.Add(last);
     }
 
     // Update is called once per frame

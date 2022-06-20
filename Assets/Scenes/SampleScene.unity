@@ -318,7 +318,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b89a89fc0a13fe48af4d50b00f3a705, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  AIStack: []
   last: {fileID: 660766589}
+  referance: {fileID: 660766589}
 --- !u!4 &184483152
 Transform:
   m_ObjectHideFlags: 0
@@ -327,7 +329,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 184483150}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -17.31, y: -3.472567, z: 7.1039643}
+  m_LocalPosition: {x: -5.85, y: -3.472567, z: 7.1039643}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -451,20 +453,22 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7198439770701404457}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ce10591a1555aa541b4b5855b33d9408, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _speed: 0
   ObjectList:
+  - {fileID: 1909070630}
+  - {fileID: 1618855839}
+  - {fileID: 1086210052}
   - {fileID: 1087615635}
   - {fileID: 1414627856}
-  - {fileID: 1086210052}
-  - {fileID: 1618855839}
-  - {fileID: 471442152}
-  - {fileID: 1909070630}
   - {fileID: 319318193}
+  - {fileID: 471442152}
+  isJumping: 0
+  speedTmp: 0
   flag: 0
   target: {fileID: 0}
 --- !u!1 &319318193 stripped
@@ -707,7 +711,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5333027880104506383, guid: f142553a814424b499902d12d7de8965, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.9422569
+      value: -5.39
       objectReference: {fileID: 0}
     - target: {fileID: 5333027880104506383, guid: f142553a814424b499902d12d7de8965, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1151,7 +1155,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 660766589}
   m_LocalRotation: {x: -0, y: 1, z: -0, w: 0}
-  m_LocalPosition: {x: 4.5518503, y: 3.8725672, z: -6.0669165}
+  m_LocalPosition: {x: 4.5518503, y: 3.79, z: -6.0669165}
   m_LocalScale: {x: 0.6, y: 0.6, z: 0.6}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -3209,7 +3213,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lerpSpeed: 10
-  speedMainChar: 1
+  speedMainChar: 4
   speedAIChar: 4
   Player: {fileID: 8119462406638492814}
   AI: {fileID: 7198439770701404457}
@@ -5101,7 +5105,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7198439770701404457}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -12.758151, y: 0.165, z: 1}
+  m_LocalPosition: {x: -1.28, y: 0.18, z: 1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:

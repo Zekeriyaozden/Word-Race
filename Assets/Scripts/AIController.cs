@@ -9,10 +9,14 @@ public class AIController : MonoBehaviour
     private List<GameObject> _ObjList = new List<GameObject>();
     private float distance;
     private float _distance;
+    public bool isJumping;
+    public float speedTmp;
+    private GameObject gameManager;
     public bool flag;
     public GameObject target;
     void Start()
     {
+        gameManager = GameObject.Find("GameManager");
         flag = true;
         StartCoroutine(Timer());
         _speed = GameObject.Find("GameManager").GetComponent<GameManager>().speedAIChar;
@@ -32,10 +36,9 @@ public class AIController : MonoBehaviour
 
     private void checkTarget()
     {
-
         flag = true;
         _ObjList.Clear();
-        if (ObjectList.Capacity == 0)
+        if (ObjectList.Count == 0)
         {
             flag = false;
         }
@@ -87,7 +90,18 @@ public class AIController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        
+        if (isJumping)
+        {
+            if (gameObject.transform.position.y < 0.3f)
+            {
+                isJumping = false;
+                gameManager.GetComponent<GameManager>().speedAIChar = speedTmp;
+            }
+        }
+        
+        
+        _speed = GameObject.Find("GameManager").GetComponent<GameManager>().speedAIChar;
         if (flag == true)
         {
             if (gameObject.transform.position.x > target.gameObject.transform.position.x + 0.4f)
