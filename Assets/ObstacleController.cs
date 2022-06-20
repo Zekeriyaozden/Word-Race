@@ -18,7 +18,6 @@ public class ObstacleController : MonoBehaviour
     {
         if (other.gameObject.tag == "Letter")
         {
-            Debug.Log(other.name);
             if (other.gameObject.GetComponent<LattersController>().ownership == "Player")
             {
                 if (gm.GetComponent<GameManager>().referanceParentPlayer.GetComponent<ParentPlayerController>()

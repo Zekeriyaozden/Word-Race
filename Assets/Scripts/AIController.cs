@@ -4,7 +4,11 @@ using UnityEngine;
 
 public class AIController : MonoBehaviour
 {
-    public float _speed;
+    public float gecici;
+    private float _speed;
+    public bool isBack;
+    public float distanceOfMain;
+    private float speedTmpForBack;
     public List<GameObject> ObjectList = new List<GameObject>();
     private List<GameObject> _ObjList = new List<GameObject>();
     private float distance;
@@ -16,6 +20,7 @@ public class AIController : MonoBehaviour
     public GameObject target;
     void Start()
     {
+        isBack = false;
         gameManager = GameObject.Find("GameManager");
         flag = true;
         StartCoroutine(Timer());
@@ -90,6 +95,26 @@ public class AIController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        gecici = Mathf.Abs(gameManager.GetComponent<GameManager>().Player.transform.position.z - gameObject.transform.position.z);
+        if (Mathf.Abs(gameManager.GetComponent<GameManager>().Player.transform.position.z - gameObject.transform.position.z) > distanceOfMain)
+        {
+            if (!isBack)
+            {
+                speedTmpForBack = gameManager.GetComponent<GameManager>().speedAIChar;
+                gameManager.GetComponent<GameManager>().speedAIChar +=
+                    gameManager.GetComponent<GameManager>().speedAIChar * 30f / 100f;
+            }
+            isBack = true;
+        }
+        else if(Mathf.Abs(gameManager.GetComponent<GameManager>().Player.transform.position.z - gameObject.transform.position.z) < distanceOfMain && Mathf.Abs(gameManager.GetComponent<GameManager>().Player.transform.position.z - gameObject.transform.position.z) > 5f)
+        {
+            if (isBack)
+            {
+                gameManager.GetComponent<GameManager>().speedAIChar = speedTmpForBack;
+                isBack = false;
+            }
+        }
+        
         
         if (isJumping)
         {

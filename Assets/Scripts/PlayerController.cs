@@ -5,8 +5,9 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+
     private GameObject gameManager;
-    public float _speed;
+    private float _speed;
     private Vector3 _mousePosStart;
     public float speedTmp;
     public bool isJumping;
@@ -25,6 +26,8 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+        
         if (isJumping)
         {
             if (gameObject.transform.position.y < 0.3f)
