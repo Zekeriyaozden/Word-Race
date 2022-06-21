@@ -33,7 +33,7 @@ public class CollectController : MonoBehaviour
             gameObject.GetComponent<LattersController>().referance = gm.GetComponent<GameManager>().Player;
             gameObject.GetComponent<LattersController>().ownership = "Player";
             gameObject.transform.position = ((gm.GetComponent<GameManager>().referanceParentPlayer
-                .GetComponent<ParentPlayerController>().PlayerStack.Count + 1) * new Vector3(0, 0, 1.3f)) + (gm
+                .GetComponent<ParentPlayerController>().PlayerStack.Count + 1) * new Vector3(0, 0, 1.6f)) + (gm
                 .GetComponent<GameManager>().referanceParentPlayer
                 .GetComponent<ParentPlayerController>().referance.transform.position);
             

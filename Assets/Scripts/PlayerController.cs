@@ -5,7 +5,8 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-
+    public float maxXLeft;
+    public float maxXRight;
     private GameObject gameManager;
     private float _speed;
     private Vector3 _mousePosStart;
@@ -69,7 +70,6 @@ public class PlayerController : MonoBehaviour
             
             if (Input.mousePosition.x < _mousePosStart.x)
             {
-                //Debug.Log(_mousePosStart.x + "" + Input.mousePosition.x);
                 if (_mousePosStart.x - Input.mousePosition.x > 80)
                 {
                     _mousePosStart.x = Input.mousePosition.x + 80;
@@ -77,8 +77,14 @@ public class PlayerController : MonoBehaviour
                 xCordinate = (45f/80f) * (Input.mousePosition.x - _mousePosStart.x);
             }
         }
-        
-        //_lookAtV3 = gameObject.transform.position + new Vector3(xCordinate, 0f, 1f);
+
+        if (gameObject.transform.position.x < maxXLeft && xCordinate < 0)
+        {
+            xCordinate = 0f;
+        }else if (gameObject.transform.position.x > maxXRight && xCordinate > 0)
+        {
+            xCordinate = 0f;
+        }
         gameObject.transform.rotation = Quaternion.Euler(transform.eulerAngles.x , xCordinate , 0f);
   
         
