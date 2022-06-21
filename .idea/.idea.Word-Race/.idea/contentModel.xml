@@ -14,6 +14,7 @@
           <e p="CollectController.cs" t="Include" />
           <e p="Deneme.cs" t="Include" />
           <e p="GameManager.cs" t="Include" />
+          <e p="GateController.cs" t="Include" />
           <e p="LattersController.cs" t="Include" />
           <e p="ObstacleController.cs" t="Include" />
           <e p="ParentAIController.cs" t="Include" />

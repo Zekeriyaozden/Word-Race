@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class LattersController : MonoBehaviour
 {
+    public int controlGroup;
+    public int level;
     public bool isProtected;
     public GameObject referance;
     public GameObject jumpingObject;
@@ -19,6 +21,8 @@ public class LattersController : MonoBehaviour
 
     void Start()
     {
+        controlGroup = 0;
+        level = 1;
         isProtected = false;
         isJumping = false;
         lerpSpeed = GameObject.Find("GameManager").GetComponent<GameManager>().lerpSpeed;
