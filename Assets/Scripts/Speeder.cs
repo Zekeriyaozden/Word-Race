@@ -41,9 +41,11 @@ public class Speeder : MonoBehaviour
         }
         else
         {
+            Debug.Log(gm.GetComponent<GameManager>().speedAIChar);
             tmpSpeed = gm.GetComponent<GameManager>().speedAIChar;
             gm.GetComponent<GameManager>().speedAIChar +=
                 gm.GetComponent<GameManager>().speedAIChar * speedRate / 100f;
+            Debug.Log(gm.GetComponent<GameManager>().speedAIChar);
         }
         yield return new WaitForSeconds(speedTimer);
         if (isMain)
@@ -52,6 +54,7 @@ public class Speeder : MonoBehaviour
         }
         else
         {
+            Debug.Log("ElseSecond");
             gm.GetComponent<GameManager>().speedAIChar = tmpSpeed;
         }
         
@@ -68,6 +71,7 @@ public class Speeder : MonoBehaviour
             StartCoroutine(timerForSpeed(true));
         }else if (other.tag == "AI")
         {
+            Debug.Log("InCollision");
             isCollected = true;
             StartCoroutine(timerForSpeed(false));
         }
