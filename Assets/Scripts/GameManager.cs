@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
+    public float AIWhenIsStop;
+    public float DistanceOfMainAndAI;
     public float lerpSpeed;
     public float speedMainChar;
     public float speedAIChar;
@@ -11,14 +13,47 @@ public class GameManager : MonoBehaviour
     public GameObject AI;
     public GameObject referanceParentPlayer;
     public GameObject referanceParentAI;
+    //-------------------------------------------
+    private float tempSpeedOfAI;
+    private bool onArea;
     void Start()
     {
+        onArea = false;
+        tempSpeedOfAI = speedAIChar;
+    }
+    void Update()
+    {
+        if (SpeedIncrease())
+        {
+            speedAIChar = 7f;
+        }else if (!SpeedIncrease() && !onArea)
+        {
+            speedAIChar = tempSpeedOfAI;
+        }
         
     }
 
-    // Update is called once per frame
-    void Update()
+    public bool SpeedIncrease()
     {
-        
+        if (distanceOfMainAndAI() > DistanceOfMainAndAI)
+        {
+            onArea = true;
+            return true;
+        }
+        else
+        {
+            if (distanceOfMainAndAI() > 0 && distanceOfMainAndAI() < AIWhenIsStop)
+            {
+                onArea = false;
+            }
+            return false;
+        }
     }
+    
+    
+    public float distanceOfMainAndAI()
+    {
+        return (Player.gameObject.transform.position.z - AI.gameObject.transform.position.z);
+    }
+    
 }

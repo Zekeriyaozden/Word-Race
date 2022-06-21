@@ -6,16 +6,16 @@
     <e p="C:\Users\Maleriya\Desktop\Pigeon Gaming\Word-Race" t="IncludeRecursive">
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
-        <e p="CameraController.cs" t="Include" />
-        <e p="CollectAnimations.cs" t="Include" />
-        <e p="Deneme.cs" t="Include" />
-        <e p="ObstacleController.cs" t="Include" />
         <e p="Scripts" t="Include">
           <e p="AIController.cs" t="Include" />
           <e p="AITarget.cs" t="Include" />
+          <e p="CameraController.cs" t="Include" />
+          <e p="CollectAnimations.cs" t="Include" />
           <e p="CollectController.cs" t="Include" />
+          <e p="Deneme.cs" t="Include" />
           <e p="GameManager.cs" t="Include" />
           <e p="LattersController.cs" t="Include" />
+          <e p="ObstacleController.cs" t="Include" />
           <e p="ParentAIController.cs" t="Include" />
           <e p="ParentPlayerController.cs" t="Include" />
           <e p="PlayerController.cs" t="Include" />

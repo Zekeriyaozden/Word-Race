@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class LattersController : MonoBehaviour
 {
+    public bool isProtected;
     public GameObject referance;
     public GameObject jumpingObject;
     public bool isJumping;
@@ -18,6 +19,7 @@ public class LattersController : MonoBehaviour
 
     void Start()
     {
+        isProtected = false;
         isJumping = false;
         lerpSpeed = GameObject.Find("GameManager").GetComponent<GameManager>().lerpSpeed;
         distanceZ = gameObject.transform.position.z - referance.gameObject.transform.position.z;
