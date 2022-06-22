@@ -76,6 +76,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 60aa64cdda2b05d498bc0f7df02b99c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  controlGroup: 0
+  level: 0
   isProtected: 0
   referance: {fileID: 0}
   jumpingObject: {fileID: 0}
@@ -124,7 +126,7 @@ GameObject:
   - component: {fileID: 7268177259873777148}
   m_Layer: 0
   m_Name: Cube
-  m_TagString: Untagged
+  m_TagString: Letter
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

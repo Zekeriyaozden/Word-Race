@@ -60,7 +60,7 @@ public class CollectController : MonoBehaviour
             gameObject.GetComponent<LattersController>().referance = gm.GetComponent<GameManager>().AI;
             gameObject.GetComponent<LattersController>().ownership = "AI";
             gameObject.transform.position = ((gm.GetComponent<GameManager>().referanceParentAI
-                .GetComponent<ParentAIController>().AIStack.Count + 1) * new Vector3(0, 0, 1.3f)) + (gm
+                .GetComponent<ParentAIController>().AIStack.Count + 1) * new Vector3(0, 0, 1.6f)) + (gm
                 .GetComponent<GameManager>().referanceParentAI
                 .GetComponent<ParentAIController>().referance.transform.position);
         

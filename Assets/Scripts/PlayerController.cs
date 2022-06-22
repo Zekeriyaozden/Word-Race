@@ -27,6 +27,13 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
+        if (gameObject.transform.eulerAngles.x > 30 && gameObject.transform.eulerAngles.x < 330)
+        {
+            gameObject.transform.eulerAngles = new Vector3(gameObject.transform.eulerAngles.x,
+                gameObject.transform.eulerAngles.y, gameObject.transform.eulerAngles.z);
+            Debug.Log(transform.eulerAngles.x);
+        }
 
         
         if (isJumping)

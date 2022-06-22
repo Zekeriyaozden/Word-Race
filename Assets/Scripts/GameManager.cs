@@ -16,8 +16,10 @@ public class GameManager : MonoBehaviour
     //-------------------------------------------
     private float tempSpeedOfAI;
     private bool onArea;
+    private bool flag;
     void Start()
     {
+        flag = true;
         onArea = false;
         tempSpeedOfAI = speedAIChar;
     }
@@ -25,9 +27,11 @@ public class GameManager : MonoBehaviour
     {
         if (SpeedIncrease())
         {
+            flag = true;
             speedAIChar = 7f;
-        }else if (!SpeedIncrease() && !onArea)
+        }else if (!SpeedIncrease() && !onArea && flag)
         {
+            flag = false;
             speedAIChar = tempSpeedOfAI;
         }
         
