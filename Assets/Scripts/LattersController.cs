@@ -30,6 +30,13 @@ public class LattersController : MonoBehaviour
         distancer();
     }
 
+    public void makeObjectNotWork()
+    {
+        gameObject.transform.GetChild(0).GetComponent<BoxCollider>().enabled = false;
+        gameObject.transform.SetParent(null);
+        isJumping = false;
+        gameObject.GetComponent<Rigidbody>().useGravity = true;
+    }
     public void distancer()
     {
         distanceZ = gameObject.transform.position.z - referance.gameObject.transform.position.z;

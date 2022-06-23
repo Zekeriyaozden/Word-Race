@@ -43,11 +43,11 @@
       <option value="$PROJECT_DIR$/Assets/LetterSpawner.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Deneme.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/CollectController.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/LattersController.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/AIController.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/GateController.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/LattersController.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/ObstacleController.cs" />
     </changedPaths>
   </component>
@@ -99,7 +99,7 @@
       <workItem from="1655720285784" duration="8632000" />
       <workItem from="1655796763076" duration="9268000" />
       <workItem from="1655893911813" duration="7379000" />
-      <workItem from="1655969020771" duration="8350000" />
+      <workItem from="1655969020771" duration="15955000" />
     </task>
     <servers />
   </component>
