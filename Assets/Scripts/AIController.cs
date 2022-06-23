@@ -47,7 +47,7 @@ public class AIController : MonoBehaviour
         distance = 0f;
         for(int i = 0 ; i < ObjectList.Count ; i++)
         {
-            GameObject _target = ObjectList[i];
+            GameObject _target = ObjectList[i].gameObject;
          
             if (_target.gameObject.transform.position.z < gameObject.transform.position.z)
             {
@@ -94,10 +94,11 @@ public class AIController : MonoBehaviour
 
         if (isJumping)
         {
+            gameObject.transform.eulerAngles = new Vector3(0,transform.eulerAngles.y,transform.eulerAngles.z);
             if (gameObject.transform.position.y < 0.3f)
             {
                 isJumping = false;
-                gameManager.GetComponent<GameManager>().speedAIChar = speedTmp;
+                gameManager.GetComponent<GameManager>().speedAIChar = gameManager.GetComponent<GameManager>().speedTmp;
             }
         }
         

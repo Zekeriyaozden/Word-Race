@@ -12,7 +12,6 @@ public class Deneme : MonoBehaviour
     
     void Start()
     {
-        
     }
 
     // Update is called once per frame

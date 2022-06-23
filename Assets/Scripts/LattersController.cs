@@ -13,7 +13,7 @@ public class LattersController : MonoBehaviour
     public bool isJumping;
     public GameObject node;
     private float lerpSpeed;
-    private float distanceZ;
+    public float distanceZ;
     private Quaternion qt;
     private float xAngle;
     private float yPos;
@@ -21,14 +21,19 @@ public class LattersController : MonoBehaviour
 
     void Start()
     {
+        isProtected = false;
         controlGroup = 0;
         level = 1;
         isProtected = false;
         isJumping = false;
         lerpSpeed = GameObject.Find("GameManager").GetComponent<GameManager>().lerpSpeed;
-        distanceZ = gameObject.transform.position.z - referance.gameObject.transform.position.z;
+        distancer();
     }
 
+    public void distancer()
+    {
+        distanceZ = gameObject.transform.position.z - referance.gameObject.transform.position.z;
+    }
     private void LateUpdate()
     {
         lerpSpeed = GameObject.Find("GameManager").GetComponent<GameManager>().lerpSpeed;
@@ -48,25 +53,4 @@ public class LattersController : MonoBehaviour
 
 }
 
-/*
- *
- *
- *     public GameObject referance;
-    private float distanceZ;
-    private Quaternion qt;
-    private float xAngle;
 
-    void Start()
-    {
-        distanceZ = gameObject.transform.position.z - referance.gameObject.transform.position.z;
-    }
-
-    private void Update()
-    {
-        xAngle = (Mathf.Cos((referance.gameObject.transform.eulerAngles.y)*Mathf.Deg2Rad));
-        Debug.Log(gameObject.transform.position.z - referance.gameObject.transform.position.z);
-        gameObject.transform.Translate(new Vector3(0f, 0f, xAngle) * Time.deltaTime * referance.gameObject.GetComponent<PlayerController>()._speed , Space.Self);
-    }
-    
-
- */

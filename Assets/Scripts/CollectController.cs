@@ -36,8 +36,6 @@ public class CollectController : MonoBehaviour
                 .GetComponent<ParentPlayerController>().PlayerStack.Count + 1) * new Vector3(0, 0, 1.6f)) + (gm
                 .GetComponent<GameManager>().referanceParentPlayer
                 .GetComponent<ParentPlayerController>().referance.transform.position);
-            
-            
             gm.GetComponent<GameManager>().referanceParentPlayer.GetComponent<ParentPlayerController>().PlayerStack
                 .Add(gameObject);
             gameObject.GetComponent<LattersController>().node = gm.GetComponent<GameManager>().referanceParentPlayer

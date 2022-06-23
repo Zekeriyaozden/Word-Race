@@ -32,16 +32,19 @@ public class PlayerController : MonoBehaviour
         {
             gameObject.transform.eulerAngles = new Vector3(gameObject.transform.eulerAngles.x,
                 gameObject.transform.eulerAngles.y, gameObject.transform.eulerAngles.z);
-            Debug.Log(transform.eulerAngles.x);
         }
 
         
         if (isJumping)
         {
+            gameObject.transform.eulerAngles = new Vector3(0, transform.eulerAngles.y,
+                transform.eulerAngles.z);
             if (gameObject.transform.position.y < 0.3f)
             {
+                gameObject.transform.eulerAngles = new Vector3(0, transform.eulerAngles.y,
+                    transform.eulerAngles.z);
                 isJumping = false;
-                gameManager.GetComponent<GameManager>().speedMainChar = speedTmp;
+                gameManager.GetComponent<GameManager>().speedMainChar = gameManager.GetComponent<GameManager>().speedTmp;
             }
         }
         _speed = gameManager.GetComponent<GameManager>().speedMainChar;

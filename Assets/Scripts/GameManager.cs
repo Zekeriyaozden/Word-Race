@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
+    public float protectTime;
     public float AIWhenIsStop;
     public float DistanceOfMainAndAI;
     public float lerpSpeed;
@@ -14,11 +15,14 @@ public class GameManager : MonoBehaviour
     public GameObject referanceParentPlayer;
     public GameObject referanceParentAI;
     //-------------------------------------------
+    [HideInInspector]
+    public float speedTmp;
     private float tempSpeedOfAI;
     private bool onArea;
     private bool flag;
     void Start()
     {
+        speedTmp = speedMainChar;
         flag = true;
         onArea = false;
         tempSpeedOfAI = speedAIChar;
