@@ -7,7 +7,7 @@ public class AIController : MonoBehaviour
     private float _speed;
     private float speedTmpForBack;
     public List<GameObject> ObjectList = new List<GameObject>();
-    private List<GameObject> _ObjList = new List<GameObject>();
+    public List<GameObject> _ObjList = new List<GameObject>();
     private float distance;
     private float _distance;
     public bool isJumping;
@@ -27,14 +27,44 @@ public class AIController : MonoBehaviour
     {
         checkTarget();
 
-        while (ObjectList.Capacity != 0)
+        while (ObjectList.Count != 0)
         {
             yield return new WaitForSeconds(0.1f);
             checkTarget();
         }
     }
 
+    private void checkTarget1()
+    {
+        _ObjList.Clear();
+        GameObject gobj;
+        for (int i = 0; i < ObjectList.Count; i++)
+        {
+            Debug.Log(ObjectList[i].transform.position.z - gameObject.transform.position.z + "-" + ObjectList[i].name);
+            if (Mathf.Abs(ObjectList[i].transform.position.z - gameObject.transform.position.z) < 50f)
+            {
+                _ObjList.Add(ObjectList[i].gameObject);
+            }
+        }
 
+        float distanceX;
+        if (_ObjList.Count > 0)
+        {
+            distanceX = Mathf.Abs(_ObjList[0].gameObject.transform.position.x - gameObject.transform.position.x);
+            
+            gobj = _ObjList[0];
+            for (int i = 0; i < _ObjList.Count; i++)
+            {
+                if (distanceX < Mathf.Abs(_ObjList[i].gameObject.transform.position.x - gameObject.transform.position.x))
+                {
+                    gobj = _ObjList[i];
+                    distanceX = Mathf.Abs(_ObjList[i].gameObject.transform.position.x - gameObject.transform.position.x);
+                }
+            }
+            target = gobj;
+        }
+        
+    }
     private void checkTarget()
     {
         flag = true;
@@ -47,7 +77,7 @@ public class AIController : MonoBehaviour
         distance = 0f;
         for(int i = 0 ; i < ObjectList.Count ; i++)
         {
-            GameObject _target = ObjectList[i].gameObject;
+            GameObject  _target  = ObjectList[i].gameObject;
          
             if (_target.gameObject.transform.position.z < gameObject.transform.position.z)
             {
@@ -59,7 +89,7 @@ public class AIController : MonoBehaviour
             }
             else
             {
-                if (_target.transform.position.z < gameObject.transform.position.z + 25f)
+                if (_target.transform.position.z < gameObject.transform.position.z + 40f)
                 {
                     _ObjList.Add(_target);
                 }
