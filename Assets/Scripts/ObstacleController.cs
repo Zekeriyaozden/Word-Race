@@ -18,6 +18,11 @@ public class ObstacleController : MonoBehaviour
     {
         if (other.gameObject.tag == "Letter")
         {
+            if (!other.gameObject.GetComponent<LattersController>().isProtected)
+            {
+                Instantiate(gm.GetComponent<GameManager>().particle, other.gameObject.transform.position,
+                    Quaternion.identity);
+            }
             if (other.gameObject.GetComponent<LattersController>().ownership == "Player")
             {
                 if (gm.GetComponent<GameManager>().referanceParentPlayer.GetComponent<ParentPlayerController>()

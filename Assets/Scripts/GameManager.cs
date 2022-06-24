@@ -5,6 +5,7 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     public float protectTime;
+    public GameObject particle;
     public GameObject protect;
     public float AIWhenIsStop;
     public float DistanceOfMainAndAI;
