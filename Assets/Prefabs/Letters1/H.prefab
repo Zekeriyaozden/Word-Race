@@ -83,6 +83,7 @@ MonoBehaviour:
   jumpingObject: {fileID: 0}
   isJumping: 0
   node: {fileID: 0}
+  distanceZ: 0
   ownership: 
 --- !u!114 &7637730878619496449
 MonoBehaviour:
@@ -124,7 +125,7 @@ GameObject:
   - component: {fileID: 9089593810809100979}
   - component: {fileID: 802402156186551916}
   - component: {fileID: 7268177259873777148}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube
   m_TagString: Letter
   m_Icon: {fileID: 0}

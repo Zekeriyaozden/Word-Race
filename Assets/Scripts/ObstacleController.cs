@@ -81,7 +81,7 @@ public class ObstacleController : MonoBehaviour
                     
                     
                     
-                    Destroy(gameObject);
+                    //Destroy(gameObject);
                     //Destroy(gameObject);
                     //Giden Harflere nolacak -- şimdilik Destroy();
                     
@@ -92,25 +92,25 @@ public class ObstacleController : MonoBehaviour
                 }
             }else if (other.gameObject.GetComponent<LattersController>().ownership == "AI")
             {
- if (gm.GetComponent<GameManager>().referanceParentPlayer.GetComponent<ParentPlayerController>()
-                    .PlayerStack.Contains(other.gameObject))
+ if (gm.GetComponent<GameManager>().referanceParentAI.GetComponent<ParentAIController>()
+                    .AIStack.Contains(other.gameObject))
                 {
-                    index = gm.GetComponent<GameManager>().referanceParentPlayer.GetComponent<ParentPlayerController>()
-                        .PlayerStack.IndexOf(other.gameObject);
-                    count = gm.GetComponent<GameManager>().referanceParentPlayer.GetComponent<ParentPlayerController>()
-                        .PlayerStack.Count;
+                    index = gm.GetComponent<GameManager>().referanceParentAI.GetComponent<ParentAIController>()
+                        .AIStack.IndexOf(other.gameObject);
+                    count = gm.GetComponent<GameManager>().referanceParentAI.GetComponent<ParentAIController>()
+                        .AIStack.Count;
                     List<GameObject> tmpIsProtected = new List<GameObject>();
                     List<GameObject> tmpIsNotProtected = new List<GameObject>();
                     for (int i = 0; i < count - index; i++)
                     {
-                        if (gm.GetComponent<GameManager>().referanceParentPlayer.GetComponent<ParentPlayerController>()
-                            .PlayerStack[count - 1 - i].GetComponent<LattersController>().isProtected)
+                        if (gm.GetComponent<GameManager>().referanceParentAI.GetComponent<ParentAIController>()
+                            .AIStack[count - 1 - i].GetComponent<LattersController>().isProtected)
                         {
-                            tmpIsProtected.Add(gm.GetComponent<GameManager>().referanceParentPlayer.GetComponent<ParentPlayerController>().PlayerStack[count - 1- i]);
+                            tmpIsProtected.Add(gm.GetComponent<GameManager>().referanceParentAI.GetComponent<ParentAIController>().AIStack[count - 1- i]);
                         }
                         else
                         {
-                            tmpIsNotProtected.Add(gm.GetComponent<GameManager>().referanceParentPlayer.GetComponent<ParentPlayerController>().PlayerStack[count - 1- i]);
+                            tmpIsNotProtected.Add(gm.GetComponent<GameManager>().referanceParentAI.GetComponent<ParentAIController>().AIStack[count - 1- i]);
                         }
                         
                         
@@ -153,7 +153,7 @@ public class ObstacleController : MonoBehaviour
                     
                     
                     
-                    Destroy(gameObject);
+                    //Destroy(gameObject);
                     //Destroy(gameObject);
                     //Giden Harflere nolacak -- şimdilik Destroy();
                     

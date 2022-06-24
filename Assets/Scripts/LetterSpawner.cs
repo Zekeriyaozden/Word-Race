@@ -17,7 +17,6 @@ public class LetterSpawner : MonoBehaviour
     {
         while (true)
         {
-            
             yield return new WaitForSeconds(timer);
             GameObject gO = Instantiate(gm, v3, Quaternion.identity);
             gO.transform.eulerAngles += new Vector3(0, 180, 0);
