@@ -4,5 +4,8 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/ZekeriyaWorkspace.unity
+    guid: 2737a44a536cf47418c3b5cb956cc4c7
   m_configObjects: {}
