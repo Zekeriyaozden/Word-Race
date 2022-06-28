@@ -19,11 +19,15 @@ public class GameManager : MonoBehaviour
     //-------------------------------------------
     [HideInInspector]
     public float speedTmp;
+    /*[HideInInspector]*/public bool gameIsGoing;
     private float tempSpeedOfAI;
     private bool onArea;
     private bool flag;
+    private bool gameStartBool;
     void Start()
     {
+        gameStartBool = true;
+        gameIsGoing = false;
         speedTmp = speedMainChar;
         flag = true;
         onArea = false;
@@ -31,6 +35,11 @@ public class GameManager : MonoBehaviour
     }
     void Update()
     {
+        if (Input.GetMouseButtonDown(0) && gameStartBool)
+        {
+            gameIsGoing = true;
+            gameStartBool = false;
+        }
         if (SpeedIncrease())
         {
             flag = true;

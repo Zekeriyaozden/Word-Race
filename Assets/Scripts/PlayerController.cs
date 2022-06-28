@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -14,6 +15,7 @@ public class PlayerController : MonoBehaviour
     private bool isTouched;
     private float xCordinate;
     public Quaternion lookAt;
+    private bool gameIsGoing;
     //private Vector3 _lookAtV3;
     void Start()
     {
@@ -26,29 +28,36 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
-        if (gameObject.transform.eulerAngles.x > 30 && gameObject.transform.eulerAngles.x < 330)
+        gameIsGoing = gameManager.GetComponent<GameManager>().gameIsGoing;
+        if (gameIsGoing)
         {
-            gameObject.transform.eulerAngles = new Vector3(gameObject.transform.eulerAngles.x,
-                gameObject.transform.eulerAngles.y, gameObject.transform.eulerAngles.z);
-        }
+              
+            if (gameObject.transform.eulerAngles.x > 30 && gameObject.transform.eulerAngles.x < 330)
+            {
+                gameObject.transform.eulerAngles = new Vector3(gameObject.transform.eulerAngles.x,
+                    gameObject.transform.eulerAngles.y, gameObject.transform.eulerAngles.z);
+            }
 
         
-        if (isJumping)
-        {
-            gameObject.transform.eulerAngles = new Vector3(0, transform.eulerAngles.y,
-                transform.eulerAngles.z);
-            if (gameObject.transform.position.y < 0.3f)
+            if (isJumping)
             {
                 gameObject.transform.eulerAngles = new Vector3(0, transform.eulerAngles.y,
                     transform.eulerAngles.z);
-                isJumping = false;
-                gameManager.GetComponent<GameManager>().speedMainChar = gameManager.GetComponent<GameManager>().speedTmp;
+                if (gameObject.transform.position.y < 0.3f)
+                {
+                    gameObject.transform.eulerAngles = new Vector3(0, transform.eulerAngles.y,
+                        transform.eulerAngles.z);
+                    isJumping = false;
+                    gameManager.GetComponent<GameManager>().speedMainChar = gameManager.GetComponent<GameManager>().speedTmp;
+                }
             }
+            _speed = gameManager.GetComponent<GameManager>().speedMainChar;
+            Control();
         }
-        _speed = gameManager.GetComponent<GameManager>().speedMainChar;
-        Control();
-
+        else
+        {
+            
+        }
     }
 
 
@@ -102,7 +111,9 @@ public class PlayerController : MonoBehaviour
         gameObject.transform.Translate(new Vector3(xCordinate, 0, 1f) * _speed * Time.deltaTime,Space.Self);
         
     }
-    
-    
-    
+
+    private void OnCollisionEnter(Collision other)
+    {
+        Debug.Log(other.gameObject.name);
+    }
 }
