@@ -41,14 +41,14 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/Speeder.cs" />
       <option value="$PROJECT_DIR$/Assets/LetterSpawner.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Deneme.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/CollectController.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/LattersController.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/LetterSpawner.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/AIController.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/GateController.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/ObstacleController.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/CollectController.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="2ALaX7nMpAflu6fvhSwVNGOdx6e" />
@@ -100,7 +100,8 @@
       <workItem from="1655796763076" duration="9268000" />
       <workItem from="1655893911813" duration="7379000" />
       <workItem from="1655969020771" duration="16598000" />
-      <workItem from="1656055498796" duration="8557000" />
+      <workItem from="1656055498796" duration="8628000" />
+      <workItem from="1656075575422" duration="708000" />
     </task>
     <servers />
   </component>

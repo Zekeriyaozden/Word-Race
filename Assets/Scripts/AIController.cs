@@ -5,6 +5,7 @@ using UnityEngine;
 public class AIController : MonoBehaviour
 {
     private float _speed;
+    private float direction;
     private float speedTmpForBack;
     public List<GameObject> ObjectList = new List<GameObject>();
     public List<GameObject> _ObjList = new List<GameObject>();
@@ -134,25 +135,30 @@ public class AIController : MonoBehaviour
         
         
         _speed = GameObject.Find("GameManager").GetComponent<GameManager>().speedAIChar;
+        direction = 0;
         if (flag == true)
         {
             if (gameObject.transform.position.x > target.gameObject.transform.position.x + 0.4f)
             {
-                gameObject.transform.eulerAngles = new Vector3(gameObject.transform.eulerAngles.x,-45f,0f);
+               // gameObject.transform.eulerAngles = new Vector3(gameObject.transform.eulerAngles.x,-45f,0f);
+                direction = -1f;
             }else if (gameObject.transform.position.x < target.gameObject.transform.position.x - 0.4f)
             {
-                gameObject.transform.eulerAngles = new Vector3(gameObject.transform.eulerAngles.x,45f,0f);
+                //gameObject.transform.eulerAngles = new Vector3(gameObject.transform.eulerAngles.x,45f,0f);
+                direction = 1f;
             }
             else
             {
                 gameObject.transform.eulerAngles = new Vector3(gameObject.transform.eulerAngles.x,0f,0f);
+                direction = 0;
             }
         }
         else
         {
             gameObject.transform.eulerAngles = new Vector3(gameObject.transform.eulerAngles.x,0f,0f);
+            direction = 0;
         }
 
-        gameObject.transform.Translate(new Vector3(0,0,1) * Time.deltaTime * _speed,Space.Self);
+        gameObject.transform.Translate(new Vector3(direction,0,1) * Time.deltaTime * _speed,Space.Self);
     }
 }

@@ -1,6 +1,5 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEditor.UIElements;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
@@ -75,7 +74,7 @@ public class PlayerController : MonoBehaviour
                 {
                     _mousePosStart.x = Input.mousePosition.x - 80;
                 }
-                xCordinate = (45f/80f) * (Input.mousePosition.x - _mousePosStart.x);
+                xCordinate = (Input.mousePosition.x - _mousePosStart.x);
             }
             
             if (Input.mousePosition.x < _mousePosStart.x)
@@ -84,7 +83,7 @@ public class PlayerController : MonoBehaviour
                 {
                     _mousePosStart.x = Input.mousePosition.x + 80;
                 }
-                xCordinate = (45f/80f) * (Input.mousePosition.x - _mousePosStart.x);
+                xCordinate = (Input.mousePosition.x - _mousePosStart.x);
             }
         }
 
@@ -95,12 +94,12 @@ public class PlayerController : MonoBehaviour
         {
             xCordinate = 0f;
         }
-        gameObject.transform.rotation = Quaternion.Euler(transform.eulerAngles.x , xCordinate , 0f);
-  
-        
-        
-        
-        gameObject.transform.Translate(0,0,1f * _speed * Time.deltaTime,Space.Self);
+        //gameObject.transform.Translate(0,0,0 * _speed * Time.deltaTime,Space.Self);
+
+
+        gameObject.transform.eulerAngles = new Vector3(gameObject.transform.eulerAngles.x, 0, 0);
+        xCordinate = xCordinate * 0.02f;
+        gameObject.transform.Translate(new Vector3(xCordinate, 0, 1f) * _speed * Time.deltaTime,Space.Self);
         
     }
     
