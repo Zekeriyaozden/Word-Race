@@ -17,6 +17,7 @@ public class RunnerFinishController : MonoBehaviour
     public bool isFinished;
     private float k;
     private GameObject gameManager;
+    public GameObject hint;
     void Start()
     {
         MainFinish = false;
@@ -60,6 +61,7 @@ public class RunnerFinishController : MonoBehaviour
             mainCharStart = MainChar.transform.position;
             AICharStart = AIChar.transform.position;
             isFinished = true;
+            hint.gameObject.SetActive(true);
             gameManager.GetComponent<GameManager>().inGameEnd = true;
             gameManager.GetComponent<GameManager>().gameIsGoing = false;
         }

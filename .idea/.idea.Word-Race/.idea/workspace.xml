@@ -45,17 +45,17 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/Speeder.cs" />
       <option value="$PROJECT_DIR$/Assets/LetterSpawner.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Deneme.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/LattersController.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/LetterSpawner.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/GateController.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/CollectController.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/LattersEndGame.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/AIController.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/ObstacleController.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/LetterBoxController.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/ObstacleController.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/RunnerFinishController.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/LattersController.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/HintTableController.cs" />
     </changedPaths>
   </component>
@@ -110,6 +110,7 @@
       <workItem from="1655969020771" duration="16598000" />
       <workItem from="1656055498796" duration="8628000" />
       <workItem from="1656075575422" duration="708000" />
+      <workItem from="1656426602393" duration="3256000" />
     </task>
     <servers />
   </component>

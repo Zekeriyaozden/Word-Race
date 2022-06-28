@@ -60,7 +60,6 @@ public class ObstacleController : MonoBehaviour
                     {
                         gm.GetComponent<GameManager>().referanceParentPlayer.GetComponent<ParentPlayerController>()
                             .PlayerStack.Remove(tmpIsNotProtected[i]);
-                        Debug.Log(tmpIsNotProtected[i]);
                         tmpIsNotProtected[i].GetComponent<LattersController>().makeObjectNotWork();
                     }
 

@@ -5,6 +5,7 @@ using UnityEngine;
 public class LetterBoxController : MonoBehaviour
 {
     public string latter;
+    public bool isEmpty;
     void Start()
     {
         
