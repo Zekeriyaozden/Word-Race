@@ -14,14 +14,21 @@ public class ObstacleController : MonoBehaviour
         gm = GameObject.Find("GameManager");
     }
 
+    private IEnumerator particle(GameObject other)
+    {
+        GameObject temp =  Instantiate(gm.GetComponent<GameManager>().particle, other.gameObject.transform.position,
+            Quaternion.identity);
+        yield return new WaitForSeconds(.4f);
+        Destroy(temp.gameObject);
+    }
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag == "Letter")
         {
             if (!other.gameObject.GetComponent<LattersController>().isProtected)
             {
-                Instantiate(gm.GetComponent<GameManager>().particle, other.gameObject.transform.position,
-                    Quaternion.identity);
+                StartCoroutine(particle(other.gameObject));
             }
             if (other.gameObject.GetComponent<LattersController>().ownership == "Player")
             {
