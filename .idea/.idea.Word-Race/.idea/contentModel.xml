@@ -52,8 +52,10 @@
           <e p="Deneme.cs" t="Include" />
           <e p="GameManager.cs" t="Include" />
           <e p="GateController.cs" t="Include" />
+          <e p="HintTableController.cs" t="Include" />
           <e p="LattersController.cs" t="Include" />
           <e p="LattersEndGame.cs" t="Include" />
+          <e p="LetterBoxController.cs" t="Include" />
           <e p="LetterSpawner.cs" t="Include" />
           <e p="ObstacleController.cs" t="Include" />
           <e p="ParentAIController.cs" t="Include" />

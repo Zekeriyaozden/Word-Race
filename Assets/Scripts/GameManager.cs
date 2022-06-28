@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
+    public bool inGameEnd;
     public float protectTime;
     public GameObject particle;
     public GameObject protect;

@@ -27,6 +27,8 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/AITarget.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/LattersEndGame.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/RunnerFinishController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/LetterBoxController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/HintTableController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
@@ -49,10 +51,12 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/CollectController.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/LattersEndGame.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/AIController.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/RunnerFinishController.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/ObstacleController.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/LetterBoxController.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/RunnerFinishController.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/HintTableController.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="2ALaX7nMpAflu6fvhSwVNGOdx6e" />

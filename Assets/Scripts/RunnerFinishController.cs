@@ -14,7 +14,7 @@ public class RunnerFinishController : MonoBehaviour
     public GameObject AIChar;
     private Vector3 AICharStart;
     private bool AIFinish;
-    private bool isFinished;
+    public bool isFinished;
     private float k;
     private GameObject gameManager;
     void Start()
@@ -60,6 +60,7 @@ public class RunnerFinishController : MonoBehaviour
             mainCharStart = MainChar.transform.position;
             AICharStart = AIChar.transform.position;
             isFinished = true;
+            gameManager.GetComponent<GameManager>().inGameEnd = true;
             gameManager.GetComponent<GameManager>().gameIsGoing = false;
         }
         
