@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 423288462927463606}
   - component: {fileID: 4307794278897192110}
   - component: {fileID: -3333791175099146089}
+  - component: {fileID: 5760794874987546478}
   m_Layer: 0
   m_Name: R
   m_TagString: Letter
@@ -113,6 +114,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 96
   m_CollisionDetection: 0
+--- !u!114 &5760794874987546478
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3025345854526241228}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9207fe27e41c0d04aad8965b1938b9f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LatterChar: R
 --- !u!1 &3364534561088452345
 GameObject:
   m_ObjectHideFlags: 0

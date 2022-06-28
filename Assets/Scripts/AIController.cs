@@ -16,6 +16,7 @@ public class AIController : MonoBehaviour
     private GameObject gameManager;
     public bool flag;
     public GameObject target;
+    private bool gameIsGoing;
     void Start()
     {
         gameManager = GameObject.Find("GameManager");
@@ -122,43 +123,51 @@ public class AIController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
-        if (isJumping)
+        gameIsGoing = gameManager.GetComponent<GameManager>().gameIsGoing;
+        if (gameIsGoing)
         {
-            gameObject.transform.eulerAngles = new Vector3(0,transform.eulerAngles.y,transform.eulerAngles.z);
-            if (gameObject.transform.position.y < 0.3f)
+            
+            if (isJumping)
             {
-                isJumping = false;
-                gameManager.GetComponent<GameManager>().speedAIChar = gameManager.GetComponent<GameManager>().speedTmp;
+                gameObject.transform.eulerAngles = new Vector3(0,transform.eulerAngles.y,transform.eulerAngles.z);
+                if (gameObject.transform.position.y < 0.3f)
+                {
+                    isJumping = false;
+                    gameManager.GetComponent<GameManager>().speedAIChar = gameManager.GetComponent<GameManager>().speedTmp;
+                }
             }
-        }
         
         
-        _speed = GameObject.Find("GameManager").GetComponent<GameManager>().speedAIChar;
-        direction = 0;
-        if (flag == true)
-        {
-            if (gameObject.transform.position.x > target.gameObject.transform.position.x + 0.4f)
+            _speed = GameObject.Find("GameManager").GetComponent<GameManager>().speedAIChar;
+            direction = 0;
+            if (flag == true)
             {
-               // gameObject.transform.eulerAngles = new Vector3(gameObject.transform.eulerAngles.x,-45f,0f);
-                direction = -1f;
-            }else if (gameObject.transform.position.x < target.gameObject.transform.position.x - 0.4f)
-            {
-                //gameObject.transform.eulerAngles = new Vector3(gameObject.transform.eulerAngles.x,45f,0f);
-                direction = 1f;
+                if (gameObject.transform.position.x > target.gameObject.transform.position.x + 0.4f)
+                {
+                    // gameObject.transform.eulerAngles = new Vector3(gameObject.transform.eulerAngles.x,-45f,0f);
+                    direction = -1f;
+                }else if (gameObject.transform.position.x < target.gameObject.transform.position.x - 0.4f)
+                {
+                    //gameObject.transform.eulerAngles = new Vector3(gameObject.transform.eulerAngles.x,45f,0f);
+                    direction = 1f;
+                }
+                else
+                {
+                    gameObject.transform.eulerAngles = new Vector3(gameObject.transform.eulerAngles.x,0f,0f);
+                    direction = 0;
+                }
             }
             else
             {
                 gameObject.transform.eulerAngles = new Vector3(gameObject.transform.eulerAngles.x,0f,0f);
                 direction = 0;
             }
+
+            gameObject.transform.Translate(new Vector3(direction,0,1) * Time.deltaTime * _speed,Space.Self);
         }
         else
         {
-            gameObject.transform.eulerAngles = new Vector3(gameObject.transform.eulerAngles.x,0f,0f);
-            direction = 0;
+            
         }
-
-        gameObject.transform.Translate(new Vector3(direction,0,1) * Time.deltaTime * _speed,Space.Self);
     }
 }
