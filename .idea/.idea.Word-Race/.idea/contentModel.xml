@@ -56,6 +56,7 @@
           <e p="LattersController.cs" t="Include" />
           <e p="LattersEndGame.cs" t="Include" />
           <e p="LetterBoxController.cs" t="Include" />
+          <e p="LetterMovementEndGame.cs" t="Include" />
           <e p="LetterSpawner.cs" t="Include" />
           <e p="ObstacleController.cs" t="Include" />
           <e p="ParentAIController.cs" t="Include" />

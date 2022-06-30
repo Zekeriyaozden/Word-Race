@@ -17,7 +17,7 @@ public class RunnerFinishController : MonoBehaviour
     public bool isFinished;
     private float k;
     private GameObject gameManager;
-    public GameObject hint;
+    private GameObject hint;
     void Start()
     {
         MainFinish = false;
@@ -25,6 +25,7 @@ public class RunnerFinishController : MonoBehaviour
         isFinished = false;
         k = 0;
         gameManager = GameObject.Find("GameManager");
+        hint = gameManager.GetComponent<GameManager>().HintTab;
     }
 
     // Update is called once per frame
@@ -64,6 +65,16 @@ public class RunnerFinishController : MonoBehaviour
             hint.gameObject.SetActive(true);
             gameManager.GetComponent<GameManager>().inGameEnd = true;
             gameManager.GetComponent<GameManager>().gameIsGoing = false;
+        }
+
+        if (other.gameObject.tag == "Letter")
+        {
+            if (other.gameObject.GetComponent<LattersController>().ownership == "Player")
+            {
+                hint.GetComponent<HintTableController>().detectLatter(other.gameObject);
+                hint.gameObject.SetActive(true);
+                gameManager.GetComponent<GameManager>().inGameEnd = true;   
+            }
         }
         
     }

@@ -5,6 +5,7 @@ using UnityEngine;
 public class HintTableController : MonoBehaviour
 {
     public float letterSpeed;
+    public GameObject targetUI;
     public List<GameObject> AnswerLetters;
     private GameObject gm;
     private GameObject parentPlayer;
@@ -17,33 +18,51 @@ public class HintTableController : MonoBehaviour
         parentPlayer = gm.GetComponent<GameManager>().referanceParentPlayer;
     }
 
-    private void goTable(GameObject gObj)
+    private void goTable(GameObject gObj , GameObject obj)
     {
-        foreach (var obj in AnswerLetters)
-        {
-            if (obj.GetComponent<LetterBoxController>().latter == gObj.GetComponent<LattersEndGame>().LatterChar)
-            {
-                Debug.Log("EnterHere");
-                if (obj.GetComponent<LetterBoxController>().isEmpty)
-                {
-                    gObj.AddComponent<LetterMovementEndGame>();
-                    gObj.GetComponent<LetterMovementEndGame>().speed = letterSpeed;
-                    gObj.GetComponent<LetterMovementEndGame>().target =
-                        obj.transform.position + new Vector3(0, 0, -0.6f);
-                    obj.GetComponent<LetterBoxController>().isEmpty = false;
-                    gObj.GetComponent<LattersController>().enabled = false;
-                }
-            }
-        }
+        gObj.AddComponent<LetterMovementEndGame>();
+        gObj.GetComponent<LetterMovementEndGame>().speed = letterSpeed;
+        gObj.GetComponent<LetterMovementEndGame>().target =
+            obj.transform.position + new Vector3(0, 0, -0.6f);
+        obj.GetComponent<LetterBoxController>().isEmpty = false;
+        gObj.GetComponent<LattersController>().enabled = false;
+        gObj.GetComponent<LetterMovementEndGame>().isGoingUI = false;
     }
 
     private void goUI(GameObject gObj)
     {
-        //Debug.Log(gObj + "-- UI");
+        gObj.AddComponent<LetterMovementEndGame>();
+        gObj.GetComponent<LetterMovementEndGame>().speed = letterSpeed;
+        gObj.GetComponent<LetterMovementEndGame>().target = targetUI.gameObject.transform.position;
+        gObj.GetComponent<LattersController>().enabled = false;
+        gObj.GetComponent<LetterMovementEndGame>().isGoingUI = true;
     }
 
-    // Update is called once per frame
-    void Update()
+    public void detectLatter(GameObject gObj)
+    {
+        int tempInt = AnswerLetters.Count;
+        bool tempBool = true;
+        foreach (var box in AnswerLetters)
+        {
+            tempInt = tempInt - 1;
+            if (box.gameObject.GetComponent<LetterBoxController>().isEmpty &&
+                box.gameObject.GetComponent<LetterBoxController>().latter ==
+                gObj.gameObject.GetComponent<LattersEndGame>().LatterChar)
+            {
+                tempBool = false;
+                goTable(gObj , box);
+                break;
+            }
+
+            if (tempBool && tempInt == 0)
+            {
+                goUI(gObj);
+            }
+        }
+    }
+    
+
+    /*public void detectLatter()
     {
         if (gm.GetComponent<GameManager>().inGameEnd)
         {
@@ -74,6 +93,12 @@ public class HintTableController : MonoBehaviour
                 }
             }
         }
+    }*/
+
+    // Update is called once per frame
+    void Update()
+    {
+        
         
     }
 }
