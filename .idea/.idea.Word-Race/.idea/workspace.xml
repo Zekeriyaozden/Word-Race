@@ -58,9 +58,9 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/EndGameCameraAnim.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/CameraController.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/LetterMovementEndGame.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/HintTableController.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/RunnerFinishController.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/LetterMovementEndGame.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="2ALaX7nMpAflu6fvhSwVNGOdx6e" />
@@ -115,7 +115,7 @@
       <workItem from="1656055498796" duration="8628000" />
       <workItem from="1656075575422" duration="708000" />
       <workItem from="1656426602393" duration="8195000" />
-      <workItem from="1656572051327" duration="4922000" />
+      <workItem from="1656572051327" duration="6570000" />
     </task>
     <servers />
   </component>

@@ -21,7 +21,13 @@ public class LetterMovementEndGame : MonoBehaviour
     {
         isGoingUI = false;
         yield return new WaitForSeconds(.1f);
-        Destroy(gameObject);
+        gameObject.GetComponent<LattersController>().enabled = false;
+        gameObject.transform.GetChild(0).GetComponent<MeshRenderer>().enabled = false;
+        gameObject.transform.GetChild(1).GetComponent<MeshRenderer>().enabled = false;
+        if (gameObject.transform.childCount > 2)
+        {
+            gameObject.transform.GetChild(2).GetComponent<MeshRenderer>().enabled = false;
+        }
     }
 
     // Update is called once per frame
