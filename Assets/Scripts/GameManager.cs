@@ -5,6 +5,7 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     public bool inGameEnd;
+    public GameObject letterGenerator;
     public float protectTime;
     public GameObject particle;
     public GameObject protect;
@@ -37,6 +38,10 @@ public class GameManager : MonoBehaviour
     }
     void Update()
     {
+        if (inGameEnd && !gameIsGoing)
+        {
+            letterGenerator.GetComponent<LetterBoardGenerator>().enabled = true;
+        }
         if (Input.GetMouseButtonDown(0) && gameStartBool)
         {
             gameIsGoing = true;
