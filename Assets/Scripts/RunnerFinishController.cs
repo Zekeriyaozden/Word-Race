@@ -55,7 +55,7 @@ public class RunnerFinishController : MonoBehaviour
                 f += Time.deltaTime * speed;
             }
             float x = Mathf.Lerp(0, 118, f);
-            AIChar.transform.position = Vector3.Lerp(AICharStart, AICharTarget, k);
+            AIChar.transform.position = Vector3.Lerp(AICharStart, AICharTarget, f);
             AIChar.transform.eulerAngles = new Vector3(0, x, 0);
         }
         
@@ -92,7 +92,7 @@ public class RunnerFinishController : MonoBehaviour
             {
                 hint.GetComponent<HintTableController>().detectLatter(other.gameObject);
                 hint.gameObject.SetActive(true);
-                gameManager.GetComponent<GameManager>().inGameEnd = true;   
+                gameManager.GetComponent<GameManager>().inGameEnd = true;
             }
             else
             {

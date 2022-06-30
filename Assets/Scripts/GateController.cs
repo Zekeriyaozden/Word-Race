@@ -51,8 +51,14 @@ public class GateController : MonoBehaviour
         GameObject gobj = GameObject.Find("GameManager").GetComponent<GameManager>().protect;
         Instantiate(gobj, go.gameObject.transform);
         yield return new WaitForSeconds(GameObject.Find("GameManager").GetComponent<GameManager>().protectTime);
-        go.GetComponent<LattersController>().isProtected = false;
-        Destroy(go.transform.GetChild(2).gameObject);
+        if (go != null)
+        {
+            if (go.TryGetComponent(out LattersController hs))
+            {
+                go.GetComponent<LattersController>().isProtected = false;
+                Destroy(go.transform.GetChild(2).gameObject);   
+            }
+        }
     }
 
     private void OnTriggerEnter(Collider other)

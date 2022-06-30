@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class HintTableController : MonoBehaviour
 {
+    public List<GameObject> LetterBoard;
     public float letterSpeed;
     public GameObject targetUI;
     public List<GameObject> AnswerLetters;
@@ -95,10 +96,33 @@ public class HintTableController : MonoBehaviour
         }
     }*/
 
-    // Update is called once per frame
+    public GameObject findTargetBox()
+    {
+        int cnt = AnswerLetters.Count;
+
+        foreach (var box in AnswerLetters)
+        {
+            if (box.gameObject.GetComponent<LetterBoxController>().isEmpty)
+            {
+                return box.gameObject;
+            }
+        }
+        return null;
+    }
     void Update()
     {
-        
+        if (onGameEnd)
+        {
+            
+            if (findTargetBox() != null)
+            {
+                Debug.Log(findTargetBox().name);
+            }
+            else
+            {
+            
+            }
+        }
         
     }
 }
