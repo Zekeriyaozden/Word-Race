@@ -50,6 +50,7 @@
           <e p="CollectAnimations.cs" t="Include" />
           <e p="CollectController.cs" t="Include" />
           <e p="Deneme.cs" t="Include" />
+          <e p="EndGameMechanics.cs" t="Include" />
           <e p="EngGameplay.cs" t="Include" />
           <e p="GameManager.cs" t="Include" />
           <e p="GateController.cs" t="Include" />

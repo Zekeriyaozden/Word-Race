@@ -19,7 +19,7 @@ public class HintTableController : MonoBehaviour
         parentPlayer = gm.GetComponent<GameManager>().referanceParentPlayer;
     }
 
-    private void goTable(GameObject gObj , GameObject obj)
+    public void goTable(GameObject gObj , GameObject obj)
     {
         gObj.AddComponent<LetterMovementEndGame>();
         gObj.GetComponent<LetterMovementEndGame>().speed = letterSpeed;
