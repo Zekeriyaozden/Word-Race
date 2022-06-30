@@ -16,6 +16,9 @@ public class RunnerFinishController : MonoBehaviour
     private bool AIFinish;
     public bool isFinished;
     private float k;
+    private float f;
+    private bool mainCharTrig;
+    private bool AICharTrig;
     private GameObject gameManager;
     private GameObject hint;
     void Start()
@@ -24,26 +27,38 @@ public class RunnerFinishController : MonoBehaviour
         AIFinish = false;
         isFinished = false;
         k = 0;
+        f = 0;
         gameManager = GameObject.Find("GameManager");
         hint = gameManager.GetComponent<GameManager>().HintTab;
+        mainCharTrig = false;
+        AICharTrig = false;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (isFinished)
+        if (mainCharTrig)
         {
             if (k < 1f)
             {
                 k += Time.deltaTime * speed;
             }
-            //Main y = -118 , AI y = 118
             float s = Mathf.Lerp(0, 118, k);
             MainChar.transform.eulerAngles = new Vector3(0, s * -1f, 0);
-            AIChar.transform.eulerAngles = new Vector3(0, s, 0);
             MainChar.transform.position = Vector3.Lerp(mainCharStart, MaincharTarget, k);
-            AIChar.transform.position = Vector3.Lerp(AICharStart, AICharTarget, k);
         }
+        
+        if (AICharTrig)
+        {
+            if (f < 1f)
+            {
+                f += Time.deltaTime * speed;
+            }
+            float x = Mathf.Lerp(0, 118, f);
+            AIChar.transform.position = Vector3.Lerp(AICharStart, AICharTarget, k);
+            AIChar.transform.eulerAngles = new Vector3(0, x, 0);
+        }
+        
     }
 
     private void OnTriggerEnter(Collider other)
@@ -51,16 +66,20 @@ public class RunnerFinishController : MonoBehaviour
         if (other.gameObject.tag == "Player")
         {
             MainFinish = true;
+            mainCharStart = MainChar.transform.position;
+            mainCharTrig = true;
         }
         else if (other.gameObject.tag == "AI")
         {
             AIFinish = true;
+            AICharStart = AIChar.transform.position;
+            AICharTrig = true;
         }
         
         if (MainFinish && AIFinish)
         {
-            mainCharStart = MainChar.transform.position;
-            AICharStart = AIChar.transform.position;
+           // mainCharStart = MainChar.transform.position;
+            // AICharStart = AIChar.transform.position;
             isFinished = true;
             hint.gameObject.SetActive(true);
             gameManager.GetComponent<GameManager>().inGameEnd = true;
@@ -74,6 +93,10 @@ public class RunnerFinishController : MonoBehaviour
                 hint.GetComponent<HintTableController>().detectLatter(other.gameObject);
                 hint.gameObject.SetActive(true);
                 gameManager.GetComponent<GameManager>().inGameEnd = true;   
+            }
+            else
+            {
+                Destroy(other.gameObject);
             }
         }
         
