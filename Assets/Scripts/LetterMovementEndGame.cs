@@ -21,7 +21,7 @@ public class LetterMovementEndGame : MonoBehaviour
     {
         isGoingUI = false;
         yield return new WaitForSeconds(.1f);
-        gameObject.GetComponent<LattersController>().enabled = false;
+        //gameObject.GetComponent<LattersController>().enabled = false;
         gameObject.transform.GetChild(0).GetComponent<MeshRenderer>().enabled = false;
         gameObject.transform.GetChild(1).GetComponent<MeshRenderer>().enabled = false;
         if (gameObject.transform.childCount > 2)
