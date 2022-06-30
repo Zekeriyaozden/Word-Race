@@ -18,6 +18,7 @@ public class GameManager : MonoBehaviour
     public GameObject referanceParentPlayer;
     public GameObject referanceParentAI;
     //-------------------------------------------
+    public GameObject HintTab;
     [HideInInspector]
     public float speedTmp;
     /*[HideInInspector]*/public bool gameIsGoing;
