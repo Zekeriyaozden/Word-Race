@@ -44,6 +44,7 @@ public class RunnerFinishController : MonoBehaviour
                 k += Time.deltaTime * speed;
             }
             float s = Mathf.Lerp(0, 118, k);
+            MainChar.gameObject.GetComponent<PlayerController>().enabled = false;
             MainChar.transform.eulerAngles = new Vector3(0, s * -1f, 0);
             MainChar.transform.position = Vector3.Lerp(mainCharStart, MaincharTarget, k);
         }
@@ -55,6 +56,7 @@ public class RunnerFinishController : MonoBehaviour
                 f += Time.deltaTime * speed;
             }
             float x = Mathf.Lerp(0, 118, f);
+            MainChar.gameObject.GetComponent<PlayerController>().enabled = false;
             AIChar.transform.position = Vector3.Lerp(AICharStart, AICharTarget, f);
             AIChar.transform.eulerAngles = new Vector3(0, x, 0);
         }
@@ -90,6 +92,10 @@ public class RunnerFinishController : MonoBehaviour
         {
             if (other.gameObject.GetComponent<LattersController>().ownership == "Player")
             {
+                if (other.gameObject.transform.childCount > 2)
+                {
+                    other.gameObject.transform.GetChild(2).GetComponent<MeshFilter>().mesh = null;
+                }
                 hint.GetComponent<HintTableController>().detectLatter(other.gameObject);
                 hint.gameObject.SetActive(true);
                 gameManager.GetComponent<GameManager>().inGameEnd = true;

@@ -67,6 +67,7 @@
           <e p="PlayerController.cs" t="Include" />
           <e p="ReferanceController.cs" t="Include" />
           <e p="RunnerFinishController.cs" t="Include" />
+          <e p="SceneController.cs" t="Include" />
           <e p="Speeder.cs" t="Include" />
         </e>
       </e>

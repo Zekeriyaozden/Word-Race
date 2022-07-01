@@ -11,6 +11,7 @@ public class HintTableController : MonoBehaviour
     private GameObject gm;
     private GameObject parentPlayer;
     public bool onGameEnd;
+    public Mesh mesh;
     void Start()
     {
         gameObject.SetActive(false);
@@ -28,6 +29,7 @@ public class HintTableController : MonoBehaviour
         obj.GetComponent<LetterBoxController>().isEmpty = false;
         gObj.GetComponent<LattersController>().enabled = false;
         gObj.GetComponent<LetterMovementEndGame>().isGoingUI = false;
+        gObj.transform.GetChild(0).gameObject.GetComponent<MeshFilter>().mesh = mesh;
     }
 
     private void goUI(GameObject gObj)
@@ -37,6 +39,7 @@ public class HintTableController : MonoBehaviour
         gObj.GetComponent<LetterMovementEndGame>().target = targetUI.gameObject.transform.position;
         gObj.GetComponent<LattersController>().enabled = false;
         gObj.GetComponent<LetterMovementEndGame>().isGoingUI = true;
+        gObj.transform.GetChild(0).gameObject.GetComponent<MeshFilter>().mesh = mesh;
     }
 
     public void detectLatter(GameObject gObj)

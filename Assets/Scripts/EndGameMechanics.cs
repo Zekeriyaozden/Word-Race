@@ -6,10 +6,11 @@ public class EndGameMechanics : MonoBehaviour
 {
 
     public bool isCanPlayeble;
-
+    private int failCounter;
     void Start()
     {
         isCanPlayeble = true;
+        failCounter = 0;
     }
     void Update()
     {
@@ -28,6 +29,19 @@ public class EndGameMechanics : MonoBehaviour
                             .latter)
                         {
                             gameObject.GetComponent<HintTableController>().goTable(hitInfo.transform.gameObject,gameObject.GetComponent<HintTableController>().findTargetBox());
+                        }
+                        else
+                        {
+                            Debug.Log("Fail");
+                            if (failCounter < 3)
+                            {
+                                failCounter++;
+                            }
+
+                            if (failCounter == 3)
+                            {
+                                Debug.Log("Game Over");
+                            }
                         }
                     }
                 }

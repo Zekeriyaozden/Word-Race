@@ -10,8 +10,10 @@ public class CameraController : MonoBehaviour
     private float k;
     private Vector3 startPos;
     public float speed;
+    private Vector3 startRotate;
     void Start()
     {
+        startRotate = gameObject.transform.eulerAngles;
         k = 0;
         distance =  gameObject.transform.position - focus.gameObject.transform.position ;
     }
@@ -26,6 +28,7 @@ public class CameraController : MonoBehaviour
                 k += Time.deltaTime * speed;
             }
             gameObject.transform.position = Vector3.Lerp(startPos, target, k);
+            gameObject.transform.eulerAngles = Vector3.Lerp(startRotate, new Vector3(2.3f, 0, 0), k);
         }
         else
         {
