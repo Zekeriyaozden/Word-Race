@@ -47,18 +47,43 @@ public class GateController : MonoBehaviour
 
     private IEnumerator protectCour(GameObject go)
     {
-        go.GetComponent<LattersController>().isProtected = true;
-        GameObject gobj = GameObject.Find("GameManager").GetComponent<GameManager>().protect;
-        Instantiate(gobj, go.gameObject.transform);
-        yield return new WaitForSeconds(GameObject.Find("GameManager").GetComponent<GameManager>().protectTime);
-        if (go != null)
+        if (go.GetComponent<LattersController>().isProtected)
         {
-            if (go.TryGetComponent(out LattersController hs))
+            for (int i = 0; i < 1000; i++)
             {
-                go.GetComponent<LattersController>().isProtected = false;
-                Destroy(go.transform.GetChild(2).gameObject);   
+                if (!go.GetComponent<LattersController>().isProtected)
+                {
+                    go.GetComponent<LattersController>().isProtected = true;
+                    GameObject gobj = GameObject.Find("GameManager").GetComponent<GameManager>().protect;
+                    Instantiate(gobj, go.gameObject.transform);
+                }
+                yield return new WaitForSeconds((GameObject.Find("GameManager").GetComponent<GameManager>().protectTime) / 1000f);
+            }
+            if (go != null)
+            {
+                if (go.TryGetComponent(out LattersController hs))
+                {
+                    go.GetComponent<LattersController>().isProtected = false;
+                    Destroy(go.transform.GetChild(2).gameObject);   
+                }
             }
         }
+        else
+        {
+            go.GetComponent<LattersController>().isProtected = true;
+            GameObject gobj = GameObject.Find("GameManager").GetComponent<GameManager>().protect;
+            Instantiate(gobj, go.gameObject.transform);
+            yield return new WaitForSeconds(GameObject.Find("GameManager").GetComponent<GameManager>().protectTime);
+            if (go != null)
+            {
+                if (go.TryGetComponent(out LattersController hs))
+                {
+                    go.GetComponent<LattersController>().isProtected = false;
+                    Destroy(go.transform.GetChild(2).gameObject);   
+                }
+            }
+        }
+        
     }
 
     private void OnTriggerEnter(Collider other)

@@ -1795,6 +1795,7 @@ MonoBehaviour:
   node: {fileID: 0}
   distanceZ: 0
   ownership: AI
+  isDest: 0
 --- !u!65 &660766592
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2190,6 +2191,7 @@ MonoBehaviour:
   node: {fileID: 0}
   distanceZ: 0
   ownership: Player
+  isDest: 0
 --- !u!65 &787009362
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5906,7 +5908,7 @@ MonoBehaviour:
   AIWhenIsStop: 0.2
   DistanceOfMainAndAI: 5
   lerpSpeed: 10
-  speedMainChar: 4
+  speedMainChar: 6
   speedAIChar: 4
   Player: {fileID: 8119462406638492814}
   AI: {fileID: 7198439770701404457}

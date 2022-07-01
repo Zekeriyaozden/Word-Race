@@ -9,23 +9,63 @@ public class ObstacleController : MonoBehaviour
     private GameObject gm;
     private int index;
     private int count;
+    private int indexOf;
     private void Start()
     {
+        indexOf = 0;
         gm = GameObject.Find("GameManager");
     }
 
     private IEnumerator particle(GameObject other)
     {
-        GameObject temp =  Instantiate(gm.GetComponent<GameManager>().particle, other.gameObject.transform.position,
-            Quaternion.identity);
-        yield return new WaitForSeconds(.4f);
-        Destroy(temp.gameObject);
+        /*GameObject temp =  Instantiate(gm.GetComponent<GameManager>().particle, other.gameObject.transform.position,
+            Quaternion.identity);*/
+        yield return new WaitForSeconds(.2f);
+        /*Destroy(temp.gameObject);*/
+    }
+
+    private void ObsMechanics(bool isMain)
+    {
+        if (isMain)
+        {
+            GameObject node = gm.gameObject.GetComponent<GameManager>().referanceParentPlayer.GetComponent<ParentPlayerController>().PlayerStack[0].gameObject;
+            int i = 1;
+            while (i < gm.gameObject.GetComponent<GameManager>().referanceParentPlayer.GetComponent<ParentPlayerController>().PlayerStack.Count)
+            {
+                if (gm.gameObject.GetComponent<GameManager>().referanceParentPlayer
+                    .GetComponent<ParentPlayerController>().PlayerStack[i].GetComponent<LattersController>().isDest)
+                {
+                    if (gm.gameObject.GetComponent<GameManager>().referanceParentPlayer
+                        .GetComponent<ParentPlayerController>().PlayerStack.Count > i + 1)
+                    {
+                        gm.gameObject.GetComponent<GameManager>().referanceParentPlayer
+                            .GetComponent<ParentPlayerController>().PlayerStack[i + 1].GetComponent<LattersController>().node = node;
+                    }
+                    gm.gameObject.GetComponent<GameManager>().referanceParentPlayer
+                        .GetComponent<ParentPlayerController>().PlayerStack[i].GetComponent<LattersController>()
+                        .enabled = false;
+                    gm.gameObject.GetComponent<GameManager>().referanceParentPlayer
+                        .GetComponent<ParentPlayerController>().PlayerStack.RemoveAt(i);
+                }
+                else
+                {
+                    gm.gameObject.GetComponent<GameManager>().referanceParentPlayer
+                            .GetComponent<ParentPlayerController>().PlayerStack[i].GetComponent<LattersController>()
+                            .node =
+                        node;
+                    node = gm.gameObject.GetComponent<GameManager>().referanceParentPlayer
+                        .GetComponent<ParentPlayerController>().PlayerStack[i];
+                    i++;
+                }
+            }
+        }
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "Letter")
-        {
+
+    if (other.gameObject.tag == "Letter")
+         {
             if (!other.gameObject.GetComponent<LattersController>().isProtected)
             {
                 StartCoroutine(particle(other.gameObject));
@@ -87,19 +127,9 @@ public class ObstacleController : MonoBehaviour
                             new Vector3(0, 0, 1.6f);
                         tmpIsProtected[i].GetComponent<LattersController>().distancer();
                     }
-                    
-                    
-                    
-                    
-                    
-                    //Destroy(gameObject);
-                    //Destroy(gameObject);
-                    //Giden Harflere nolacak -- şimdilik Destroy();
-                    
+
                     count = gm.GetComponent<GameManager>().referanceParentPlayer.GetComponent<ParentPlayerController>()
                         .PlayerStack.Count;
-                    
-                    
                 }
             }else if (other.gameObject.GetComponent<LattersController>().ownership == "AI")
             {
@@ -160,10 +190,6 @@ public class ObstacleController : MonoBehaviour
                         tmpIsProtected[i].GetComponent<LattersController>().distancer();
                     }
                     
-                    
-                    
-                    
-                    
                     //Destroy(gameObject);
                     //Destroy(gameObject);
                     //Giden Harflere nolacak -- şimdilik Destroy();
@@ -174,5 +200,114 @@ public class ObstacleController : MonoBehaviour
                 } 
             }
         }
+
+        
+   
+   /*if (other.gameObject.tag == "Letter")
+        {
+            if (other.gameObject.TryGetComponent(out LattersController lc))
+            {
+                if (lc.ownership == "Player" && !lc.isProtected)
+                {
+                    int indexOf = gm.GetComponent<GameManager>().referanceParentPlayer.GetComponent<ParentPlayerController>()
+                        .PlayerStack.IndexOf(other.gameObject);
+                    GameObject node = lc.node;
+                    for (int i = indexOf;
+                        i < gm.GetComponent<GameManager>().referanceParentPlayer.GetComponent<ParentPlayerController>()
+                            .PlayerStack.Count;
+                        i++)
+                    {
+                        if (gm.GetComponent<GameManager>().referanceParentPlayer.GetComponent<ParentPlayerController>()
+                            .PlayerStack[i].GetComponent<LattersController>().isProtected)
+                        {
+                            gm.GetComponent<GameManager>().referanceParentPlayer.GetComponent<ParentPlayerController>()
+                                .PlayerStack[i].GetComponent<LattersController>().node = node;
+                            gm.GetComponent<GameManager>().referanceParentPlayer.GetComponent<ParentPlayerController>()
+                                .PlayerStack[i].transform.position = new Vector3(gm.GetComponent<GameManager>().referanceParentPlayer.GetComponent<ParentPlayerController>()
+                                .PlayerStack[i].transform.position.x,gm.GetComponent<GameManager>().referanceParentPlayer.GetComponent<ParentPlayerController>()
+                                .PlayerStack[i].transform.position.y,node.transform.position.z + 1.6f);
+                            node = gm.GetComponent<GameManager>().referanceParentPlayer
+                                .GetComponent<ParentPlayerController>()
+                                .PlayerStack[i].gameObject;
+                        }
+                        else
+                        {
+                            if (gm.GetComponent<GameManager>().referanceParentPlayer
+                                .GetComponent<ParentPlayerController>()
+                                .PlayerStack.Count > i + 1)
+                            {
+                                gm.GetComponent<GameManager>().referanceParentPlayer
+                                    .GetComponent<ParentPlayerController>()
+                                    .PlayerStack[i + 1].gameObject.GetComponent<LattersController>().node = node;
+                            }
+
+                            gm.GetComponent<GameManager>().referanceParentPlayer.GetComponent<ParentPlayerController>()
+                                .PlayerStack[i].GetComponent<LattersController>().isDest = true;
+                            gm.GetComponent<GameManager>().referanceParentPlayer.GetComponent<ParentPlayerController>()
+                                .PlayerStack.Remove(gm.GetComponent<GameManager>().referanceParentPlayer
+                                    .GetComponent<ParentPlayerController>()
+                                    .PlayerStack[i]);
+                            gm.GetComponent<GameManager>().referanceParentPlayer.GetComponent<ParentPlayerController>()
+                                .PlayerStack[i].transform.GetChild(0).GetComponent<MeshFilter>().mesh = null;
+                            gm.GetComponent<GameManager>().referanceParentPlayer.GetComponent<ParentPlayerController>()
+                                .PlayerStack[i].transform.GetChild(0).GetComponent<Collider>().enabled = false;
+                            gm.GetComponent<GameManager>().referanceParentPlayer.GetComponent<ParentPlayerController>()
+                                .PlayerStack[i].GetComponent<Collider>().enabled = false;
+                            gm.GetComponent<GameManager>().referanceParentPlayer.GetComponent<ParentPlayerController>()
+                                .PlayerStack[i].transform.position = new Vector3(0, 0, 0);
+                            gm.GetComponent<GameManager>().referanceParentPlayer.GetComponent<ParentPlayerController>()
+                                .PlayerStack[i].GetComponent<LattersController>().node = gm;
+                        }
+                    }
+
+                }else if (lc.ownership == "AI")
+                {
+                    
+                }
+            }
+            
+            
+            
+            else
+            {
+                
+            }
+        }
+
+
+
+        if (other.gameObject.tag == "Letter")
+        {
+            if (other.gameObject.GetComponent<LattersController>().ownership == "Player")
+            {
+                indexOf = gm.GetComponent<GameManager>().referanceParentPlayer.GetComponent<ParentPlayerController>().PlayerStack
+                    .IndexOf(other.gameObject);
+            
+                for (int i = 1;
+                    i < gm.GetComponent<GameManager>().referanceParentPlayer.GetComponent<ParentPlayerController>().PlayerStack
+                        .Count;
+                    i++)
+                {
+                    if (i > indexOf)
+                    {
+                        if (!gm.GetComponent<GameManager>().referanceParentPlayer.GetComponent<ParentPlayerController>()
+                            .PlayerStack[i].gameObject.GetComponent<LattersController>().isProtected)
+                        {
+                            gm.GetComponent<GameManager>().referanceParentPlayer.GetComponent<ParentPlayerController>()
+                                .PlayerStack[i].gameObject.GetComponent<LattersController>().isDest = true;
+                        }
+                    }
+                }
+                ObsMechanics(true);
+            }
+            else if (other.gameObject.GetComponent<LattersController>().ownership == "AI")
+            {
+                
+            }
+
+        }
+
+*/
+
     }
 }

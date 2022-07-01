@@ -18,9 +18,11 @@ public class LattersController : MonoBehaviour
     private float xAngle;
     private float yPos;
     public string ownership;
+    public bool isDest;
 
     void Start()
     {
+        isDest = false;
         isProtected = false;
         controlGroup = 0;
         level = 1;

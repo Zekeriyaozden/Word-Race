@@ -53,12 +53,9 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/CollectController.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/AIController.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/ObstacleController.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/LattersController.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/LetterBoxController.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/EndGameCameraAnim.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/EngGameplay.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/GateController.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/LattersEndGame.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/LetterBoardGenerator.cs" />
@@ -68,6 +65,9 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/CameraController.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/HintTableController.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/RunnerFinishController.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/LattersController.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/GateController.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/ObstacleController.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="2ALaX7nMpAflu6fvhSwVNGOdx6e" />
@@ -125,7 +125,8 @@
       <workItem from="1656572051327" duration="11870000" />
       <workItem from="1656600477474" duration="5785000" />
       <workItem from="1656658418970" duration="3136000" />
-      <workItem from="1656669523569" duration="586000" />
+      <workItem from="1656669523569" duration="7377000" />
+      <workItem from="1656685079974" duration="3158000" />
     </task>
     <servers />
   </component>
