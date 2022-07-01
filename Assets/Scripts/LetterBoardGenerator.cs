@@ -23,7 +23,7 @@ public class LetterBoardGenerator : MonoBehaviour
                 }
                 temp.GetComponent<Rigidbody>().isKinematic = true;
                 temp.GetComponent<Rigidbody>().useGravity = false;
-                temp.GetComponent<Collider>().enabled = false;
+                temp.GetComponent<Collider>().isTrigger = true;
                 temp.transform.GetChild(0).GetComponent<Collider>().enabled = false;
                 
                 temp.transform.localPosition = (startPos + (new Vector3(3.6628f, 0, 0) * i));
@@ -38,7 +38,7 @@ public class LetterBoardGenerator : MonoBehaviour
                 }
                 temp.GetComponent<Rigidbody>().isKinematic = true;
                 temp.GetComponent<Rigidbody>().useGravity = false;
-                temp.GetComponent<Collider>().enabled = false;
+                temp.GetComponent<Collider>().isTrigger = true;
                 temp.transform.GetChild(0).GetComponent<Collider>().enabled = false;
                 temp.transform.localPosition = (startPos + new Vector3(0,3.1430f,0) + (new Vector3(3.6628f, 0, 0) * (i % 5)));
                 temp.transform.eulerAngles = new Vector3(90f, 180f, 0);
@@ -52,7 +52,7 @@ public class LetterBoardGenerator : MonoBehaviour
                 }
                 temp.GetComponent<Rigidbody>().isKinematic = true;
                 temp.GetComponent<Rigidbody>().useGravity = false;
-                temp.GetComponent<Collider>().enabled = false;
+                temp.GetComponent<Collider>().isTrigger = true;
                 temp.transform.GetChild(0).GetComponent<Collider>().enabled = false;
                 temp.transform.localPosition = (startPos + new Vector3(0, (3.1430f * 2f),0) + (new Vector3(3.6628f, 0, 0) * (i % 5)));
                 temp.transform.eulerAngles = new Vector3(90f, 180f, 0);

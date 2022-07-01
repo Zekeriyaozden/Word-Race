@@ -7713,17 +7713,17 @@ MonoBehaviour:
   boardLetters:
   - {fileID: 6199077535374202478, guid: 65f127cc9517e66408d282ae0135de6f, type: 3}
   - {fileID: 2183889246324795510, guid: dcb7218f038cc26469ea5d65db521769, type: 3}
-  - {fileID: 4099294666154683890, guid: 45378113b2c050242ae07f8423ac6876, type: 3}
+  - {fileID: 332834980517669968, guid: a48bbccde47ec114084485f966ea36cb, type: 3}
   - {fileID: 7914137405120929501, guid: 63a0a04d6f5445741b59a74215840674, type: 3}
   - {fileID: 8454724743246069134, guid: bfbe579d4c51b3a48a7d2e60ff183266, type: 3}
-  - {fileID: 680718840531063869, guid: 7095c805e181a99429740c836c3e7de3, type: 3}
+  - {fileID: 5403742837092591464, guid: 93bc00bf4fd926d4f92eb2b7c612f10e, type: 3}
   - {fileID: 2080942416963215889, guid: 89b4f69ee7c8a164183612dc645255a0, type: 3}
   - {fileID: 1256352754197748855, guid: 531815a1d861a1b4eb6d960344a25d24, type: 3}
-  - {fileID: 7902851969380519580, guid: b59e66fd97361844692e5f6a0197ba48, type: 3}
+  - {fileID: 3240791104559247317, guid: 5c1681cf648a9f949b330044b81d4c8e, type: 3}
   - {fileID: 7746852175418124957, guid: 074fdbdfe6b05094a809c0d56802b1b4, type: 3}
   - {fileID: 2183889246324795510, guid: dcb7218f038cc26469ea5d65db521769, type: 3}
-  - {fileID: 7914137405120929501, guid: 63a0a04d6f5445741b59a74215840674, type: 3}
-  - {fileID: 7975747522493388461, guid: 78152ec9f40b5ff42b832919468e81b1, type: 3}
+  - {fileID: 9186391031905091690, guid: 7ad25d20bfad12346be2937fc03a2111, type: 3}
+  - {fileID: 3025345854526241228, guid: 26e9275de08294a49b97179212f80f72, type: 3}
   - {fileID: 7902851969380519580, guid: b59e66fd97361844692e5f6a0197ba48, type: 3}
   - {fileID: 8053463694172074200, guid: c70437411467ce8438e08f44afdcc995, type: 3}
 --- !u!1 &4759751676563613715
@@ -8631,6 +8631,7 @@ GameObject:
   - component: {fileID: 6626545332509032171}
   - component: {fileID: 8940419965361179169}
   - component: {fileID: 8940419965361179170}
+  - component: {fileID: 8940419965361179171}
   m_Layer: 0
   m_Name: Hint Tab
   m_TagString: Untagged
@@ -9177,6 +9178,19 @@ MonoBehaviour:
   - {fileID: 1516863912}
   - {fileID: 263030419}
   onGameEnd: 0
+--- !u!114 &8940419965361179171
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7427065698935270388}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f53f118451fe1da4dac850eaacae4f1d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isCanPlayeble: 0
 --- !u!1 &8957620946555350822
 GameObject:
   m_ObjectHideFlags: 0

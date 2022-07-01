@@ -31,6 +31,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/GateController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/LattersEndGame.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/LetterBoxController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/EndGameMechanics.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/EngGameplay.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/LetterMovementEndGame.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
@@ -59,12 +60,13 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/CameraController.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/EngGameplay.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/LetterMovementEndGame.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/HintTableController.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/GateController.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/LattersEndGame.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/LetterBoardGenerator.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/RunnerFinishController.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/LetterBoardGenerator.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/HintTableController.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/EndGameMechanics.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="2ALaX7nMpAflu6fvhSwVNGOdx6e" />
@@ -120,7 +122,7 @@
       <workItem from="1656075575422" duration="708000" />
       <workItem from="1656426602393" duration="8195000" />
       <workItem from="1656572051327" duration="11870000" />
-      <workItem from="1656600477474" duration="2433000" />
+      <workItem from="1656600477474" duration="5784000" />
     </task>
     <servers />
   </component>
