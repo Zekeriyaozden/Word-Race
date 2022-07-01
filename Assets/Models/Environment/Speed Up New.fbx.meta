@@ -1,41 +1,38 @@
 fileFormatVersion: 2
-guid: d58a14e008eb6b747b10856fca094b5d
+guid: 4d8a6a6faa199a3408f76e840c85c768
 ModelImporter:
   serializedVersion: 21202
   internalIDToNameTable:
   - first:
-      74: 1441041791090075600
-    second: Armature.002Action
+      74: 3379960435701499455
+    second: Armature.005|Armature.001Action
   - first:
-      74: 6906267723572508546
-    second: Armature.002|Armature.001Action
+      74: 7413068192051285482
+    second: Armature.005|Armature.005Action
   - first:
-      74: 5138602965388526686
-    second: Armature.002|Armature.002Action
+      74: -1720620320842834001
+    second: Armature.005|Letter Opener.001Action
   - first:
-      74: -4453253774542818866
-    second: Armature.002|Letter Opener.001Action
+      74: 8100075288453736571
+    second: Armature.005|Main CharacterAction
   - first:
-      74: -1679147229696482084
-    second: Armature.002|Main CharacterAction
+      74: -5702358096914177905
+    second: Armature.005|Path_02Action
   - first:
-      74: 7457075421271602363
-    second: Armature.002|Path_02Action
+      74: -7909271367030719439
+    second: Armature.005|Shader NodetreeAction
   - first:
-      74: 7411072021968680404
-    second: Armature.002|Shader NodetreeAction
+      74: 7914109824472962380
+    second: Armature.005|Shader NodetreeAction.001
   - first:
-      74: 6177945362407611318
-    second: Armature.002|Shader NodetreeAction.001
+      74: 7254780232436006200
+    second: Armature.005|Shader NodetreeAction.002
   - first:
-      74: -400343489153535317
-    second: Armature.002|Shader NodetreeAction.002
+      74: 8929265169795850749
+    second: Armature.005|Shader NodetreeAction.003
   - first:
-      74: 4650330318842052545
-    second: Armature.002|Shader NodetreeAction.003
-  - first:
-      74: -5121685910696746891
-    second: Armature.002|Speed Up NewAction
+      74: -6581511432100778802
+    second: Armature.005|Speed Up NewAction
   externalObjects: {}
   materials:
     materialImportMode: 2
