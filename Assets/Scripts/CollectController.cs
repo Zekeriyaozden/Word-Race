@@ -41,6 +41,7 @@ public class CollectController : MonoBehaviour
                 .GetComponent<ParentPlayerController>().PlayerStack[gm.GetComponent<GameManager>().referanceParentPlayer
                     .GetComponent<ParentPlayerController>().PlayerStack.Count - 2];
             gameObject.GetComponent<Rigidbody>().useGravity = true;
+            gameObject.GetComponent<Rigidbody>().isKinematic = false;
             gm.GetComponent<CollectAnimations>().PlayerCollectAnim();
             gameObject.GetComponent<CollectController>().enabled = false;
         }
@@ -70,6 +71,7 @@ public class CollectController : MonoBehaviour
             
             //gameObject.GetComponent<BoxCollider>().enabled = false;
             gameObject.GetComponent<Rigidbody>().useGravity = true;
+            gameObject.GetComponent<Rigidbody>().isKinematic = false;
             gameObject.GetComponent<CollectController>().enabled = false;   
         }
     }

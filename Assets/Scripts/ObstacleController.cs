@@ -1,16 +1,16 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class ObstacleController : MonoBehaviour
 {
+    public float zMin;
+    public float zMax;
     private GameObject gm;
     private int index;
     private int count;
-    public float xIndex;
-    public float zIndex;
     private void Start()
     {
         gm = GameObject.Find("GameManager");
@@ -94,21 +94,25 @@ public class ObstacleController : MonoBehaviour
         }
     }
 
-    private void LetterCollectible(GameObject go)
+    private void LetterCollectible(GameObject go , Vector3 v3)
     {
+        float z = Random.Range(zMin,zMax);
+        float x = Random.Range(-12f,-6.5f);
         go.transform.SetParent(null);
         Destroy(go.GetComponent<CollectController>());
         Destroy(go.GetComponent<LattersController>());
         go.AddComponent<LattersController>().enabled = false;
         go.AddComponent<CollectController>();
         go.GetComponent<CollectController>().enabled = true;
-        go.transform.position = new Vector3(0, 0, 0);
+        go.transform.position = v3 + new Vector3(0,0,z);
+        go.transform.position = new Vector3(x,go.transform.position.y,go.transform.position.z);
         go.GetComponent<Rigidbody>().useGravity = false;
+        go.GetComponent<Rigidbody>().isKinematic = true;
         go.GetComponent<AITarget>().targetable = true;
 
     }
     
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerEnter(Collider other )
     {
 
     if (other.gameObject.tag == "Letter")
@@ -147,7 +151,7 @@ public class ObstacleController : MonoBehaviour
                     {
                         gm.GetComponent<GameManager>().referanceParentPlayer.GetComponent<ParentPlayerController>()
                             .PlayerStack.Remove(tmpIsNotProtected[i]);
-                        LetterCollectible(tmpIsNotProtected[i]);
+                        LetterCollectible(tmpIsNotProtected[i] , tmpIsNotProtected[i].gameObject.transform.position);
                         //tmpIsNotProtected[i].GetComponent<LattersController>().makeObjectNotWork();
                     }
 
