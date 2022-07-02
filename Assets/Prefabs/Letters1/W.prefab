@@ -98,6 +98,7 @@ GameObject:
   - component: {fileID: 218333113380936232}
   - component: {fileID: 5978590945449412616}
   - component: {fileID: 2135616851818030615}
+  - component: {fileID: -7842386940183062505}
   m_Layer: 0
   m_Name: W
   m_TagString: Letter
@@ -169,6 +170,7 @@ MonoBehaviour:
   node: {fileID: 0}
   distanceZ: 0
   ownership: 
+  isDest: 0
 --- !u!114 &218333113380936232
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -210,6 +212,26 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LatterChar: W
+--- !u!95 &-7842386940183062505
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5403742837092591464}
+  m_Enabled: 0
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 95c6ee648fc73b0448dfea69f1da43e1, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &5598248282854271069
 GameObject:
   m_ObjectHideFlags: 0

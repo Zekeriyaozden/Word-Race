@@ -112,6 +112,7 @@ GameObject:
   - component: {fileID: 6582664986079415820}
   - component: {fileID: 8966296430322895894}
   - component: {fileID: -5135030413781432154}
+  - component: {fileID: -7606190655242413217}
   m_Layer: 0
   m_Name: Q
   m_TagString: Letter
@@ -183,6 +184,7 @@ MonoBehaviour:
   node: {fileID: 0}
   distanceZ: 0
   ownership: 
+  isDest: 0
 --- !u!114 &6582664986079415820
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -224,6 +226,26 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LatterChar: Q
+--- !u!95 &-7606190655242413217
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2820140039376420564}
+  m_Enabled: 0
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 95c6ee648fc73b0448dfea69f1da43e1, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &8454402086344233159
 GameObject:
   m_ObjectHideFlags: 0

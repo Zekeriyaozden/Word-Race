@@ -68,8 +68,12 @@
           <e p="PlayerController.cs" t="Include" />
           <e p="ReferanceController.cs" t="Include" />
           <e p="RunnerFinishController.cs" t="Include" />
+          <e p="SaveLoadManager.cs" t="Include" />
           <e p="SceneController.cs" t="Include" />
+          <e p="ScrableBoardController.cs" t="Include" />
+          <e p="ScrableCaseController.cs" t="Include" />
           <e p="Speeder.cs" t="Include" />
+          <e p="UIManager.cs" t="Include" />
         </e>
         <e p="TextMesh Pro" t="Include">
           <e p="Fonts" t="Include">
