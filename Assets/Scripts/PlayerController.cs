@@ -48,6 +48,15 @@ public class PlayerController : MonoBehaviour
                     gameObject.transform.eulerAngles = new Vector3(0, transform.eulerAngles.y,
                         transform.eulerAngles.z);
                     isJumping = false;
+                    foreach (var stackMember in gameManager.GetComponent<GameManager>().referanceParentPlayer.GetComponent<ParentPlayerController>().PlayerStack)
+                    {
+                        if (stackMember != gameManager.GetComponent<GameManager>().referanceParentPlayer
+                            .GetComponent<ParentPlayerController>().PlayerStack[0])
+                        {
+                            stackMember.gameObject.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;   
+                            stackMember.gameObject.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeRotationY | RigidbodyConstraints.FreezeRotationZ;
+                        }
+                    }
                     gameManager.GetComponent<GameManager>().speedMainChar = gameManager.GetComponent<GameManager>().speedTmp;
                 }
             }

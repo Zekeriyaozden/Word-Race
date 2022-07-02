@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -24,11 +25,26 @@ public class CollectAnimations : MonoBehaviour
         count = playerParent.GetComponent<ParentPlayerController>().PlayerStack.Count;
         for (int i = count - 1; i > 0; i--)
         {
-            playerParent.GetComponent<ParentPlayerController>().PlayerStack[i].gameObject.transform.localScale =
-                new Vector3(.8f, .8f, .8f);
+            try
+            {
+                playerParent.GetComponent<ParentPlayerController>().PlayerStack[i].gameObject.transform.localScale =
+                    new Vector3(.8f, .8f, .8f);
+            }
+            catch (Exception e)
+            {
+                Debug.Log(e);
+            }
+           
             yield return new WaitForSeconds(AnimWaitTime);
-            playerParent.GetComponent<ParentPlayerController>().PlayerStack[i].gameObject.transform.localScale =
-                new Vector3(.6f, .6f, .6f);
+            try
+            {
+                playerParent.GetComponent<ParentPlayerController>().PlayerStack[i].gameObject.transform.localScale =
+                    new Vector3(.6f, .6f, .6f);
+            }
+            catch (Exception e)
+            {
+                Debug.Log(e);
+            }
         }
 
 

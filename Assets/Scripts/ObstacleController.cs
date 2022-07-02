@@ -214,7 +214,8 @@ public class ObstacleController : MonoBehaviour
                         gm.GetComponent<GameManager>().referanceParentAI.GetComponent<ParentAIController>()
                             .AIStack.Remove(tmpIsNotProtected[i]);
                         Debug.Log(tmpIsNotProtected[i]);
-                        tmpIsNotProtected[i].GetComponent<LattersController>().makeObjectNotWork();
+                        LetterCollectible(tmpIsNotProtected[i] , tmpIsNotProtected[i].gameObject.transform.position);
+                        //tmpIsNotProtected[i].GetComponent<LattersController>().makeObjectNotWork();
                     }
 
 

@@ -2316,8 +2316,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a239bb4e7e804544dbeb892571f1959a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  zMin: 0
-  zMax: 0
+  zMin: 10
+  zMax: 20
 --- !u!1 &832535998
 GameObject:
   m_ObjectHideFlags: 0
@@ -4445,6 +4445,14 @@ PrefabInstance:
     - target: {fileID: 5333027880104506383, guid: f142553a814424b499902d12d7de8965, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 8.77
+      objectReference: {fileID: 0}
+    - target: {fileID: 5586717419512375323, guid: f142553a814424b499902d12d7de8965, type: 3}
+      propertyPath: zMax
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 5586717419512375323, guid: f142553a814424b499902d12d7de8965, type: 3}
+      propertyPath: zMin
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 5586717420193595438, guid: f142553a814424b499902d12d7de8965, type: 3}
       propertyPath: m_ApplyRootMotion
