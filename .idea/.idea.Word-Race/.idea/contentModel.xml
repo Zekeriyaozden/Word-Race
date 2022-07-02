@@ -52,6 +52,7 @@
           <e p="Deneme.cs" t="Include" />
           <e p="EndGameMechanics.cs" t="Include" />
           <e p="EngGameplay.cs" t="Include" />
+          <e p="EnvelopeController.cs" t="Include" />
           <e p="GameManager.cs" t="Include" />
           <e p="GateController.cs" t="Include" />
           <e p="HintTableController.cs" t="Include" />

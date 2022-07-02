@@ -9,10 +9,8 @@ public class ObstacleController : MonoBehaviour
     private GameObject gm;
     private int index;
     private int count;
-    private int indexOf;
     private void Start()
     {
-        indexOf = 0;
         gm = GameObject.Find("GameManager");
     }
 
@@ -55,6 +53,39 @@ public class ObstacleController : MonoBehaviour
                         node;
                     node = gm.gameObject.GetComponent<GameManager>().referanceParentPlayer
                         .GetComponent<ParentPlayerController>().PlayerStack[i];
+                    i++;
+                }
+            }
+        }
+        else
+        {
+            GameObject node = gm.gameObject.GetComponent<GameManager>().referanceParentAI.GetComponent<ParentAIController>().AIStack[0].gameObject;
+            int i = 1;
+            while (i < gm.gameObject.GetComponent<GameManager>().referanceParentAI.GetComponent<ParentAIController>().AIStack.Count)
+            {
+                if (gm.gameObject.GetComponent<GameManager>().referanceParentAI
+                    .GetComponent<ParentAIController>().AIStack[i].GetComponent<LattersController>().isDest)
+                {
+                    if (gm.gameObject.GetComponent<GameManager>().referanceParentAI
+                        .GetComponent<ParentAIController>().AIStack.Count > i + 1)
+                    {
+                        gm.gameObject.GetComponent<GameManager>().referanceParentAI
+                            .GetComponent<ParentAIController>().AIStack[i + 1].GetComponent<LattersController>().node = node;
+                    }
+                    gm.gameObject.GetComponent<GameManager>().referanceParentAI
+                        .GetComponent<ParentAIController>().AIStack[i].GetComponent<LattersController>()
+                        .enabled = false;
+                    gm.gameObject.GetComponent<GameManager>().referanceParentAI
+                        .GetComponent<ParentAIController>().AIStack.RemoveAt(i);
+                }
+                else
+                {
+                    gm.gameObject.GetComponent<GameManager>().referanceParentAI
+                            .GetComponent<ParentAIController>().AIStack[i].GetComponent<LattersController>()
+                            .node =
+                        node;
+                    node = gm.gameObject.GetComponent<GameManager>().referanceParentAI
+                        .GetComponent<ParentAIController>().AIStack[i];
                     i++;
                 }
             }
