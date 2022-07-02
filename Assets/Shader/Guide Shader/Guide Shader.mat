@@ -20,7 +20,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Speed Up Shader 4
+  m_Name: Guide Shader
   m_Shader: {fileID: -6465566751694194690, guid: fa821b18ef4cb2f469f1ebe3fa417586, type: 3}
   m_ValidKeywords: []
   m_InvalidKeywords: []
