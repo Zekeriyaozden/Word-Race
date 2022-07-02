@@ -9,6 +9,8 @@ public class ObstacleController : MonoBehaviour
     private GameObject gm;
     private int index;
     private int count;
+    public float xIndex;
+    public float zIndex;
     private void Start()
     {
         gm = GameObject.Find("GameManager");
@@ -92,6 +94,20 @@ public class ObstacleController : MonoBehaviour
         }
     }
 
+    private void LetterCollectible(GameObject go)
+    {
+        go.transform.SetParent(null);
+        Destroy(go.GetComponent<CollectController>());
+        Destroy(go.GetComponent<LattersController>());
+        go.AddComponent<LattersController>().enabled = false;
+        go.AddComponent<CollectController>();
+        go.GetComponent<CollectController>().enabled = true;
+        go.transform.position = new Vector3(0, 0, 0);
+        go.GetComponent<Rigidbody>().useGravity = false;
+        go.GetComponent<AITarget>().targetable = true;
+
+    }
+    
     private void OnTriggerEnter(Collider other)
     {
 
@@ -131,7 +147,8 @@ public class ObstacleController : MonoBehaviour
                     {
                         gm.GetComponent<GameManager>().referanceParentPlayer.GetComponent<ParentPlayerController>()
                             .PlayerStack.Remove(tmpIsNotProtected[i]);
-                        tmpIsNotProtected[i].GetComponent<LattersController>().makeObjectNotWork();
+                        LetterCollectible(tmpIsNotProtected[i]);
+                        //tmpIsNotProtected[i].GetComponent<LattersController>().makeObjectNotWork();
                     }
 
 
