@@ -18,10 +18,10 @@ public class ObstacleController : MonoBehaviour
 
     private IEnumerator particle(GameObject other)
     {
-        /*GameObject temp =  Instantiate(gm.GetComponent<GameManager>().particle, other.gameObject.transform.position,
-            Quaternion.identity);*/
+        GameObject temp =  Instantiate(gm.GetComponent<GameManager>().particle, other.gameObject.transform.position,
+            Quaternion.identity);
         yield return new WaitForSeconds(.2f);
-        /*Destroy(temp.gameObject);*/
+        Destroy(temp.gameObject);
     }
 
     private void ObsMechanics(bool isMain)

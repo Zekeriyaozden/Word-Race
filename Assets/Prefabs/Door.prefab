@@ -715,6 +715,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4615493360198788834}
   - component: {fileID: 4615493360198788835}
+  - component: {fileID: 2393313746732026369}
+  - component: {fileID: 6444672666605919811}
   m_Layer: 0
   m_Name: Radial Shine Win (3)
   m_TagString: Untagged
@@ -789,6 +791,35 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!65 &2393313746732026369
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4615493360198788832}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 6.0865946, y: 7.987745, z: 0.5105225}
+  m_Center: {x: 0.080788285, y: -0.22387278, z: 0.15526123}
+--- !u!114 &6444672666605919811
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4615493360198788832}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16e506f840a762c42bde3c9bb57ceee1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isChangeLevel: 0
+  secondLevelLetterMesh: {fileID: -5495902117074765545, guid: 6ce4755ea74822b4881a4f3716631970, type: 3}
+  thirdLevelLetterMesh: {fileID: -5495902117074765545, guid: 6d98ef4f7624a9c4ba0a8cb8bdac959a, type: 3}
+  numberOfGroup: 0
 --- !u!1 &4615493360312572279
 GameObject:
   m_ObjectHideFlags: 0
@@ -836,6 +867,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4615493360490537792}
   - component: {fileID: 4615493360490537793}
+  - component: {fileID: 3114489015660338952}
+  - component: {fileID: 3251092861810500239}
   m_Layer: 0
   m_Name: Radial Shine Win (1)
   m_TagString: Untagged
@@ -910,6 +943,35 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!65 &3114489015660338952
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4615493360490537854}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 6.376562, y: 8.100967, z: 0.5992447}
+  m_Center: {x: -0.5175448, y: -0.8939534, z: 0.19962233}
+--- !u!114 &3251092861810500239
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4615493360490537854}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16e506f840a762c42bde3c9bb57ceee1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isChangeLevel: 1
+  secondLevelLetterMesh: {fileID: -5495902117074765545, guid: 6ce4755ea74822b4881a4f3716631970, type: 3}
+  thirdLevelLetterMesh: {fileID: -5495902117074765545, guid: 6d98ef4f7624a9c4ba0a8cb8bdac959a, type: 3}
+  numberOfGroup: 0
 --- !u!1 &4615493360633085112
 GameObject:
   m_ObjectHideFlags: 0
