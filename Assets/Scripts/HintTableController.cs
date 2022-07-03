@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class HintTableController : MonoBehaviour
 {
-    public List<GameObject> LetterBoard;
+    public Material[] whiteAndTarget;
     public float letterSpeed;
     public GameObject targetUI;
     public List<GameObject> AnswerLetters;
@@ -75,40 +75,7 @@ public class HintTableController : MonoBehaviour
         }
     }
     
-
-    /*public void detectLatter()
-    {
-        if (gm.GetComponent<GameManager>().inGameEnd)
-        {
-            while (parentPlayer.GetComponent<ParentPlayerController>().PlayerStack.Count > 1)
-            {
-                bool isInBoard = false;
-                foreach (var board in AnswerLetters)
-                {
-                    Debug.Log(board.GetComponent<LetterBoxController>().latter);
-                    if (board.GetComponent<LetterBoxController>().latter == parentPlayer.GetComponent<ParentPlayerController>().PlayerStack[1].GetComponent<LattersEndGame>().LatterChar)
-                    {
-                        Debug.Log(parentPlayer.GetComponent<ParentPlayerController>().PlayerStack[1].name);
-                        isInBoard = true;
-                    }
-                }
-
-                if (isInBoard)
-                {
-                    goTable(parentPlayer.GetComponent<ParentPlayerController>().PlayerStack[1]);
-                    parentPlayer.GetComponent<ParentPlayerController>().PlayerStack
-                        .Remove(parentPlayer.GetComponent<ParentPlayerController>().PlayerStack[1]);
-                }
-                else
-                {
-                    goUI(parentPlayer.GetComponent<ParentPlayerController>().PlayerStack[1]);
-                    parentPlayer.GetComponent<ParentPlayerController>().PlayerStack
-                        .Remove(parentPlayer.GetComponent<ParentPlayerController>().PlayerStack[1]);
-                }
-            }
-        }
-    }*/
-
+    
     public GameObject findTargetBox()
     {
         int cnt = AnswerLetters.Count;
@@ -124,6 +91,25 @@ public class HintTableController : MonoBehaviour
     }
     void Update()
     {
+        
+        if (gameObject.GetComponent<HintTableController>().findTargetBox() != null)
+        {
+            Material[] mt = gameObject.GetComponent<HintTableController>().findTargetBox().GetComponent<MeshRenderer>().materials;
+            mt[0] = whiteAndTarget[1];
+            gameObject.GetComponent<HintTableController>().findTargetBox().GetComponent<MeshRenderer>().materials = mt;
+        }
+        
+        for (int i = 0; i < gameObject.GetComponent<HintTableController>().AnswerLetters.Count; i++)
+        {
+            if (gameObject.GetComponent<HintTableController>().AnswerLetters[i] !=
+                gameObject.GetComponent<HintTableController>().findTargetBox())
+            {
+                Debug.Log("aa");
+                Material[] mt = gameObject.GetComponent<HintTableController>().AnswerLetters[i].GetComponent<MeshRenderer>().materials;
+                mt[0] = whiteAndTarget[0];
+            }
+        }
+        
         if (onGameEnd)
         {
             

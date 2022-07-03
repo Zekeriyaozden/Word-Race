@@ -5,6 +5,7 @@ using UnityEngine;
 public class AIController : MonoBehaviour
 {
     private float _speed;
+    public float distanceCl;
     private float direction;
     private float speedTmpForBack;
     public List<GameObject> ObjectList = new List<GameObject>();
@@ -19,6 +20,10 @@ public class AIController : MonoBehaviour
     private bool gameIsGoing;
     void Start()
     {
+        if (distanceCl == null || distanceCl == 0)
+        {
+            distanceCl = 40f;
+        }
         gameManager = GameObject.Find("GameManager");
         flag = true;
         StartCoroutine(Timer());
@@ -91,7 +96,7 @@ public class AIController : MonoBehaviour
             }
             else
             {
-                if (_target.transform.position.z < gameObject.transform.position.z + 40f)
+                if (_target.transform.position.z < gameObject.transform.position.z + distanceCl)
                 {
                     _ObjList.Add(_target);
                 }

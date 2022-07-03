@@ -11,21 +11,32 @@ public class UIManagerRunner : MonoBehaviour
     private GameObject gm;
     public int HintIndex;
     public GameObject text;
+    public GameObject tryAgain;
     void Start()
     {
         HintIndex = 0;
         gm = GameObject.Find("GameManager");
     }
 
-    public void HintVisible()
+    public void HintVisible(bool isVisib)
     {
-        Hint.gameObject.transform.parent.gameObject.SetActive(true);
+        Hint.gameObject.transform.parent.gameObject.SetActive(isVisib);
     }
 
     public void NextVisible()
     {
         Hint.gameObject.transform.parent.GetChild(0).gameObject.SetActive(true);
         Hint.gameObject.transform.parent.GetChild(1).gameObject.SetActive(false);
+    }
+
+    public void tryAgainVisible()
+    {
+        tryAgain.gameObject.SetActive(true);
+    }
+
+    public void tryAgainController()
+    {
+        Debug.Log("sds");
     }
     
 

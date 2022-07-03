@@ -40,6 +40,10 @@ public class GameManager : MonoBehaviour
     }
     void Update()
     {
+
+        
+        HintTab.GetComponent<HintTableController>().findTargetBox();
+        
         if (inGameEnd && !gameIsGoing)
         {
             letterGenerator.GetComponent<LetterBoardGenerator>().enabled = true;

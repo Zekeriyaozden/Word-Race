@@ -1,10 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class EndGameMechanics : MonoBehaviour
 {
-
+    public GameObject[] XCross;
+    public GameObject[] xCrossTarget;
     public bool isCanPlayeble;
     private int failCounter;
     private GameObject gm;
@@ -27,18 +29,23 @@ public class EndGameMechanics : MonoBehaviour
     {
         if (i == 1)
         {
-            
+            XCross[0].gameObject.AddComponent<FailCrossController>().target = xCrossTarget[0].gameObject.transform.position;
         }else if (i == 2)
         {
-            
+            XCross[1].gameObject.AddComponent<FailCrossController>().target = xCrossTarget[1].gameObject.transform.position;
         }else if (i == 3)
         {
-            
+            XCross[2].gameObject.AddComponent<FailCrossController>().target = xCrossTarget[2].gameObject.transform.position;
         }
     }
     
     void Update()
     {
+        if (failCounter >= 3)
+        {
+            gm.GetComponent<GameManager>().UIManagerRunner.gameObject.GetComponent<UIManagerRunner>().tryAgainVisible();
+            gm.GetComponent<GameManager>().UIManagerRunner.gameObject.GetComponent<UIManagerRunner>().HintVisible(false);
+        }
         if (gameObject.GetComponent<HintTableController>().findTargetBox() == null)
         {
             isCanPlayeble = false;
@@ -66,6 +73,7 @@ public class EndGameMechanics : MonoBehaviour
                             if (failCounter < 3)
                             {
                                 failCounter++;
+                                fail(failCounter);
                             }
 
                             if (failCounter == 3)
