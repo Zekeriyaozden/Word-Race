@@ -47,6 +47,12 @@ public class UIManagerRunner : MonoBehaviour
     {
 
         text.GetComponent<TextMeshProUGUI>().text= gm.GetComponent<GameManager>().playerScore.ToString();
+
+        if (HintIndex < HintCost.Count)
+        {
+            Hint.gameObject.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = HintCost[HintIndex].ToString();
+        }
+
         
         if (HintCost[HintIndex] > gm.GetComponent<GameManager>().playerScore)
         {
