@@ -112,6 +112,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Try Again UI Button
       objectReference: {fileID: 0}
+    - target: {fileID: 1654063438095419230, guid: 544937ea6618f4346905dc4a277f753f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5502458766534366493, guid: 544937ea6618f4346905dc4a277f753f, type: 3}
       propertyPath: m_RootOrder
       value: 0
