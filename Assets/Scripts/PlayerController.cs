@@ -15,20 +15,52 @@ public class PlayerController : MonoBehaviour
     private bool isTouched;
     private float xCordinate;
     public Quaternion lookAt;
+    public GameObject speedTrailer;
+    public bool isTrailer;
     private bool gameIsGoing;
     //private Vector3 _lookAtV3;
     void Start()
     {
+        isTrailer = false;
         isJumping = false;
         gameManager = GameObject.Find("GameManager");
         _speed = gameManager.GetComponent<GameManager>().speedMainChar;
         xCordinate = 0;
     }
 
+    public void idleAnim()
+    {
+        gameObject.GetComponent<Animator>().SetBool("idle",true);
+        gameObject.GetComponent<Animator>().SetBool("run",false);
+    }
+
     // Update is called once per frame
     void Update()
     {
+        if (isTrailer)
+        {
+            speedTrailer.SetActive(true);
+        }
+        else
+        {
+            speedTrailer.SetActive(false);
+        }
         gameIsGoing = gameManager.GetComponent<GameManager>().gameIsGoing;
+        if (!gameIsGoing)
+        {
+            gameObject.GetComponent<Animator>().SetBool("idle",true);
+            gameObject.GetComponent<Animator>().SetBool("run",false);
+        }
+        else
+        {
+            if (!gameManager.GetComponent<GameManager>().finishController.GetComponent<RunnerFinishController>()
+                .mainCharBool)
+            {
+                gameObject.GetComponent<Animator>().SetBool("idle",false);
+                gameObject.GetComponent<Animator>().SetBool("run",true);
+            }
+        }
+
         if (gameIsGoing)
         {
               

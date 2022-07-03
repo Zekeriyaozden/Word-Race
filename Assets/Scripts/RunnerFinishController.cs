@@ -21,8 +21,12 @@ public class RunnerFinishController : MonoBehaviour
     private bool AICharTrig;
     private GameObject gameManager;
     private GameObject hint;
+    public bool mainCharBool;
+    public bool AIcharBool;
     void Start()
     {
+        mainCharBool = false;
+        AIcharBool = false;
         MainFinish = false;
         AIFinish = false;
         isFinished = false;
@@ -37,6 +41,14 @@ public class RunnerFinishController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (mainCharBool && AIcharBool)
+        {
+            isFinished = true;
+            hint.gameObject.SetActive(true);
+            gameManager.GetComponent<GameManager>().inGameEnd = true;
+            gameManager.GetComponent<GameManager>().gameIsGoing = false;
+            gameManager.GetComponent<GameManager>().UIManagerRunner.GetComponent<UIManagerRunner>().HintVisible(true);
+        }
         if (mainCharTrig)
         {
             if (k < 1f)
@@ -56,7 +68,7 @@ public class RunnerFinishController : MonoBehaviour
                 f += Time.deltaTime * speed;
             }
             float x = Mathf.Lerp(0, 118, f);
-            MainChar.gameObject.GetComponent<PlayerController>().enabled = false;
+            AIChar.gameObject.GetComponent<AIController>().enabled = false;
             AIChar.transform.position = Vector3.Lerp(AICharStart, AICharTarget, f);
             AIChar.transform.eulerAngles = new Vector3(0, x, 0);
         }
@@ -67,29 +79,24 @@ public class RunnerFinishController : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
+            mainCharBool = true;
             MainFinish = true;
             mainCharStart = MainChar.transform.position;
             mainCharTrig = true;
+            gameManager.GetComponent<GameManager>().Player.GetComponent<PlayerController>().idleAnim();
         }
         else if (other.gameObject.tag == "AI")
         {
+            AIcharBool = true;
             AIFinish = true;
             AICharStart = AIChar.transform.position;
             AICharTrig = true;
+            gameManager.GetComponent<GameManager>().AI.GetComponent<AIController>().idleAnim();
         }
         
-        if (MainFinish && AIFinish)
-        {
-           // mainCharStart = MainChar.transform.position;
-            // AICharStart = AIChar.transform.position;
-            isFinished = true;
-            hint.gameObject.SetActive(true);
-            gameManager.GetComponent<GameManager>().inGameEnd = true;
-            gameManager.GetComponent<GameManager>().gameIsGoing = false;
-            gameManager.GetComponent<GameManager>().UIManagerRunner.GetComponent<UIManagerRunner>().HintVisible(true);
-        }
+        
 
-        if (other.gameObject.tag == "Letter")
+            if (other.gameObject.tag == "Letter")
         {
             if (other.gameObject.GetComponent<LattersController>().ownership == "Player")
             {

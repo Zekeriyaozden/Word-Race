@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
+    public GameObject finishController;
     public GameObject UIManagerRunner;
     public int playerScore;
     public bool inGameEnd;

@@ -5,8 +5,7 @@ using UnityEngine;
 
 public class Speeder : MonoBehaviour
 {
-    private MeshRenderer mr;
-    private BoxCollider bc;
+
     private float tmpSpeed;
     public float speedRate;
     private GameObject gm;
@@ -16,8 +15,6 @@ public class Speeder : MonoBehaviour
     void Start()
     {
         gm = GameObject.Find("GameManager");
-        bc = gameObject.GetComponent<BoxCollider>();
-        mr = gameObject.GetComponent<MeshRenderer>();
         isCollected = false;
     }
 
@@ -26,8 +23,7 @@ public class Speeder : MonoBehaviour
     {
         if (isCollected)
         {
-            bc.enabled = false;
-            mr.enabled = false;
+            gameObject.transform.position = new Vector3(0,250,0);
         }
     }
 
@@ -38,9 +34,11 @@ public class Speeder : MonoBehaviour
             tmpSpeed = gm.GetComponent<GameManager>().speedMainChar;
             gm.GetComponent<GameManager>().speedMainChar +=
                 gm.GetComponent<GameManager>().speedMainChar * speedRate / 100f;
+            gm.GetComponent<GameManager>().Player.GetComponent<PlayerController>().isTrailer = true;
         }
         else
         {
+            gm.GetComponent<GameManager>().AI.GetComponent<AIController>().flagTrailer = true;
             Debug.Log(gm.GetComponent<GameManager>().speedAIChar);
             tmpSpeed = gm.GetComponent<GameManager>().speedAIChar;
             gm.GetComponent<GameManager>().speedAIChar +=
@@ -50,10 +48,12 @@ public class Speeder : MonoBehaviour
         yield return new WaitForSeconds(speedTimer);
         if (isMain)
         {
+            gm.GetComponent<GameManager>().Player.GetComponent<PlayerController>().isTrailer = false;
             gm.GetComponent<GameManager>().speedMainChar = tmpSpeed;
         }
         else
         {
+            gm.GetComponent<GameManager>().AI.GetComponent<AIController>().flagTrailer = false;
             Debug.Log("ElseSecond");
             gm.GetComponent<GameManager>().speedAIChar = tmpSpeed;
         }

@@ -5,16 +5,20 @@ using UnityEngine;
 
 public class EndGameMechanics : MonoBehaviour
 {
+    public GameObject greenTick;
+    public GameObject confety;
     public GameObject[] XCross;
     public GameObject[] xCrossTarget;
     public bool isCanPlayeble;
     private int failCounter;
     private GameObject gm;
+    private bool flagConfety;
     void Start()
     {
         gm = GameObject.Find("GameManager");
         isCanPlayeble = true;
         failCounter = 0;
+        flagConfety = true;
     }
 
     private IEnumerator isCanPlayebleFalse()
@@ -38,6 +42,16 @@ public class EndGameMechanics : MonoBehaviour
             XCross[2].gameObject.AddComponent<FailCrossController>().target = xCrossTarget[2].gameObject.transform.position;
         }
     }
+
+    private IEnumerator Confety()
+    {
+
+        while (true)
+        {
+            Instantiate(confety, new Vector3(-9.06f, 12f, 137f), Quaternion.identity);
+            yield return new WaitForSeconds(.6f);
+        }
+    }
     
     void Update()
     {
@@ -49,6 +63,11 @@ public class EndGameMechanics : MonoBehaviour
         if (gameObject.GetComponent<HintTableController>().findTargetBox() == null)
         {
             isCanPlayeble = false;
+            if (flagConfety)
+            {
+                StartCoroutine(Confety());
+                flagConfety = false;
+            }
             gm.GetComponent<GameManager>().UIManagerRunner.GetComponent<UIManagerRunner>().NextVisible();
         }
         if (isCanPlayeble)
@@ -58,13 +77,14 @@ public class EndGameMechanics : MonoBehaviour
                 RaycastHit hitInfo = new RaycastHit();
                 if (Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out hitInfo) && hitInfo.transform.tag == "Letter")
                 {
-                    print ("It's working");
                     if (gameObject.GetComponent<HintTableController>().findTargetBox() != null)
                     {
                         if (hitInfo.transform.gameObject.GetComponent<LattersEndGame>().LatterChar == gameObject
                             .GetComponent<HintTableController>().findTargetBox().GetComponent<LetterBoxController>()
                             .latter)
                         {
+                            GameObject gt = Instantiate(greenTick, hitInfo.transform.position, Quaternion.identity);
+                            gt.transform.localScale = new Vector3(.25f, .25f, .25f);
                             gameObject.GetComponent<HintTableController>().goTable(hitInfo.transform.gameObject,gameObject.GetComponent<HintTableController>().findTargetBox());
                         }
                         else

@@ -51,7 +51,6 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/ParentAIController.cs" />
       <option value="$PROJECT_DIR$/Assets/Deneme.cs" />
       <option value="$PROJECT_DIR$/Assets/ObstacleController.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Speeder.cs" />
       <option value="$PROJECT_DIR$/Assets/LetterSpawner.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Deneme.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/LetterSpawner.cs" />
@@ -68,7 +67,6 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/LattersEndGame.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/DenemeDest.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/CollectController.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/CollectAnimations.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/SaveLoadManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/ScrableCaseController.cs" />
@@ -76,12 +74,14 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/UIManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/ObstacleController.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/FailCrossController.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/UIManagerRunner.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/RunnerFinishController.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/EndGameMechanics.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/HintTableController.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/EndGameMechanics.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Speeder.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/AIController.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/RunnerFinishController.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/UIManagerRunner.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="2ALaX7nMpAflu6fvhSwVNGOdx6e" />
@@ -142,7 +142,7 @@
       <workItem from="1656669523569" duration="7377000" />
       <workItem from="1656685079974" duration="3847000" />
       <workItem from="1656751101731" duration="18620000" />
-      <workItem from="1656840562014" duration="10031000" />
+      <workItem from="1656840562014" duration="17157000" />
     </task>
     <servers />
   </component>

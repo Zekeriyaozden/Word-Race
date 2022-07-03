@@ -18,12 +18,16 @@ public class AIController : MonoBehaviour
     public bool flag;
     public GameObject target;
     private bool gameIsGoing;
+    public GameObject trailer;
+    public bool flagTrailer;
     void Start()
     {
         if (distanceCl == null || distanceCl == 0)
         {
             distanceCl = 40f;
         }
+
+        gameIsGoing = false;
         gameManager = GameObject.Find("GameManager");
         flag = true;
         StartCoroutine(Timer());
@@ -124,10 +128,39 @@ public class AIController : MonoBehaviour
             flag = false;
         }
     }
+    
+    public void idleAnim()
+    {
+        gameObject.GetComponent<Animator>().SetBool("idle",true);
+        gameObject.GetComponent<Animator>().SetBool("run",false);
+    }
 
     // Update is called once per frame
     void Update()
     {
+        if (flagTrailer)
+        {
+            trailer.SetActive(true);
+        }
+        else
+        {
+            trailer.SetActive(false);
+        }
+        if (!gameIsGoing)
+        {
+            gameObject.GetComponent<Animator>().SetBool("idle",true);
+            gameObject.GetComponent<Animator>().SetBool("run",false);
+        }
+        else
+        {
+            if (!gameManager.GetComponent<GameManager>().finishController.GetComponent<RunnerFinishController>()
+                .AIcharBool)
+            {
+                gameObject.GetComponent<Animator>().SetBool("idle",false);
+                gameObject.GetComponent<Animator>().SetBool("run",true);
+            }
+        }
+   
         gameIsGoing = gameManager.GetComponent<GameManager>().gameIsGoing;
         if (gameIsGoing)
         {

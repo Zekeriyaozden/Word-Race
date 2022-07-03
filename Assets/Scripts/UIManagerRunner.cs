@@ -6,6 +6,7 @@ using UnityEngine.UI;
 
 public class UIManagerRunner : MonoBehaviour
 {
+    public GameObject swipe;
     public List<int> HintCost;
     public GameObject Hint;
     private GameObject gm;
@@ -27,6 +28,11 @@ public class UIManagerRunner : MonoBehaviour
     {
         Hint.gameObject.transform.parent.GetChild(0).gameObject.SetActive(true);
         Hint.gameObject.transform.parent.GetChild(1).gameObject.SetActive(false);
+    }
+
+    public void hideSwipe()
+    {
+        swipe.SetActive(false);
     }
 
     public void tryAgainVisible()
@@ -56,6 +62,10 @@ public class UIManagerRunner : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Input.GetMouseButtonDown(0))
+        {
+            hideSwipe();
+        }
 
         text.GetComponent<TextMeshProUGUI>().text= gm.GetComponent<GameManager>().playerScore.ToString();
 
