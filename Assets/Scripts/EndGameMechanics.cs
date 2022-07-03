@@ -14,6 +14,29 @@ public class EndGameMechanics : MonoBehaviour
         isCanPlayeble = true;
         failCounter = 0;
     }
+
+    private IEnumerator isCanPlayebleFalse()
+    {
+        isCanPlayeble = false;
+        yield return new WaitForSeconds(1f);
+        isCanPlayeble = true;
+    }
+
+
+    public void fail(int i)
+    {
+        if (i == 1)
+        {
+            
+        }else if (i == 2)
+        {
+            
+        }else if (i == 3)
+        {
+            
+        }
+    }
+    
     void Update()
     {
         if (gameObject.GetComponent<HintTableController>().findTargetBox() == null)

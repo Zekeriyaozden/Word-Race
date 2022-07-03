@@ -34,6 +34,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/LattersEndGame.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/LetterBoxController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/EndGameMechanics.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/FailCrossController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/EngGameplay.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/EnvelopeController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/LetterMovementEndGame.cs" root0="FORCE_HIGHLIGHTING" />
@@ -75,11 +76,12 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/ScrableBoardController.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/UIManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/HintTableController.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/EndGameMechanics.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/RunnerFinishController.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/ObstacleController.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/UIManagerRunner.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/EndGameMechanics.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/FailCrossController.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="2ALaX7nMpAflu6fvhSwVNGOdx6e" />
@@ -140,7 +142,7 @@
       <workItem from="1656669523569" duration="7377000" />
       <workItem from="1656685079974" duration="3847000" />
       <workItem from="1656751101731" duration="18620000" />
-      <workItem from="1656840562014" duration="1462000" />
+      <workItem from="1656840562014" duration="3368000" />
     </task>
     <servers />
   </component>

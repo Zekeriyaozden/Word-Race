@@ -80,7 +80,7 @@ public class AIController : MonoBehaviour
         for(int i = 0 ; i < ObjectList.Count ; i++)
         {
             GameObject  _target  = ObjectList[i].gameObject;
-         
+            
             if (_target.gameObject.transform.position.z < gameObject.transform.position.z)
             {
                 ObjectList.Remove(_target);
