@@ -7,13 +7,20 @@ public class EndGameMechanics : MonoBehaviour
 
     public bool isCanPlayeble;
     private int failCounter;
+    private GameObject gm;
     void Start()
     {
+        gm = GameObject.Find("GameManager");
         isCanPlayeble = true;
         failCounter = 0;
     }
     void Update()
     {
+        if (gameObject.GetComponent<HintTableController>().findTargetBox() == null)
+        {
+            isCanPlayeble = false;
+            gm.GetComponent<GameManager>().UIManagerRunner.GetComponent<UIManagerRunner>().NextVisible();
+        }
         if (isCanPlayeble)
         {
             if (Input.GetMouseButtonDown(0))

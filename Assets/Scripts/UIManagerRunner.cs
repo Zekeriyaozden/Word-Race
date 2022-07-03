@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -9,11 +10,24 @@ public class UIManagerRunner : MonoBehaviour
     public GameObject Hint;
     private GameObject gm;
     public int HintIndex;
+    public GameObject text;
     void Start()
     {
         HintIndex = 0;
         gm = GameObject.Find("GameManager");
     }
+
+    public void HintVisible()
+    {
+        Hint.gameObject.transform.parent.gameObject.SetActive(true);
+    }
+
+    public void NextVisible()
+    {
+        Hint.gameObject.transform.parent.GetChild(0).gameObject.SetActive(true);
+        Hint.gameObject.transform.parent.GetChild(1).gameObject.SetActive(false);
+    }
+    
 
     public void HintController()
     {
@@ -31,6 +45,9 @@ public class UIManagerRunner : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+        text.GetComponent<TextMeshProUGUI>().text= gm.GetComponent<GameManager>().playerScore.ToString();
+        
         if (HintCost[HintIndex] > gm.GetComponent<GameManager>().playerScore)
         {
             Hint.gameObject.GetComponent<Button>().interactable = false;

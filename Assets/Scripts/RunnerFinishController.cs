@@ -86,6 +86,7 @@ public class RunnerFinishController : MonoBehaviour
             hint.gameObject.SetActive(true);
             gameManager.GetComponent<GameManager>().inGameEnd = true;
             gameManager.GetComponent<GameManager>().gameIsGoing = false;
+            gameManager.GetComponent<GameManager>().UIManagerRunner.GetComponent<UIManagerRunner>().HintVisible();
         }
 
         if (other.gameObject.tag == "Letter")
