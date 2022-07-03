@@ -34,6 +34,16 @@ public class HintTableController : MonoBehaviour
 
     private void goUI(GameObject gObj)
     {
+        if (gObj.gameObject.GetComponent<LattersController>().level == 1)
+        {
+            gm.GetComponent<GameManager>().playerScore += 50;
+        }else if (gObj.gameObject.GetComponent<LattersController>().level == 2)
+        {
+            gm.GetComponent<GameManager>().playerScore += 100;
+        }else if (gObj.gameObject.GetComponent<LattersController>().level == 3)
+        {
+            gm.GetComponent<GameManager>().playerScore += 150;
+        }
         gObj.AddComponent<LetterMovementEndGame>();
         gObj.GetComponent<LetterMovementEndGame>().speed = letterSpeed;
         gObj.GetComponent<LetterMovementEndGame>().target = targetUI.gameObject.transform.position;

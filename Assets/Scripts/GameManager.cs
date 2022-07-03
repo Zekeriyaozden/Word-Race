@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
+    public GameObject UIManagerRunner;
+    public int playerScore;
     public bool inGameEnd;
     public GameObject letterGenerator;
     public float protectTime;
@@ -59,6 +61,23 @@ public class GameManager : MonoBehaviour
         
     }
 
+    public void Hint()
+    {
+        GameObject target = HintTab.gameObject.GetComponent<HintTableController>().findTargetBox();
+        for (int i = 0; i < letterGenerator.transform.childCount; i++)
+        {
+            if (letterGenerator.gameObject.transform.GetChild(i).gameObject.GetComponent<LattersEndGame>().LatterChar == target.GetComponent<LetterBoxController>().latter)
+            {
+                if (target.gameObject.GetComponent<LetterBoxController>().isEmpty)
+                {
+                    target.gameObject.GetComponent<LetterBoxController>().isEmpty = false;
+                    HintTab.gameObject.GetComponent<HintTableController>().goTable(letterGenerator.gameObject.transform.GetChild(i).gameObject,target);
+                    i = 500;
+                }
+            }
+        }
+    }
+    
     public bool SpeedIncrease()
     {
         if (distanceOfMainAndAI() > DistanceOfMainAndAI)
