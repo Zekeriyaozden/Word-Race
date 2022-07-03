@@ -786,7 +786,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   HintCost: 64000000c80000002c01000090010000f4010000
-  Hint: {fileID: 1007913999}
+  Hint: {fileID: 553330080}
   HintIndex: 0
   text: {fileID: 2046208630}
 --- !u!4 &255678688
@@ -1630,6 +1630,11 @@ Transform:
 Transform:
   m_CorrespondingSourceObject: {fileID: 7414967132500022310, guid: b59e66fd97361844692e5f6a0197ba48, type: 3}
   m_PrefabInstance: {fileID: 943892499}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &553330080 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7670867702947044967, guid: 1c8707229d2bea1458aa64169dc03998, type: 3}
+  m_PrefabInstance: {fileID: 142592356}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &556836875
 GameObject:
@@ -2789,11 +2794,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4237b3fe8e765e148a22dadc577584e1, type: 3}
---- !u!1 &1007913999 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 629245737748418443, guid: 1c8707229d2bea1458aa64169dc03998, type: 3}
-  m_PrefabInstance: {fileID: 142592356}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1044629951
 PrefabInstance:
   m_ObjectHideFlags: 0
