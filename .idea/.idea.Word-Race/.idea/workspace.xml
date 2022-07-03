@@ -79,9 +79,9 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/UIManagerRunner.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/RunnerFinishController.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/EndGameMechanics.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/AIController.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/HintTableController.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/AIController.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="2ALaX7nMpAflu6fvhSwVNGOdx6e" />
@@ -142,7 +142,7 @@
       <workItem from="1656669523569" duration="7377000" />
       <workItem from="1656685079974" duration="3847000" />
       <workItem from="1656751101731" duration="18620000" />
-      <workItem from="1656840562014" duration="9218000" />
+      <workItem from="1656840562014" duration="10031000" />
     </task>
     <servers />
   </component>
