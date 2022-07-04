@@ -50,9 +50,9 @@ Material:
     - _QueueControl: 0
     - _QueueOffset: 0
     m_Colors:
-    - _ReppleColor: {r: 0, g: 0.6622782, b: 2, a: 0}
+    - _ReppleColor: {r: 0, g: 0.6701571, b: 2, a: 0}
     - _ReppleDensty: {r: 150, g: 150, b: 0, a: 0}
     - _ReppleSpeed: {r: 2, g: 2, b: 0, a: 0}
     - _Repplelimless: {r: 5, g: 5, b: 0, a: 0}
-    - _base_color: {r: 0.040850822, g: 0.65049535, b: 0.9622642, a: 0}
+    - _base_color: {r: 0.21450691, g: 0.853387, b: 0.9716981, a: 1}
   m_BuildTextureStacks: []
