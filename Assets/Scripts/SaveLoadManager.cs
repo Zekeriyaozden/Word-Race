@@ -13,6 +13,7 @@ public class SaveLoadManager : MonoBehaviour
     void Start()
     {
         gm = GameObject.Find("GameManager");
+        gm.GetComponent<GameManager>().currentScene = currentLevel;
         Debug.Log(currentLevel);
         PlayerPrefs.SetInt("currentLevel",currentLevel);
         Load();
@@ -28,6 +29,12 @@ public class SaveLoadManager : MonoBehaviour
     {
         PlayerPrefs.SetInt("playerScore",gm.gameObject.GetComponent<GameManager>().playerScore);
         PlayerPrefs.SetInt("aiScore",gm.gameObject.GetComponent<GameManager>().aiScore);
+        
+       /* PlayerPrefs.SetInt("aiScore",0);
+        PlayerPrefs.SetInt("playerScore",0);
+        PlayerPrefs.SetInt("currentLevel",0);
+        PlayerPrefs.SetInt("firstScoreAI",0);
+        PlayerPrefs.SetInt("firstScorePlayer",0);*/
     }
 
     public void Load()

@@ -43,7 +43,7 @@ public class UIManagerRunner : MonoBehaviour
 
     public void tryAgainController()
     {
-        Debug.Log("sds");
+        SceneManager.LoadScene(gm.GetComponent<GameManager>().currentScene);
     }
 
     public void onNextButton()

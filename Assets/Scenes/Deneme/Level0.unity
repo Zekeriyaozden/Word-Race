@@ -2507,6 +2507,34 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2534394998751553319, guid: ec719ab233d19444eb90decdcf82ca15, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2534394998751553319, guid: ec719ab233d19444eb90decdcf82ca15, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2534394998751553319, guid: ec719ab233d19444eb90decdcf82ca15, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 255678687}
+    - target: {fileID: 2534394998751553319, guid: ec719ab233d19444eb90decdcf82ca15, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2534394998751553319, guid: ec719ab233d19444eb90decdcf82ca15, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: tryAgainController
+      objectReference: {fileID: 0}
+    - target: {fileID: 2534394998751553319, guid: ec719ab233d19444eb90decdcf82ca15, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: UIManagerRunner, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 2534394998751553319, guid: ec719ab233d19444eb90decdcf82ca15, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 6364168516151307720, guid: ec719ab233d19444eb90decdcf82ca15, type: 3}
       propertyPath: m_Name
       value: TryAgain
@@ -5618,6 +5646,7 @@ MonoBehaviour:
   UIManagerRunner: {fileID: 255678686}
   playerScore: 0
   aiScore: 0
+  currentScene: 0
   inGameEnd: 0
   letterGenerator: {fileID: 4589386760340947424}
   protectTime: 15

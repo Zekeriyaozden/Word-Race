@@ -9,6 +9,7 @@ public class GameManager : MonoBehaviour
     public GameObject UIManagerRunner;
     public int playerScore;
     public int aiScore;
+    public int currentScene;
     public bool inGameEnd;
     public GameObject letterGenerator;
     public float protectTime;
