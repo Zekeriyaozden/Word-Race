@@ -4788,14 +4788,70 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: -8113120889063978472, guid: dafff614cfeb1304da287c1845a9b1d5, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: f42e14d5d69b20a43a71ce3336a13bb3, type: 2}
+    - target: {fileID: -8113120889063978472, guid: dafff614cfeb1304da287c1845a9b1d5, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 9d19c83febb986a4f952fe116bf9a236, type: 2}
     - target: {fileID: -7918335002988649766, guid: dafff614cfeb1304da287c1845a9b1d5, type: 3}
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: -7918335002988649766, guid: dafff614cfeb1304da287c1845a9b1d5, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: ee21d61a181bff4419520dc531b088b7, type: 2}
+    - target: {fileID: -1831265297771755325, guid: dafff614cfeb1304da287c1845a9b1d5, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: a5b83342aade97f49836986f2f41f481, type: 2}
+    - target: {fileID: -1831265297771755325, guid: dafff614cfeb1304da287c1845a9b1d5, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: bddc7cc5520dbd9478524f3569f034ce, type: 2}
+    - target: {fileID: -1831265297771755325, guid: dafff614cfeb1304da287c1845a9b1d5, type: 3}
+      propertyPath: m_Materials.Array.data[2]
+      value: 
+      objectReference: {fileID: 2100000, guid: 541ab783d9637f34683eac74747bde44, type: 2}
+    - target: {fileID: -1831265297771755325, guid: dafff614cfeb1304da287c1845a9b1d5, type: 3}
+      propertyPath: m_Materials.Array.data[3]
+      value: 
+      objectReference: {fileID: 2100000, guid: 299bce584172de74da17da5f34d90fa8, type: 2}
+    - target: {fileID: -1831265297771755325, guid: dafff614cfeb1304da287c1845a9b1d5, type: 3}
+      propertyPath: m_Materials.Array.data[4]
+      value: 
+      objectReference: {fileID: 2100000, guid: e48ace6cc48bc0e4bba2b28645118952, type: 2}
     - target: {fileID: 919132149155446097, guid: dafff614cfeb1304da287c1845a9b1d5, type: 3}
       propertyPath: m_Name
       value: Competition Platform 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3593957076385314737, guid: dafff614cfeb1304da287c1845a9b1d5, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: b782f281ea0e4ea47ab1a6a632810dea, type: 2}
+    - target: {fileID: 3593957076385314737, guid: dafff614cfeb1304da287c1845a9b1d5, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 541ab783d9637f34683eac74747bde44, type: 2}
+    - target: {fileID: 3593957076385314737, guid: dafff614cfeb1304da287c1845a9b1d5, type: 3}
+      propertyPath: m_Materials.Array.data[2]
+      value: 
+      objectReference: {fileID: 2100000, guid: 541ab783d9637f34683eac74747bde44, type: 2}
+    - target: {fileID: 3593957076385314737, guid: dafff614cfeb1304da287c1845a9b1d5, type: 3}
+      propertyPath: m_Materials.Array.data[3]
+      value: 
+      objectReference: {fileID: 2100000, guid: c2a0b75749bb99446bcd7b9e74597ec7, type: 2}
+    - target: {fileID: 5264181947057013600, guid: dafff614cfeb1304da287c1845a9b1d5, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: f42e14d5d69b20a43a71ce3336a13bb3, type: 2}
+    - target: {fileID: 5264181947057013600, guid: dafff614cfeb1304da287c1845a9b1d5, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 9d19c83febb986a4f952fe116bf9a236, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dafff614cfeb1304da287c1845a9b1d5, type: 3}
 --- !u!1 &1198486945
