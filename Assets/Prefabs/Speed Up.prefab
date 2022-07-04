@@ -286,6 +286,7 @@ GameObject:
   - component: {fileID: 6566140097734711283}
   - component: {fileID: 7123559896069851551}
   - component: {fileID: 4177245909583389531}
+  - component: {fileID: 1177205342016313485}
   m_Layer: 0
   m_Name: Speed Up
   m_TagString: Untagged
@@ -339,6 +340,26 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.9612064, y: 1.7953668, z: 2.107666}
   m_Center: {x: -0.068657875, y: 0.9103277, z: -1.8537598}
+--- !u!95 &1177205342016313485
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5788336143004945737}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: e21fe558b84531f4d859ec32a2c73e44, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 1
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &6047969753293499839
 GameObject:
   m_ObjectHideFlags: 0
