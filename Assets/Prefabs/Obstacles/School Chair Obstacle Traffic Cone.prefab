@@ -113,7 +113,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   zMin: 0
-  zMax: 0
+  zMax: 7
 --- !u!1001 &4256973107198184898
 PrefabInstance:
   m_ObjectHideFlags: 0

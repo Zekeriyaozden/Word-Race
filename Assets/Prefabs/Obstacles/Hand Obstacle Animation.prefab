@@ -92,7 +92,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   zMin: 0
-  zMax: 0
+  zMax: 7
 --- !u!1 &1409798334439200153
 GameObject:
   m_ObjectHideFlags: 0
