@@ -5,11 +5,15 @@ using UnityEngine;
 public class LetterBoardGenerator : MonoBehaviour
 {
     public List<GameObject> boardLetters;
+    public GameObject obje;
     private Vector3 startPos;
     private float xAxisDist;
     private float yAxisDist;
     void Start()
     {
+
+        obje.SetActive(true);
+        
         startPos = new Vector3(-7.4554f, -2.4130f, -0.9731f);
         
         for (int i = 0; i < boardLetters.Count; i++)

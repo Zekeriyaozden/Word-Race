@@ -152,6 +152,7 @@
             <e p="ETFXRotation.cs" t="Include" />
           </e>
         </e>
+        <e p="SceneManagement.cs" t="Include" />
         <e p="Scripts" t="Include">
           <e p="AIController.cs" t="Include" />
           <e p="AITarget.cs" t="Include" />

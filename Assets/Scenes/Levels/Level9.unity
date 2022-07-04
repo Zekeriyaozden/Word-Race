@@ -273,7 +273,7 @@ MonoBehaviour:
   AIScore: 0
   firstScoreAI: 0
   firstScorePlayer: 0
-  currentLevel: 1
+  currentLevel: 9
 --- !u!4 &640003439
 Transform:
   m_ObjectHideFlags: 0

@@ -35,6 +35,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/LattersEndGame.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/LetterBoxController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/EndGameMechanics.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/SceneManagement.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/FailCrossController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/EngGameplay.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/EnvelopeController.cs" root0="FORCE_HIGHLIGHTING" />
@@ -58,7 +59,6 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/LetterBoxController.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/EndGameCameraAnim.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/EngGameplay.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/LetterBoardGenerator.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/LetterMovementEndGame.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/SceneController.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/CameraController.cs" />
@@ -83,6 +83,8 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/UIManagerRunner.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/SaveLoadManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/LetterBoardGenerator.cs" />
+      <option value="$PROJECT_DIR$/Assets/SceneManagement.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="2ALaX7nMpAflu6fvhSwVNGOdx6e" />
@@ -144,7 +146,7 @@
       <workItem from="1656685079974" duration="3847000" />
       <workItem from="1656751101731" duration="18620000" />
       <workItem from="1656840562014" duration="17157000" />
-      <workItem from="1656922770100" duration="6202000" />
+      <workItem from="1656922770100" duration="9623000" />
     </task>
     <servers />
   </component>
@@ -155,5 +157,24 @@
   <component name="UnityUnitTestConfiguration" currentTestLauncher="EditMode" />
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/GameManager.cs</url>
+          <line>102</line>
+          <properties documentPath="C:\Users\Maleriya\Desktop\Pigeon Gaming\Word-Race\Assets\Scripts\GameManager.cs" initialLine="102" containingFunctionPresentation="method 'SpeedIncrease'">
+            <startOffsets>
+              <option value="3107" />
+            </startOffsets>
+            <endOffsets>
+              <option value="3108" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
