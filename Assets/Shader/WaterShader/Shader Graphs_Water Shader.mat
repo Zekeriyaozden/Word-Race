@@ -54,5 +54,5 @@ Material:
     - _ReppleDensty: {r: 150, g: 150, b: 0, a: 0}
     - _ReppleSpeed: {r: 2, g: 2, b: 0, a: 0}
     - _Repplelimless: {r: 5, g: 5, b: 0, a: 0}
-    - _base_color: {r: 0.21450691, g: 0.853387, b: 0.9716981, a: 1}
+    - _base_color: {r: 0.16470587, g: 0.72728765, b: 1, a: 1}
   m_BuildTextureStacks: []
