@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -13,12 +14,12 @@ public class UIManager : MonoBehaviour
     public int AIScore;
     public int firstScoreAI;
     public int firstScorePlayer;
+    public int currentLevel;
     private float k;
     private bool flag;
     private bool swipeFlag;
     private Vector3 targetAI;
     private Vector3 targetPlayer;
-    public int nextSceneIndex;
     void Start()
     {
         flag = false;
@@ -30,10 +31,12 @@ public class UIManager : MonoBehaviour
 
     public void nextButton()
     {
-        SceneManager.LoadScene(nextSceneIndex);
+        Debug.Log("VAR");
+        SceneManager.LoadScene(currentLevel + 1);
     }
     private void Load()
     {
+        PlayerPrefs.SetInt("currentLevel",currentLevel);
         firstScorePlayer = PlayerPrefs.GetInt("firstScorePlayer" , 0);
         firstScoreAI = PlayerPrefs.GetInt("firstScoreAI" , 0);
         AIScore = PlayerPrefs.GetInt("aiScore");
@@ -107,6 +110,8 @@ public class UIManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        AIScoreText.GetComponent<TextMeshProUGUI>().text = AIScore.ToString();
+        playerScoreText.GetComponent<TextMeshProUGUI>().text = playersScore.ToString();
         if (swipeFlag)
         {
             if (k < 1f)

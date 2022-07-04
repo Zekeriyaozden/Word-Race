@@ -36,13 +36,13 @@ public class HintTableController : MonoBehaviour
     {
         if (gObj.gameObject.GetComponent<LattersController>().level == 1)
         {
-            gm.GetComponent<GameManager>().playerScore += 50;
+            gm.GetComponent<GameManager>().playerScore += gm.GetComponent<GameManager>().levelPoint[0];
         }else if (gObj.gameObject.GetComponent<LattersController>().level == 2)
         {
-            gm.GetComponent<GameManager>().playerScore += 100;
+            gm.GetComponent<GameManager>().playerScore += gm.GetComponent<GameManager>().levelPoint[1];
         }else if (gObj.gameObject.GetComponent<LattersController>().level == 3)
         {
-            gm.GetComponent<GameManager>().playerScore += 150;
+            gm.GetComponent<GameManager>().playerScore += gm.GetComponent<GameManager>().levelPoint[2];
         }
         gObj.AddComponent<LetterMovementEndGame>();
         gObj.GetComponent<LetterMovementEndGame>().speed = letterSpeed;

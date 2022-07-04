@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class UIManagerRunner : MonoBehaviour
@@ -44,7 +45,14 @@ public class UIManagerRunner : MonoBehaviour
     {
         Debug.Log("sds");
     }
-    
+
+    public void onNextButton()
+    {
+        if (PlayerPrefs.GetInt("currentLevel") < 9)
+        {
+            SceneManager.LoadScene(PlayerPrefs.GetInt("currentLevel") + 1);
+        }
+    }
 
     public void HintController()
     {

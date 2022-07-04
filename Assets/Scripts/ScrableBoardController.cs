@@ -25,8 +25,7 @@ public class ScrableBoardController : MonoBehaviour
                             go.transform.GetChild(0).gameObject.GetComponent<Collider>().enabled = false;
                             go.transform.eulerAngles = new Vector3(90f, 180f, 0);
                             go.transform.localScale = new Vector3(1.2f, 1.2f, 1.2f);
-                            go.transform.SetParent(GameObject.Find("GameManager").transform);
-                            Debug.Log(go.transform.rotation.eulerAngles);
+                            go.transform.SetParent(GameObject.Find("UIManager").transform);
                             continue;
                         }
                     }
@@ -43,7 +42,7 @@ public class ScrableBoardController : MonoBehaviour
 
         foreach (var current in currentLetterList)
         {
-            yield return new WaitForSeconds(.1f);
+            yield return new WaitForSeconds(.3f);
             foreach (var letter in letterList)
             {
                 if (letter.gameObject.GetComponent<LattersEndGame>().LatterChar ==
@@ -54,7 +53,7 @@ public class ScrableBoardController : MonoBehaviour
                     go.GetComponent<Rigidbody>().useGravity = false;
                     go.transform.GetChild(0).gameObject.GetComponent<Collider>().enabled = false;
                     go.transform.eulerAngles = new Vector3(90f, 180f, 0);
-                    go.transform.SetParent(GameObject.Find("GameManager").transform);
+                    go.transform.SetParent(GameObject.Find("UIManager").transform);
                     go.GetComponent<Animator>().enabled = true;
                 }
             }

@@ -4,9 +4,11 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
+    public int[] levelPoint;
     public GameObject finishController;
     public GameObject UIManagerRunner;
     public int playerScore;
+    public int aiScore;
     public bool inGameEnd;
     public GameObject letterGenerator;
     public float protectTime;

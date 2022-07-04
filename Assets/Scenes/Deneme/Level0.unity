@@ -378,6 +378,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1404784971006283812, guid: 1c8707229d2bea1458aa64169dc03998, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 255678687}
+    - target: {fileID: 1404784971006283812, guid: 1c8707229d2bea1458aa64169dc03998, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: onNextButton
+      objectReference: {fileID: 0}
+    - target: {fileID: 1404784971006283812, guid: 1c8707229d2bea1458aa64169dc03998, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: UIManagerRunner, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 1404784971006283834, guid: 1c8707229d2bea1458aa64169dc03998, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -4576,7 +4588,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 086ade7c9fd49704c9f8d78a8c8c4bd0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lastScene: 0
+  currentLevel: 0
 --- !u!1001 &1662682932
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5601,9 +5613,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b98bae3aa689eb94db749d916b91a1a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  levelPoint: 3200000064000000c8000000
   finishController: {fileID: 47506951}
   UIManagerRunner: {fileID: 255678686}
   playerScore: 0
+  aiScore: 0
   inGameEnd: 0
   letterGenerator: {fileID: 4589386760340947424}
   protectTime: 15

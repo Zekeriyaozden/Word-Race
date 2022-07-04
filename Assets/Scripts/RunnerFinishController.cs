@@ -75,6 +75,20 @@ public class RunnerFinishController : MonoBehaviour
         
     }
 
+    private void setPointAI(GameObject gObj)
+    {
+        if (gObj.gameObject.GetComponent<LattersController>().level == 1)
+        {
+            gameManager.GetComponent<GameManager>().aiScore += gameManager.GetComponent<GameManager>().levelPoint[0];
+        }else if (gObj.gameObject.GetComponent<LattersController>().level == 2)
+        {
+            gameManager.GetComponent<GameManager>().aiScore += gameManager.GetComponent<GameManager>().levelPoint[1];
+        }else if (gObj.gameObject.GetComponent<LattersController>().level == 3)
+        {
+            gameManager.GetComponent<GameManager>().aiScore += gameManager.GetComponent<GameManager>().levelPoint[2];
+        }
+    }
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag == "Player")
@@ -110,6 +124,7 @@ public class RunnerFinishController : MonoBehaviour
             }
             else
             {
+                setPointAI(other.gameObject);
                 Destroy(other.gameObject);
             }
         }
