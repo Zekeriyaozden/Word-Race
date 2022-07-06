@@ -32,16 +32,12 @@ public class CollectController : MonoBehaviour
             gameObject.GetComponent<LattersController>().referance = gm.GetComponent<GameManager>().Player;
             gameObject.GetComponent<LattersController>().ownership = "Player";
             gameObject.transform.position = ((gm.GetComponent<GameManager>().referanceParentPlayer
-                .GetComponent<ParentPlayerController>().PlayerStack.Count + 1) * new Vector3(0, 0, 1.6f)) + (gm
-                .GetComponent<GameManager>().referanceParentPlayer
-                .GetComponent<ParentPlayerController>().referance.transform.position);
+                .GetComponent<ParentPlayerController>().PlayerStack.Count) * new Vector3(0f, .4f, 0f)) + gm.GetComponent<GameManager>().referanceParentPlayer.GetComponent<ParentPlayerController>().PlayerStack[0].transform.position;
             gm.GetComponent<GameManager>().referanceParentPlayer.GetComponent<ParentPlayerController>().PlayerStack
                 .Add(gameObject);
             gameObject.GetComponent<LattersController>().node = gm.GetComponent<GameManager>().referanceParentPlayer
                 .GetComponent<ParentPlayerController>().PlayerStack[gm.GetComponent<GameManager>().referanceParentPlayer
                     .GetComponent<ParentPlayerController>().PlayerStack.Count - 2];
-            gameObject.GetComponent<Rigidbody>().useGravity = true;
-            gameObject.GetComponent<Rigidbody>().isKinematic = false;
             gm.GetComponent<CollectAnimations>().PlayerCollectAnim();
             gameObject.GetComponent<CollectController>().enabled = false;
         }
@@ -57,10 +53,8 @@ public class CollectController : MonoBehaviour
             gameObject.GetComponent<LattersController>().enabled = true;
             gameObject.GetComponent<LattersController>().referance = gm.GetComponent<GameManager>().AI;
             gameObject.GetComponent<LattersController>().ownership = "AI";
-            gameObject.transform.position = ((gm.GetComponent<GameManager>().referanceParentAI
-                .GetComponent<ParentAIController>().AIStack.Count + 1) * new Vector3(0, 0, 1.6f)) + (gm
-                .GetComponent<GameManager>().referanceParentAI
-                .GetComponent<ParentAIController>().referance.transform.position);
+            gameObject.transform.position = (gm.GetComponent<GameManager>().referanceParentAI
+                .GetComponent<ParentAIController>().AIStack.Count) * new Vector3(0f,.4f,0f);
         
             gm.GetComponent<GameManager>().referanceParentAI.GetComponent<ParentAIController>().AIStack
                 .Add(gameObject);
@@ -70,14 +64,13 @@ public class CollectController : MonoBehaviour
             
             
             //gameObject.GetComponent<BoxCollider>().enabled = false;
-            gameObject.GetComponent<Rigidbody>().useGravity = true;
-            gameObject.GetComponent<Rigidbody>().isKinematic = false;
             gameObject.GetComponent<CollectController>().enabled = false;   
         }
     }
     private void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "Letter")
+/*
+ *         if (other.tag == "Letter")
         {
             if (other.gameObject.GetComponent<LattersController>().ownership == "Player")
             {
@@ -89,8 +82,8 @@ public class CollectController : MonoBehaviour
             }
             
         }
-        else
-        {
+ */
+
             if (other.tag == "Player")
             {
                 ownerPlayer();
@@ -99,6 +92,5 @@ public class CollectController : MonoBehaviour
             {
                 ownerAI();
             }
-        }
     }
 }

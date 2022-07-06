@@ -166,7 +166,7 @@ public class ObstacleController : MonoBehaviour
                             tmpIsProtected[tmpIsProtected.Count - 1].GetComponent<LattersController>().node.transform.position +
                             new Vector3(0, 0, 1.6f);
                     
-                        tmpIsProtected[tmpIsProtected.Count - 1].GetComponent<LattersController>().distancer();
+                       // tmpIsProtected[tmpIsProtected.Count - 1].GetComponent<LattersController>().distancer();
                     }
                     
 
@@ -177,7 +177,7 @@ public class ObstacleController : MonoBehaviour
                         tmpIsProtected[i].transform.position =
                             tmpIsProtected[i].GetComponent<LattersController>().node.transform.position +
                             new Vector3(0, 0, 1.6f);
-                        tmpIsProtected[i].GetComponent<LattersController>().distancer();
+                       // tmpIsProtected[i].GetComponent<LattersController>().distancer();
                     }
 
                     count = gm.GetComponent<GameManager>().referanceParentPlayer.GetComponent<ParentPlayerController>()
@@ -229,7 +229,7 @@ public class ObstacleController : MonoBehaviour
                             tmpIsProtected[tmpIsProtected.Count - 1].GetComponent<LattersController>().node.transform.position +
                             new Vector3(0, 0, 1.6f);
                     
-                        tmpIsProtected[tmpIsProtected.Count - 1].GetComponent<LattersController>().distancer();
+                       // tmpIsProtected[tmpIsProtected.Count - 1].GetComponent<LattersController>().distancer();
                     }
                     
 
@@ -240,7 +240,7 @@ public class ObstacleController : MonoBehaviour
                         tmpIsProtected[i].transform.position =
                             tmpIsProtected[i].GetComponent<LattersController>().node.transform.position +
                             new Vector3(0, 0, 1.6f);
-                        tmpIsProtected[i].GetComponent<LattersController>().distancer();
+                       // tmpIsProtected[i].GetComponent<LattersController>().distancer();
                     }
                     
                     //Destroy(gameObject);

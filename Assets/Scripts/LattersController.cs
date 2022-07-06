@@ -13,12 +13,13 @@ public class LattersController : MonoBehaviour
     public bool isJumping;
     public GameObject node;
     private float lerpSpeed;
-    public float distanceZ;
+    public float distanceY;
     private Quaternion qt;
     private float xAngle;
     private float yPos;
     public string ownership;
     public bool isDest;
+    private GameObject parent;
 
     void Start()
     {
@@ -29,7 +30,21 @@ public class LattersController : MonoBehaviour
         isProtected = false;
         isJumping = false;
         lerpSpeed = GameObject.Find("GameManager").GetComponent<GameManager>().lerpSpeed;
-        distancer();
+        if (ownership != null)
+        {
+            if (ownership == "Player")
+            {
+                parent = GameObject.Find("GameManager").GetComponent<GameManager>()
+                    .referanceParentPlayer.GetComponent<ParentPlayerController>().PlayerStack[0].gameObject;
+                distanceY = gameObject.transform.position.y - parent.gameObject.transform.position.y;
+            }
+            else
+            {
+                parent = GameObject.Find("GameManager").GetComponent<GameManager>().referanceParentAI
+                    .GetComponent<ParentAIController>().AIStack[0];
+                distanceY = gameObject.transform.position.y - parent.gameObject.transform.position.y;
+            }
+        }
     }
 
     public void makeObjectNotWork()
@@ -39,10 +54,10 @@ public class LattersController : MonoBehaviour
         isJumping = false;
         gameObject.GetComponent<Rigidbody>().useGravity = true;
     }
-    public void distancer()
+    /*public void distancer()
     {
         distanceZ = gameObject.transform.position.z - referance.gameObject.transform.position.z;
-    }
+    }*/
     private void LateUpdate()
     {
         lerpSpeed = GameObject.Find("GameManager").GetComponent<GameManager>().lerpSpeed;
@@ -51,12 +66,8 @@ public class LattersController : MonoBehaviour
         {
             yPos = jumpingObject.transform.position.y;
         }
-        gameObject.transform.position = new Vector3((Mathf.Lerp( gameObject.transform.position.x,node.gameObject.transform.position.x ,Time.deltaTime * lerpSpeed)),yPos,distanceZ + referance.gameObject.transform.position.z);
-        if (gameObject.transform.rotation.x > 30)
-        {
-            gameObject.transform.eulerAngles = new Vector3(30f, 180f, 0f);
-        }
-        
+        gameObject.transform.position = new Vector3((Mathf.Lerp( gameObject.transform.position.x,node.gameObject.transform.position.x ,Time.deltaTime * lerpSpeed)), parent.transform.position.y + distanceY ,parent.transform.position.z);
+
     }
     
 
