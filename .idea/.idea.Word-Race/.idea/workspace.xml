@@ -62,15 +62,12 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/LetterMovementEndGame.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/SceneController.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/CameraController.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/LattersController.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/GateController.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/EnvelopeController.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/LattersEndGame.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/DenemeDest.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/CollectController.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/CollectAnimations.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/ScrableCaseController.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/ObstacleController.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/FailCrossController.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/EndGameMechanics.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Speeder.cs" />
@@ -85,6 +82,9 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/SaveLoadManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/LetterBoardGenerator.cs" />
       <option value="$PROJECT_DIR$/Assets/SceneManagement.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/ObstacleController.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/LattersController.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/CollectController.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="2ALaX7nMpAflu6fvhSwVNGOdx6e" />
@@ -147,6 +147,7 @@
       <workItem from="1656751101731" duration="18620000" />
       <workItem from="1656840562014" duration="17157000" />
       <workItem from="1656922770100" duration="9623000" />
+      <workItem from="1657101516988" duration="1672000" />
     </task>
     <servers />
   </component>
@@ -163,13 +164,13 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/Scripts/GameManager.cs</url>
-          <line>102</line>
+          <line>100</line>
           <properties documentPath="C:\Users\Maleriya\Desktop\Pigeon Gaming\Word-Race\Assets\Scripts\GameManager.cs" initialLine="102" containingFunctionPresentation="method 'SpeedIncrease'">
             <startOffsets>
-              <option value="3107" />
+              <option value="3063" />
             </startOffsets>
             <endOffsets>
-              <option value="3108" />
+              <option value="3064" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="1" />
