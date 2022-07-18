@@ -120,18 +120,18 @@ public class PlayerController : MonoBehaviour
             if (Input.mousePosition.x > _mousePosStart.x)
             {
                 //Debug.Log(_mousePosStart.x + "" + Input.mousePosition.x);
-                if (Input.mousePosition.x - _mousePosStart.x > 80)
+                if (Input.mousePosition.x - _mousePosStart.x > 120)
                 {
-                    _mousePosStart.x = Input.mousePosition.x - 80;
+                    _mousePosStart.x = Input.mousePosition.x - 120;
                 }
                 xCordinate = (Input.mousePosition.x - _mousePosStart.x);
             }
             
             if (Input.mousePosition.x < _mousePosStart.x)
             {
-                if (_mousePosStart.x - Input.mousePosition.x > 80)
+                if (_mousePosStart.x - Input.mousePosition.x > 120)
                 {
-                    _mousePosStart.x = Input.mousePosition.x + 80;
+                    _mousePosStart.x = Input.mousePosition.x + 120;
                 }
                 xCordinate = (Input.mousePosition.x - _mousePosStart.x);
             }
@@ -148,7 +148,7 @@ public class PlayerController : MonoBehaviour
 
 
         gameObject.transform.eulerAngles = new Vector3(gameObject.transform.eulerAngles.x, 0, 0);
-        xCordinate = xCordinate * 0.02f;
+        xCordinate = xCordinate * 0.01f;
         gameObject.transform.Translate(new Vector3(xCordinate, 0, 1f) * _speed * Time.deltaTime,Space.Self);
         
     }

@@ -105,9 +105,7 @@ public class ObstacleController : MonoBehaviour
         go.AddComponent<CollectController>();
         go.GetComponent<CollectController>().enabled = true;
         go.transform.position = v3 + new Vector3(0,0,z);
-        go.transform.position = new Vector3(x,go.transform.position.y,go.transform.position.z);
-        go.GetComponent<Rigidbody>().useGravity = false;
-        go.GetComponent<Rigidbody>().isKinematic = true;
+        go.transform.position = new Vector3(x,0.19f,go.transform.position.z + z);
         go.GetComponent<AITarget>().targetable = true;
 
     }
@@ -115,7 +113,7 @@ public class ObstacleController : MonoBehaviour
     private void OnTriggerEnter(Collider other )
     {
 
-    if (other.gameObject.tag == "Letter")
+    /*if (other.gameObject.tag == "Letter")
          {
             if (!other.gameObject.GetComponent<LattersController>().isProtected)
             {
@@ -252,8 +250,37 @@ public class ObstacleController : MonoBehaviour
                     
                 } 
             }
-        }
+        }*/
 
+    if (other.gameObject.tag == "Player")
+    {
+        Debug.Log("isEnter");
+        int size = gm.GetComponent<GameManager>().referanceParentPlayer.GetComponent<ParentPlayerController>()
+            .PlayerStack.Count;
+        if (size > 1)
+        {
+            for (int i=0;i<size/2;i++)
+            {
+                Debug.Log( gm.GetComponent<GameManager>().referanceParentPlayer.GetComponent<ParentPlayerController>()
+                    .PlayerStack.Count);
+                GameObject gObj = gm.GetComponent<GameManager>().referanceParentPlayer.GetComponent<ParentPlayerController>()
+                    .PlayerStack[gm.GetComponent<GameManager>().referanceParentPlayer
+                        .GetComponent<ParentPlayerController>()
+                        .PlayerStack.Count - 1];
+
+                gm.GetComponent<GameManager>().referanceParentPlayer.GetComponent<ParentPlayerController>()
+                    .PlayerStack.Remove(gObj);
+                
+                
+                LetterCollectible(gObj,gObj.transform.position);
+                
+            }
+        }
+        else
+        {
+            Debug.Log("empty");
+        }
+    }
         
    
    /*if (other.gameObject.tag == "Letter")
