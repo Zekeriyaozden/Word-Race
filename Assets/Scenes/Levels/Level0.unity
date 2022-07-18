@@ -6134,7 +6134,7 @@ MonoBehaviour:
   protect: {fileID: 628761351554104355, guid: f0536ee205dfc354d9ef6e3ced11c451, type: 3}
   AIWhenIsStop: 0.2
   DistanceOfMainAndAI: 5
-  lerpSpeed: 10
+  lerpSpeed: 42
   speedMainChar: 6.7
   speedAIChar: 6.7
   Player: {fileID: 8119462406638492814}
@@ -6171,7 +6171,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d276e38e7e1ce3b44a37745c4d70b7b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AnimWaitTime: 0.08
+  AnimWaitTime: 0.04
   playerParent: {fileID: 381984800}
   AIParent: {fileID: 184483150}
 --- !u!1001 &2098724751

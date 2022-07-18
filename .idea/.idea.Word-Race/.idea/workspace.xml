@@ -65,7 +65,6 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/EnvelopeController.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/LattersEndGame.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/DenemeDest.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/CollectAnimations.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/ScrableCaseController.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/FailCrossController.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/EndGameMechanics.cs" />
@@ -85,6 +84,7 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/SceneController.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/SaveLoadManager.cs" />
       <option value="$PROJECT_DIR$/Assets/SceneManagement.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/CollectAnimations.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="2ALaX7nMpAflu6fvhSwVNGOdx6e" />

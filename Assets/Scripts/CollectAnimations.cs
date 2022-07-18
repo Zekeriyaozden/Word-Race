@@ -28,7 +28,7 @@ public class CollectAnimations : MonoBehaviour
             try
             {
                 playerParent.GetComponent<ParentPlayerController>().PlayerStack[i].gameObject.transform.localScale =
-                    new Vector3(.8f, .8f, .8f);
+                    new Vector3(.6f, .6f, .6f);
             }
             catch (Exception e)
             {
@@ -39,7 +39,7 @@ public class CollectAnimations : MonoBehaviour
             try
             {
                 playerParent.GetComponent<ParentPlayerController>().PlayerStack[i].gameObject.transform.localScale =
-                    new Vector3(.6f, .6f, .6f);
+                    new Vector3(.4f, .4f, .4f);
             }
             catch (Exception e)
             {

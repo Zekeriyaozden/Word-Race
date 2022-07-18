@@ -32,7 +32,7 @@ public class CollectController : MonoBehaviour
             gameObject.GetComponent<LattersController>().referance = gm.GetComponent<GameManager>().Player;
             gameObject.GetComponent<LattersController>().ownership = "Player";
             gameObject.transform.position = ((gm.GetComponent<GameManager>().referanceParentPlayer
-                .GetComponent<ParentPlayerController>().PlayerStack.Count) * new Vector3(0f, .4f, 0f)) + gm.GetComponent<GameManager>().referanceParentPlayer.GetComponent<ParentPlayerController>().PlayerStack[0].transform.position;
+                .GetComponent<ParentPlayerController>().PlayerStack.Count) * new Vector3(0f, .2f, 0f)) + gm.GetComponent<GameManager>().referanceParentPlayer.GetComponent<ParentPlayerController>().PlayerStack[0].transform.position;
             gameObject.transform.localScale = new Vector3(.3f, .3f, .3f);
             Debug.Log(gameObject.transform.localScale);
             gm.GetComponent<GameManager>().referanceParentPlayer.GetComponent<ParentPlayerController>().PlayerStack
@@ -56,7 +56,7 @@ public class CollectController : MonoBehaviour
             gameObject.GetComponent<LattersController>().referance = gm.GetComponent<GameManager>().AI;
             gameObject.GetComponent<LattersController>().ownership = "AI";
             gameObject.transform.position = (gm.GetComponent<GameManager>().referanceParentAI
-                .GetComponent<ParentAIController>().AIStack.Count) * new Vector3(0f,.4f,0f);
+                .GetComponent<ParentAIController>().AIStack.Count) * new Vector3(0f,.2f,0f);
         
             gm.GetComponent<GameManager>().referanceParentAI.GetComponent<ParentAIController>().AIStack
                 .Add(gameObject);
