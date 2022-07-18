@@ -2264,7 +2264,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 660766589}
   m_LocalRotation: {x: -0, y: 1, z: -0, w: 0}
-  m_LocalPosition: {x: 4.5518503, y: 4.654, z: -6.92}
+  m_LocalPosition: {x: 4.5518503, y: 3.805, z: -6.416}
   m_LocalScale: {x: 0.6, y: 0.6, z: 0.6}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2861,7 +2861,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 787009360}
   m_LocalRotation: {x: -0, y: 1, z: -0, w: 0}
-  m_LocalPosition: {x: 7.57985, y: 4.521, z: -6.568}
+  m_LocalPosition: {x: 7.57985, y: 3.771, z: -6.429}
   m_LocalScale: {x: 0.6, y: 0.6, z: 0.6}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -4384,14 +4384,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 242244332}
     m_Modifications:
-    - target: {fileID: 3666705880458241347, guid: 45378113b2c050242ae07f8423ac6876, type: 3}
-      propertyPath: m_Mass
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 3666705880458241347, guid: 45378113b2c050242ae07f8423ac6876, type: 3}
-      propertyPath: m_UseGravity
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 3722311314555402056, guid: 45378113b2c050242ae07f8423ac6876, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -4628,7 +4620,7 @@ PrefabInstance:
       value: S
       objectReference: {fileID: 0}
     m_RemovedComponents:
-    - {fileID: 9110950511591527890, guid: 89b4f69ee7c8a164183612dc645255a0, type: 3}
+    - {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: 89b4f69ee7c8a164183612dc645255a0, type: 3}
 --- !u!1 &1228776722 stripped
 GameObject:
@@ -7172,14 +7164,6 @@ PrefabInstance:
     - target: {fileID: 2080942416963215889, guid: 89b4f69ee7c8a164183612dc645255a0, type: 3}
       propertyPath: m_Name
       value: S
-      objectReference: {fileID: 0}
-    - target: {fileID: 9110950511591527890, guid: 89b4f69ee7c8a164183612dc645255a0, type: 3}
-      propertyPath: m_Mass
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 9110950511591527890, guid: 89b4f69ee7c8a164183612dc645255a0, type: 3}
-      propertyPath: m_UseGravity
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 89b4f69ee7c8a164183612dc645255a0, type: 3}

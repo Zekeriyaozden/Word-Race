@@ -33,6 +33,8 @@ public class CollectController : MonoBehaviour
             gameObject.GetComponent<LattersController>().ownership = "Player";
             gameObject.transform.position = ((gm.GetComponent<GameManager>().referanceParentPlayer
                 .GetComponent<ParentPlayerController>().PlayerStack.Count) * new Vector3(0f, .4f, 0f)) + gm.GetComponent<GameManager>().referanceParentPlayer.GetComponent<ParentPlayerController>().PlayerStack[0].transform.position;
+            gameObject.transform.localScale = new Vector3(.3f, .3f, .3f);
+            Debug.Log(gameObject.transform.localScale);
             gm.GetComponent<GameManager>().referanceParentPlayer.GetComponent<ParentPlayerController>().PlayerStack
                 .Add(gameObject);
             gameObject.GetComponent<LattersController>().node = gm.GetComponent<GameManager>().referanceParentPlayer

@@ -13,9 +13,9 @@ public class SaveLoadManager : MonoBehaviour
     void Start()
     {
         gm = GameObject.Find("GameManager");
-        gm.GetComponent<GameManager>().currentScene = currentLevel;
+        gm.GetComponent<GameManager>().currentScene = 0;
         Debug.Log(currentLevel);
-        PlayerPrefs.SetInt("currentLevel",currentLevel);
+        PlayerPrefs.SetInt("currentLevel",0);
         Load();
     }
 

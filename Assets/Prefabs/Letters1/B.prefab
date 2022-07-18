@@ -193,7 +193,6 @@ GameObject:
   - component: {fileID: 8185912577060873825}
   - component: {fileID: 1652289800587798749}
   - component: {fileID: 7391408397677363931}
-  - component: {fileID: 1932741817752009240}
   - component: {fileID: -4229049743988528135}
   - component: {fileID: 2283372131011992416}
   m_Layer: 0
@@ -212,8 +211,8 @@ Transform:
   m_GameObject: {fileID: 6199077535374202478}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
   m_LocalPosition: {x: -50.099655, y: -42.26607, z: 99.90029}
-  m_LocalScale: {x: 0.6, y: 0.6, z: 0.6}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 0.4, y: 0.4, z: 0.4}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 7583492302951684017}
   - {fileID: 5413627174656938579}
@@ -265,7 +264,7 @@ MonoBehaviour:
   jumpingObject: {fileID: 0}
   isJumping: 0
   node: {fileID: 0}
-  distanceZ: 0
+  distanceY: 0
   ownership: 
   isDest: 0
 --- !u!114 &7391408397677363931
@@ -280,22 +279,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c851920c5f3725c4f913730141c98b66, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!54 &1932741817752009240
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6199077535374202478}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 96
-  m_CollisionDetection: 0
 --- !u!114 &-4229049743988528135
 MonoBehaviour:
   m_ObjectHideFlags: 0
