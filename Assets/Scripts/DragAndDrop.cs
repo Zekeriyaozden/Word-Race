@@ -7,11 +7,13 @@ public class DragAndDrop : MonoBehaviour
 {
     public Vector3 Pos;
     public Vector3 _Pos;
+    public Vector3 posStart;
     private GameObject gameManager;
     private Vector3 offset;
-    private bool isPlayable;
+    public bool isPlayable;
     private void Start()
     {
+        posStart = transform.position;
         isPlayable = true;
         gameManager = GameObject.Find("GameManager");
     }
@@ -49,6 +51,7 @@ public class DragAndDrop : MonoBehaviour
                     gameObject.transform.position =
                         new Vector3(go.transform.position.x, go.transform.position.y, transform.position.z);
                     go.GetComponent<ScrblDrag>().isFull = true;
+                    go.GetComponent<ScrblDrag>().linked = gameObject;
                 }
             }
             else

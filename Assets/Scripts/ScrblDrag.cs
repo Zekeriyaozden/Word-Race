@@ -11,9 +11,13 @@ public class ScrblDrag : MonoBehaviour
     public bool isEnter;
     private bool flagEnter;
     public bool isFull;
+    public bool isSubmitted;
+    public GameObject linked;
 
     void Start()
     {
+        linked = null;
+        isSubmitted = false;
         isFull = false;
         flagEnter = true;
         //gameManager.GetComponent<GameManager>().scrblI = 9;

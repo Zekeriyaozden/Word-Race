@@ -35,6 +35,7 @@ public class LetterAnim : MonoBehaviour
 
         if (k >= 1)
         {
+            gameObject.AddComponent<DragAndDrop>();
             gameObject.GetComponent<LetterAnim>().enabled = false;
         }
 

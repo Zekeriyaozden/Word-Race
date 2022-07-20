@@ -41,8 +41,7 @@ public class ScrblGameEnd : MonoBehaviour
             i++)
         {
             gm.GetComponent<GameManager>().referanceParentPlayer.GetComponent<ParentPlayerController>().PlayerStack[i].GetComponent<LattersController>().enabled = false;
-            gm.GetComponent<GameManager>().referanceParentPlayer.GetComponent<ParentPlayerController>().PlayerStack[i]
-                .AddComponent<DragAndDrop>();
+
             gm.GetComponent<GameManager>().referanceParentPlayer.GetComponent<ParentPlayerController>().PlayerStack[i]
                 .AddComponent<LetterAnim>();
             gm.GetComponent<GameManager>().referanceParentPlayer.GetComponent<ParentPlayerController>().PlayerStack[i]
