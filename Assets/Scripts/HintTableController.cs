@@ -104,7 +104,7 @@ public class HintTableController : MonoBehaviour
             if (gameObject.GetComponent<HintTableController>().AnswerLetters[i] !=
                 gameObject.GetComponent<HintTableController>().findTargetBox())
             {
-                Debug.Log("aa");
+//                Debug.Log("aa");
                 Material[] mt = gameObject.GetComponent<HintTableController>().AnswerLetters[i].GetComponent<MeshRenderer>().materials;
                 mt[0] = whiteAndTarget[0];
                 gameObject.GetComponent<HintTableController>().AnswerLetters[i].GetComponent<MeshRenderer>().materials= mt;

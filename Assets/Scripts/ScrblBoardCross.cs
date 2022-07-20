@@ -2,19 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ScrableBoardController : MonoBehaviour
+public class ScrblBoardCross : MonoBehaviour
 {
-    public Material mt;
-    //public GameObject boardDrop;
-    
     
     void Start()
     {
-       // boardDrop = null;
+        
     }
 
-
-
+    // Update is called once per frame
     void Update()
     {
         

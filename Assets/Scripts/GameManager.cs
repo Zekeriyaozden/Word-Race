@@ -24,6 +24,9 @@ public class GameManager : MonoBehaviour
     public GameObject AI;
     public GameObject referanceParentPlayer;
     public GameObject referanceParentAI;
+    public Vector3 dropAndDrag;
+    public int scrblI;
+    public int scrblJ;
     //-------------------------------------------
     public GameObject HintTab;
     [HideInInspector]
@@ -35,6 +38,7 @@ public class GameManager : MonoBehaviour
     private bool gameStartBool;
     void Start()
     {
+        dropAndDrag = new Vector3(0, 0, 0);
         gameStartBool = true;
         gameIsGoing = false;
         speedTmp = speedMainChar;

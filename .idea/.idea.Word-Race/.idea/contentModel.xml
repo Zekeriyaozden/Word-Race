@@ -152,7 +152,6 @@
             <e p="ETFXRotation.cs" t="Include" />
           </e>
         </e>
-        <e p="SceneManagement.cs" t="Include" />
         <e p="Scripts" t="Include">
           <e p="AIController.cs" t="Include" />
           <e p="AITarget.cs" t="Include" />
@@ -160,6 +159,7 @@
           <e p="CollectAnimations.cs" t="Include" />
           <e p="CollectController.cs" t="Include" />
           <e p="Deneme.cs" t="Include" />
+          <e p="DragAndDrop.cs" t="Include" />
           <e p="EndGameMechanics.cs" t="Include" />
           <e p="EngGameplay.cs" t="Include" />
           <e p="EnvelopeController.cs" t="Include" />
@@ -169,6 +169,7 @@
           <e p="HintTableController.cs" t="Include" />
           <e p="LattersController.cs" t="Include" />
           <e p="LattersEndGame.cs" t="Include" />
+          <e p="LetterAnim.cs" t="Include" />
           <e p="LetterBoardGenerator.cs" t="Include" />
           <e p="LetterBoxController.cs" t="Include" />
           <e p="LetterMovementEndGame.cs" t="Include" />
@@ -181,8 +182,12 @@
           <e p="RunnerFinishController.cs" t="Include" />
           <e p="SaveLoadManager.cs" t="Include" />
           <e p="SceneController.cs" t="Include" />
+          <e p="SceneManagement.cs" t="Include" />
           <e p="ScrableBoardController.cs" t="Include" />
           <e p="ScrableCaseController.cs" t="Include" />
+          <e p="ScrblBoardCross.cs" t="Include" />
+          <e p="ScrblDrag.cs" t="Include" />
+          <e p="ScrblGameEnd.cs" t="Include" />
           <e p="Speeder.cs" t="Include" />
           <e p="UIManager.cs" t="Include" />
           <e p="UIManagerRunner.cs" t="Include" />

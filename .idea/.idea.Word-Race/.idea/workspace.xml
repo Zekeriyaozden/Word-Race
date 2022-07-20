@@ -20,27 +20,30 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UIManager.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/LetterBoardGenerator.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/AITarget.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/RunnerFinishController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/HintTableController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/LetterAnim.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ScrableBoardController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/CollectController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/AIController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/LattersController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../unity/Assets/Scripts/Singleton.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/ParentAIController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/GateController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/LattersEndGame.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/LetterBoxController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/EndGameMechanics.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/SceneManagement.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/FailCrossController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/EngGameplay.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/ScrblDrag.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/ScrblBoardCross.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/EnvelopeController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/LetterMovementEndGame.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UIManagerRunner.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/LetterBoardGenerator.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/RunnerFinishController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/HintTableController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/DragAndDrop.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/AIController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/LattersController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/ParentAIController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/LattersEndGame.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/EngGameplay.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
@@ -60,21 +63,16 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/EndGameCameraAnim.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/EngGameplay.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/LetterMovementEndGame.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/CameraController.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/GateController.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/EnvelopeController.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/LattersEndGame.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/DenemeDest.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/ScrableCaseController.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/FailCrossController.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/EndGameMechanics.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Speeder.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/AIController.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/UIManager.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/ScrableBoardController.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/HintTableController.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/RunnerFinishController.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/UIManagerRunner.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/LetterBoardGenerator.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/LattersController.cs" />
@@ -85,6 +83,16 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/CollectController.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/ObstacleController.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/EndGameMechanics.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/LetterAnim.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/HintTableController.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/CameraController.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/ScrblGameEnd.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/ScrblBoardCross.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/ScrableBoardController.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/ScrblDrag.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/DragAndDrop.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="2ALaX7nMpAflu6fvhSwVNGOdx6e" />
@@ -149,6 +157,8 @@
       <workItem from="1656922770100" duration="9623000" />
       <workItem from="1657101516988" duration="1672000" />
       <workItem from="1658129440040" duration="2245000" />
+      <workItem from="1658227237427" duration="18001000" />
+      <workItem from="1658303230289" duration="9388000" />
     </task>
     <servers />
   </component>

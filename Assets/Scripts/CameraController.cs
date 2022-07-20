@@ -28,7 +28,7 @@ public class CameraController : MonoBehaviour
                 k += Time.deltaTime * speed;
             }
             gameObject.transform.position = Vector3.Lerp(startPos, target, k);
-            gameObject.transform.eulerAngles = Vector3.Lerp(startRotate, new Vector3(2.3f, 0, 0), k);
+            gameObject.transform.eulerAngles = Vector3.Lerp(startRotate, new Vector3(-3f, 360f, 0), k);
         }
         else
         {
