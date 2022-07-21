@@ -20,6 +20,94 @@ public class ScrableBoardController : MonoBehaviour
         
     }
 
+    private bool firstLetter(int i,int j)
+    {
+        int iFirst = i;
+        int jFirst = j;
+        bool flagHorizLeft = true;
+        bool flagHorizRight = true;
+        bool flagVertUp = true;
+        bool flagVertDown = true;
+        
+        while (jFirst>= 0 && flagHorizLeft)
+        {
+            if (jFirst - 1 >= 0 && GameObject.Find(i.ToString() + "-" + (jFirst - 1).ToString()).GetComponent<ScrblDrag>().isFull
+            && !!GameObject.Find(i.ToString() + "-" + (jFirst - 1).ToString()).GetComponent<ScrblDrag>().isSubmitted
+            )
+            {
+                jFirst = jFirst - 1;
+            }
+            else
+            {
+                flagHorizLeft = false;
+            }
+        }
+        
+        while (jFirst <= 8 && flagHorizRight)
+        {
+            GameObject.Find(i.ToString() + "-" + jFirst.ToString()).GetComponent<ScrblDrag>().cross = true;
+            if (jFirst+1 <= 8 && GameObject.Find(i.ToString() + "-" + (jFirst + 1).ToString()).GetComponent<ScrblDrag>().isFull
+            && !GameObject.Find(i.ToString() + "-" + (jFirst + 1).ToString()).GetComponent<ScrblDrag>().isSubmitted
+            )
+            {
+                jFirst = jFirst + 1;
+            }
+            else
+            {
+                flagHorizRight = false;
+            }
+        }
+            
+        //--------------------------------------------------------------------------------------------------------------
+        
+        while (iFirst>= 0 && flagVertUp)
+        {
+            if (iFirst - 1 >= 0 && GameObject.Find((iFirst - 1).ToString() + "-" + j.ToString()).GetComponent<ScrblDrag>().isFull
+                                && !!GameObject.Find((iFirst - 1).ToString() + "-" + j.ToString()).GetComponent<ScrblDrag>().isSubmitted
+            )
+            {
+                iFirst = iFirst - 1;
+            }
+            else
+            {
+                flagVertUp = false;
+            }
+        }
+        
+        while (iFirst <= 8 && flagVertDown)
+        {
+            GameObject.Find(iFirst.ToString() + "-" + j.ToString()).GetComponent<ScrblDrag>().cross = true;
+            if (iFirst+1 <= 8 && GameObject.Find((iFirst+1).ToString() + "-" + j.ToString()).GetComponent<ScrblDrag>().isFull
+                              && !GameObject.Find((iFirst + 1).ToString() + "-" + j.ToString()).GetComponent<ScrblDrag>().isSubmitted
+            )
+            {
+                iFirst = iFirst + 1;
+            }
+            else
+            {
+                flagVertDown = false;
+            }
+        }
+        
+        //--------------------------------------------------------------------------------------------------------------
+        
+        for (int k = 0; k < 9; k++)
+        {
+            
+            for (int l = 0; l < 9; l++)
+            {
+                if (GameObject.Find(k.ToString() + "-" + l.ToString()).GetComponent<ScrblDrag>().isFull 
+                && !GameObject.Find(k.ToString() + "-" + l.ToString()).GetComponent<ScrblDrag>().isSubmitted)
+                {
+                    if (!GameObject.Find(k.ToString() + "-" + l.ToString()).GetComponent<ScrblDrag>().cross)
+                    {
+                        return false;
+                    }
+                }
+            }
+        }
+        return true;
+    }
     private bool control2D(int i,int j)
     {
         bool horiz = false;
@@ -69,8 +157,6 @@ public class ScrableBoardController : MonoBehaviour
 
     private bool controlLetter(int i,int j)
     {
-
-
         bool isWordExist = false;
         int iFirst = i;
         int jFirst = j;
@@ -84,7 +170,7 @@ public class ScrableBoardController : MonoBehaviour
         bool flagHorizRight = true;
         bool flagVertUp = true;
         bool flagVertDown = true;
-
+        
         if (i > 8 || j > 8)
         {
             flagHorizLeft = false;
@@ -92,12 +178,12 @@ public class ScrableBoardController : MonoBehaviour
             flagVertDown = false;
             flagVertUp = false;
         }
-
         
-        while (jFirst >= 0 && flagHorizLeft)
+        
+        while (jFirst>= 0 && flagHorizLeft)
         {
             //Debug.Log("j = " + j);
-            if (GameObject.Find(i.ToString() + "-" + (jFirst - 1).ToString()).GetComponent<ScrblDrag>().isFull)
+            if (jFirst - 1 >= 0 &&GameObject.Find(i.ToString() + "-" + (jFirst - 1).ToString()).GetComponent<ScrblDrag>().isFull)
             {
                 jFirst = jFirst - 1;
             }
@@ -107,12 +193,12 @@ public class ScrableBoardController : MonoBehaviour
             }
         }
         
-        while (jFirst+1 <= 8 && flagHorizRight)
+        while (jFirst <= 8 && flagHorizRight)
         {
             //Debug.Log("EnterHoriz");
             horiz = String.Concat(horiz , GameObject.Find(i.ToString() + "-" + jFirst.ToString())
                 .GetComponent<ScrblDrag>().linked.GetComponent<LattersEndGame>().LatterChar);
-            if (GameObject.Find(i.ToString() + "-" + (jFirst + 1).ToString()).GetComponent<ScrblDrag>().isFull)
+            if (jFirst+1 <= 8 && GameObject.Find(i.ToString() + "-" + (jFirst + 1).ToString()).GetComponent<ScrblDrag>().isFull)
             {
                 jFirst = jFirst + 1;
             }
@@ -121,9 +207,44 @@ public class ScrableBoardController : MonoBehaviour
                 flagHorizRight = false;
             }
         }
+        
+        //--------------------------------------------------------------------------------------------------------------
 
+        iFirst = i;
+        jFirst = j;
+        
+        while (iFirst >= 0 && flagVertUp)
+        {
+            if (jFirst-1 >= 0 && GameObject.Find((iFirst - 1).ToString() + "-" + j.ToString()).GetComponent<ScrblDrag>().isFull)
+            {
+                iFirst = iFirst - 1;
+            }
+            else
+            {
+                flagVertUp = false;
+            }
+        }
+        
+        while (iFirst <= 8 && flagVertDown)
+        {
+            //Debug.Log("EnterHoriz");
+            vertical = String.Concat(vertical , GameObject.Find(iFirst.ToString() + "-" + j.ToString())
+                .GetComponent<ScrblDrag>().linked.GetComponent<LattersEndGame>().LatterChar);
+            if (iFirst+1<=8 && GameObject.Find((iFirst + 1).ToString() + "-" + j.ToString()).GetComponent<ScrblDrag>().isFull)
+            {
+                iFirst = iFirst + 1;
+            }
+            else
+            {
+                flagVertDown = false;
+            }
+        }
 
+        //--------------------------------------------------------------------------------------------------------------
+
+        
         Debug.Log("-" + horiz + "-");
+        Debug.Log("-" + vertical + "-");
         for (int k = 0; k < words.Count; k++)
         {
             if (words[k].Equals(horiz))
@@ -131,18 +252,41 @@ public class ScrableBoardController : MonoBehaviour
                 isWordExist = true;
             }
         }
-
-        if (!isWordExist)
+        
+        if (horiz.Length > 1 && !isWordExist)
         {
             words.Add(horiz);
         }
-        return control2D(i, j);
+        
+        //--------------------------------------------------------------------------------------------------------------
 
+        isWordExist = false;
+        
+        for (int k = 0; k < words.Count; k++)
+        {
+            if (words[k].Equals(vertical))
+            {
+                isWordExist = true;
+            }
+        }
+        
+        if (vertical.Length > 1 && !isWordExist)
+        {
+            words.Add(vertical);
+        }
+        
+        //--------------------------------------------------------------------------------------------------------------
+        
+        return control2D(i, j);
+        
     }
 
     public void submit()
     {
 
+        bool firstLetterFlag = true;
+        int firstI = 0;
+        int firstJ = 0;
         bool control2DFlag = true;
         bool flag = true;
         GameObject controllttr;
@@ -160,6 +304,12 @@ public class ScrableBoardController : MonoBehaviour
                 controllttr = GameObject.Find(I.ToString() + "-" + J.ToString());
                 if (controllttr.GetComponent<ScrblDrag>().isFull && !controllttr.GetComponent<ScrblDrag>().isSubmitted)
                 {
+                    if (firstLetterFlag)
+                    {
+                        firstI = I;
+                        firstJ = J;
+                        firstLetterFlag = false;
+                    }
                     if (!control2D(I, J))
                     {
                         control2DFlag = false;
@@ -170,11 +320,17 @@ public class ScrableBoardController : MonoBehaviour
             I++;
         }
 
-        Debug.Log("control flag = "+control2DFlag);
+        if (control2DFlag)
+        {
+            if (firstLetter(firstI, firstJ))
+            {
+                Debug.Log(true);
+            }
+        }
         
         I = 0;
         J = 0;
-        //control2DFlag
+
         if (true)
         {
             while (I < 9)

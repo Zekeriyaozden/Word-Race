@@ -89,11 +89,11 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/CameraController.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/ScrblBoardCross.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/ScrblDrag.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/LetterAnim.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/ScrblGameEnd.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/DragAndDrop.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/LetterReturn.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/ScrblDrag.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/ScrableBoardController.cs" />
     </changedPaths>
   </component>
@@ -161,7 +161,7 @@
       <workItem from="1658129440040" duration="2245000" />
       <workItem from="1658227237427" duration="18001000" />
       <workItem from="1658303230289" duration="19252000" />
-      <workItem from="1658400526463" duration="3634000" />
+      <workItem from="1658400526463" duration="8037000" />
     </task>
     <servers />
   </component>

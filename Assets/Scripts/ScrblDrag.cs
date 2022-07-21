@@ -13,9 +13,11 @@ public class ScrblDrag : MonoBehaviour
     public bool isFull;
     public bool isSubmitted;
     public GameObject linked;
+    public bool cross;
 
     void Start()
     {
+        cross = false;
         linked = null;
         isSubmitted = false;
         isFull = false;
