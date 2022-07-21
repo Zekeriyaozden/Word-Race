@@ -10,9 +10,16 @@ public class ScrblGameEnd : MonoBehaviour
     public Vector3 startPosLetters;
     public float offset;
     public List<GameObject> letterList;
+    public GameObject ui;
     void Start()
     {
         gm = GameObject.Find("GameManager");
+    }
+
+    IEnumerator scrabbleUI()
+    {
+        yield return new WaitForSeconds(3f);
+        ui.SetActive(true);
     }
 
     private IEnumerator _instant(GameObject go)
@@ -129,6 +136,7 @@ public class ScrblGameEnd : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
+            StartCoroutine(scrabbleUI());
             if (gm.GetComponent<GameManager>().referanceParentPlayer.GetComponent<ParentPlayerController>().PlayerStack
                 .Count > 1)
             {

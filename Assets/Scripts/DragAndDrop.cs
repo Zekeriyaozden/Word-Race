@@ -52,6 +52,7 @@ public class DragAndDrop : MonoBehaviour
                         new Vector3(go.transform.position.x, go.transform.position.y, transform.position.z);
                     go.GetComponent<ScrblDrag>().isFull = true;
                     go.GetComponent<ScrblDrag>().linked = gameObject;
+                    gameManager.GetComponent<GameManager>().dropAndDrag = new Vector3(0,0,0);   
                 }
             }
             else

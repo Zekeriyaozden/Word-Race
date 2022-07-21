@@ -23,6 +23,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/AITarget.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/LetterAnim.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ScrableBoardController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/LetterReturn.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/CollectController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../unity/Assets/Scripts/Singleton.cs" root0="SKIP_HIGHLIGHTING" />
@@ -89,9 +90,10 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/ScrblBoardCross.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/ScrblDrag.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/DragAndDrop.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/ScrblGameEnd.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/LetterAnim.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/ScrblGameEnd.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/DragAndDrop.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/LetterReturn.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/ScrableBoardController.cs" />
     </changedPaths>
   </component>
@@ -158,7 +160,8 @@
       <workItem from="1657101516988" duration="1672000" />
       <workItem from="1658129440040" duration="2245000" />
       <workItem from="1658227237427" duration="18001000" />
-      <workItem from="1658303230289" duration="11920000" />
+      <workItem from="1658303230289" duration="19252000" />
+      <workItem from="1658400526463" duration="3634000" />
     </task>
     <servers />
   </component>
