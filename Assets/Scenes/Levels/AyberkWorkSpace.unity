@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 0.12
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.027731908, g: 0.07250327, b: 0.118577756, a: 0.12}
+  m_IndirectSpecularColor: {r: 0.027731787, g: 0.07250241, b: 0.11857774, a: 0.12}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -139,6 +139,7 @@ MonoBehaviour:
   isFull: 0
   isSubmitted: 0
   linked: {fileID: 0}
+  cross: 0
 --- !u!114 &7254744
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -155,6 +156,7 @@ MonoBehaviour:
   isFull: 0
   isSubmitted: 0
   linked: {fileID: 0}
+  cross: 0
 --- !u!4 &41928074 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 635606566808468903, guid: 62c62db7ee37ada40adec6a6be16c665, type: 3}
@@ -176,6 +178,7 @@ MonoBehaviour:
   isFull: 0
   isSubmitted: 0
   linked: {fileID: 0}
+  cross: 0
 --- !u!1 &47506951
 GameObject:
   m_ObjectHideFlags: 0
@@ -388,6 +391,7 @@ MonoBehaviour:
   isFull: 0
   isSubmitted: 0
   linked: {fileID: 0}
+  cross: 0
 --- !u!114 &142368087
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -404,6 +408,7 @@ MonoBehaviour:
   isFull: 0
   isSubmitted: 0
   linked: {fileID: 0}
+  cross: 0
 --- !u!1001 &142592356
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1183,6 +1188,7 @@ MonoBehaviour:
   isFull: 0
   isSubmitted: 0
   linked: {fileID: 0}
+  cross: 0
 --- !u!114 &258307268
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1199,6 +1205,7 @@ MonoBehaviour:
   isFull: 0
   isSubmitted: 0
   linked: {fileID: 0}
+  cross: 0
 --- !u!114 &266824367
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1215,6 +1222,7 @@ MonoBehaviour:
   isFull: 0
   isSubmitted: 0
   linked: {fileID: 0}
+  cross: 0
 --- !u!114 &271441629
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1231,6 +1239,7 @@ MonoBehaviour:
   isFull: 0
   isSubmitted: 0
   linked: {fileID: 0}
+  cross: 0
 --- !u!1 &272099611
 GameObject:
   m_ObjectHideFlags: 0
@@ -1499,6 +1508,7 @@ MonoBehaviour:
   isFull: 0
   isSubmitted: 0
   linked: {fileID: 0}
+  cross: 0
 --- !u!114 &330854505
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1515,6 +1525,7 @@ MonoBehaviour:
   isFull: 0
   isSubmitted: 0
   linked: {fileID: 0}
+  cross: 0
 --- !u!1001 &332358326
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2181,6 +2192,7 @@ MonoBehaviour:
   isFull: 0
   isSubmitted: 0
   linked: {fileID: 0}
+  cross: 0
 --- !u!1 &405958830
 GameObject:
   m_ObjectHideFlags: 0
@@ -2390,6 +2402,7 @@ MonoBehaviour:
   isFull: 0
   isSubmitted: 0
   linked: {fileID: 0}
+  cross: 0
 --- !u!1 &437707958
 GameObject:
   m_ObjectHideFlags: 0
@@ -2519,6 +2532,7 @@ MonoBehaviour:
   isFull: 0
   isSubmitted: 0
   linked: {fileID: 0}
+  cross: 0
 --- !u!1 &505157926 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 4237b3fe8e765e148a22dadc577584e1, type: 3}
@@ -2563,6 +2577,7 @@ MonoBehaviour:
   isFull: 0
   isSubmitted: 0
   linked: {fileID: 0}
+  cross: 0
 --- !u!4 &517688694 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7414967132500022310, guid: b59e66fd97361844692e5f6a0197ba48, type: 3}
@@ -2584,6 +2599,7 @@ MonoBehaviour:
   isFull: 0
   isSubmitted: 0
   linked: {fileID: 0}
+  cross: 0
 --- !u!114 &540887960
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2600,6 +2616,7 @@ MonoBehaviour:
   isFull: 0
   isSubmitted: 0
   linked: {fileID: 0}
+  cross: 0
 --- !u!1 &553330080 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7670867702947044967, guid: 1c8707229d2bea1458aa64169dc03998, type: 3}
@@ -2729,6 +2746,7 @@ MonoBehaviour:
   isFull: 0
   isSubmitted: 0
   linked: {fileID: 0}
+  cross: 0
 --- !u!114 &569583992
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2745,6 +2763,7 @@ MonoBehaviour:
   isFull: 0
   isSubmitted: 0
   linked: {fileID: 0}
+  cross: 0
 --- !u!1 &606729574 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: f0d1cf96577a1ec46aa4ba0ead218cb5, type: 3}
@@ -2785,6 +2804,7 @@ MonoBehaviour:
   isFull: 0
   isSubmitted: 0
   linked: {fileID: 0}
+  cross: 0
 --- !u!1 &660766589
 GameObject:
   m_ObjectHideFlags: 0
@@ -2886,6 +2906,7 @@ MonoBehaviour:
   isFull: 0
   isSubmitted: 0
   linked: {fileID: 0}
+  cross: 0
 --- !u!1001 &663399453
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2975,6 +2996,7 @@ MonoBehaviour:
   isFull: 0
   isSubmitted: 0
   linked: {fileID: 0}
+  cross: 0
 --- !u!114 &676740725
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2991,6 +3013,7 @@ MonoBehaviour:
   isFull: 0
   isSubmitted: 0
   linked: {fileID: 0}
+  cross: 0
 --- !u!114 &702239111
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3007,6 +3030,7 @@ MonoBehaviour:
   isFull: 0
   isSubmitted: 0
   linked: {fileID: 0}
+  cross: 0
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -3253,6 +3277,7 @@ MonoBehaviour:
   isFull: 0
   isSubmitted: 0
   linked: {fileID: 0}
+  cross: 0
 --- !u!1 &787009360
 GameObject:
   m_ObjectHideFlags: 0
@@ -3665,6 +3690,7 @@ MonoBehaviour:
   isFull: 0
   isSubmitted: 0
   linked: {fileID: 0}
+  cross: 0
 --- !u!1 &840870142
 GameObject:
   m_ObjectHideFlags: 0
@@ -3841,6 +3867,7 @@ MonoBehaviour:
   isFull: 0
   isSubmitted: 0
   linked: {fileID: 0}
+  cross: 0
 --- !u!114 &852425502
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3857,6 +3884,7 @@ MonoBehaviour:
   isFull: 0
   isSubmitted: 0
   linked: {fileID: 0}
+  cross: 0
 --- !u!114 &859964266
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3873,6 +3901,7 @@ MonoBehaviour:
   isFull: 0
   isSubmitted: 0
   linked: {fileID: 0}
+  cross: 0
 --- !u!1 &870037371
 GameObject:
   m_ObjectHideFlags: 0
@@ -3933,6 +3962,7 @@ MonoBehaviour:
   isFull: 0
   isSubmitted: 0
   linked: {fileID: 0}
+  cross: 0
 --- !u!114 &883954910
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3949,6 +3979,7 @@ MonoBehaviour:
   isFull: 0
   isSubmitted: 0
   linked: {fileID: 0}
+  cross: 0
 --- !u!4 &906384216 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 9087956148141909812, guid: bfbe579d4c51b3a48a7d2e60ff183266, type: 3}
@@ -4286,6 +4317,7 @@ MonoBehaviour:
   isFull: 0
   isSubmitted: 0
   linked: {fileID: 0}
+  cross: 0
 --- !u!114 &996674648
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4302,6 +4334,7 @@ MonoBehaviour:
   isFull: 0
   isSubmitted: 0
   linked: {fileID: 0}
+  cross: 0
 --- !u!114 &1043073833
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4318,6 +4351,7 @@ MonoBehaviour:
   isFull: 0
   isSubmitted: 0
   linked: {fileID: 0}
+  cross: 0
 --- !u!1001 &1044629951
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4407,6 +4441,7 @@ MonoBehaviour:
   isFull: 0
   isSubmitted: 0
   linked: {fileID: 0}
+  cross: 0
 --- !u!4 &1071470839 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 84b5e16585a6dee4a90527f078e370c2, type: 3}
@@ -4511,6 +4546,7 @@ MonoBehaviour:
   isFull: 0
   isSubmitted: 0
   linked: {fileID: 0}
+  cross: 0
 --- !u!114 &1082719988
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4527,6 +4563,7 @@ MonoBehaviour:
   isFull: 0
   isSubmitted: 0
   linked: {fileID: 0}
+  cross: 0
 --- !u!1 &1107513110 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3024815097090208689, guid: f142553a814424b499902d12d7de8965, type: 3}
@@ -4561,6 +4598,7 @@ MonoBehaviour:
   isFull: 0
   isSubmitted: 0
   linked: {fileID: 0}
+  cross: 0
 --- !u!1 &1150151611
 GameObject:
   m_ObjectHideFlags: 0
@@ -4741,6 +4779,7 @@ MonoBehaviour:
   isFull: 0
   isSubmitted: 0
   linked: {fileID: 0}
+  cross: 0
 --- !u!114 &1162513088
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4757,6 +4796,7 @@ MonoBehaviour:
   isFull: 0
   isSubmitted: 0
   linked: {fileID: 0}
+  cross: 0
 --- !u!114 &1183829032
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4773,6 +4813,7 @@ MonoBehaviour:
   isFull: 0
   isSubmitted: 0
   linked: {fileID: 0}
+  cross: 0
 --- !u!1 &1198486945
 GameObject:
   m_ObjectHideFlags: 0
@@ -4847,6 +4888,7 @@ MonoBehaviour:
   isFull: 0
   isSubmitted: 0
   linked: {fileID: 0}
+  cross: 0
 --- !u!114 &1206290909
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4863,6 +4905,7 @@ MonoBehaviour:
   isFull: 0
   isSubmitted: 0
   linked: {fileID: 0}
+  cross: 0
 --- !u!1 &1208188186 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 153598040686813100, guid: aeb6bfbbe4cd9be499efaaa52bc6e050, type: 3}
@@ -4884,6 +4927,7 @@ MonoBehaviour:
   isFull: 0
   isSubmitted: 0
   linked: {fileID: 0}
+  cross: 0
 --- !u!1 &1234634700 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 4237b3fe8e765e148a22dadc577584e1, type: 3}
@@ -4918,6 +4962,7 @@ MonoBehaviour:
   isFull: 0
   isSubmitted: 0
   linked: {fileID: 0}
+  cross: 0
 --- !u!114 &1247102278
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4934,6 +4979,7 @@ MonoBehaviour:
   isFull: 0
   isSubmitted: 0
   linked: {fileID: 0}
+  cross: 0
 --- !u!114 &1255659482
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4950,6 +4996,7 @@ MonoBehaviour:
   isFull: 0
   isSubmitted: 0
   linked: {fileID: 0}
+  cross: 0
 --- !u!1001 &1255805250
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5293,6 +5340,7 @@ MonoBehaviour:
   isFull: 0
   isSubmitted: 0
   linked: {fileID: 0}
+  cross: 0
 --- !u!114 &1298708248
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5309,6 +5357,7 @@ MonoBehaviour:
   isFull: 0
   isSubmitted: 0
   linked: {fileID: 0}
+  cross: 0
 --- !u!114 &1300549458
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5325,6 +5374,7 @@ MonoBehaviour:
   isFull: 0
   isSubmitted: 0
   linked: {fileID: 0}
+  cross: 0
 --- !u!114 &1314432952
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5341,6 +5391,7 @@ MonoBehaviour:
   isFull: 0
   isSubmitted: 0
   linked: {fileID: 0}
+  cross: 0
 --- !u!1001 &1319685586
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5426,6 +5477,7 @@ MonoBehaviour:
   isFull: 0
   isSubmitted: 0
   linked: {fileID: 0}
+  cross: 0
 --- !u!114 &1347286460
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5442,6 +5494,7 @@ MonoBehaviour:
   isFull: 0
   isSubmitted: 0
   linked: {fileID: 0}
+  cross: 0
 --- !u!1 &1355018278 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4303256792084640494, guid: f1d903c2b07b39b4ca34feacf2c23f22, type: 3}
@@ -5601,6 +5654,7 @@ MonoBehaviour:
   isFull: 0
   isSubmitted: 0
   linked: {fileID: 0}
+  cross: 0
 --- !u!1001 &1389249051
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5809,6 +5863,7 @@ MonoBehaviour:
   isFull: 0
   isSubmitted: 0
   linked: {fileID: 0}
+  cross: 0
 --- !u!114 &1419972102
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5825,6 +5880,7 @@ MonoBehaviour:
   isFull: 0
   isSubmitted: 0
   linked: {fileID: 0}
+  cross: 0
 --- !u!114 &1420438956
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5841,6 +5897,7 @@ MonoBehaviour:
   isFull: 0
   isSubmitted: 0
   linked: {fileID: 0}
+  cross: 0
 --- !u!1001 &1425801811
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5914,6 +5971,7 @@ MonoBehaviour:
   isFull: 0
   isSubmitted: 0
   linked: {fileID: 0}
+  cross: 0
 --- !u!1001 &1454868175
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6011,6 +6069,7 @@ MonoBehaviour:
   isFull: 0
   isSubmitted: 0
   linked: {fileID: 0}
+  cross: 0
 --- !u!1 &1484697830 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8454724743246069134, guid: bfbe579d4c51b3a48a7d2e60ff183266, type: 3}
@@ -6032,6 +6091,7 @@ MonoBehaviour:
   isFull: 0
   isSubmitted: 0
   linked: {fileID: 0}
+  cross: 0
 --- !u!114 &1508970981
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6048,6 +6108,7 @@ MonoBehaviour:
   isFull: 0
   isSubmitted: 0
   linked: {fileID: 0}
+  cross: 0
 --- !u!4 &1519468101 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7987496537065321643, guid: 12e40a25a7f9d9743ac7327e2607f050, type: 3}
@@ -6069,6 +6130,7 @@ MonoBehaviour:
   isFull: 0
   isSubmitted: 0
   linked: {fileID: 0}
+  cross: 0
 --- !u!114 &1549049782
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6085,6 +6147,7 @@ MonoBehaviour:
   isFull: 0
   isSubmitted: 0
   linked: {fileID: 0}
+  cross: 0
 --- !u!1 &1549063061 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8053463694172074200, guid: c70437411467ce8438e08f44afdcc995, type: 3}
@@ -6106,6 +6169,7 @@ MonoBehaviour:
   isFull: 0
   isSubmitted: 0
   linked: {fileID: 0}
+  cross: 0
 --- !u!1 &1568073756 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4457198854457794783, guid: 74f1e3a4942b39d4385678101a9f3dba, type: 3}
@@ -6127,6 +6191,7 @@ MonoBehaviour:
   isFull: 0
   isSubmitted: 0
   linked: {fileID: 0}
+  cross: 0
 --- !u!114 &1574831288
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6143,6 +6208,7 @@ MonoBehaviour:
   isFull: 0
   isSubmitted: 0
   linked: {fileID: 0}
+  cross: 0
 --- !u!114 &1583804232
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6159,6 +6225,7 @@ MonoBehaviour:
   isFull: 0
   isSubmitted: 0
   linked: {fileID: 0}
+  cross: 0
 --- !u!1 &1583885653 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 193686, guid: 4ac11e49e7a6e464da0b69982f586755, type: 3}
@@ -6345,6 +6412,7 @@ MonoBehaviour:
   isFull: 0
   isSubmitted: 0
   linked: {fileID: 0}
+  cross: 0
 --- !u!114 &1613959619
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6361,6 +6429,7 @@ MonoBehaviour:
   isFull: 0
   isSubmitted: 0
   linked: {fileID: 0}
+  cross: 0
 --- !u!1001 &1620790960
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6458,6 +6527,7 @@ MonoBehaviour:
   isFull: 0
   isSubmitted: 0
   linked: {fileID: 0}
+  cross: 0
 --- !u!1001 &1648797683
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6653,6 +6723,7 @@ MonoBehaviour:
   isFull: 0
   isSubmitted: 0
   linked: {fileID: 0}
+  cross: 0
 --- !u!1001 &1688851877
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7171,6 +7242,7 @@ MonoBehaviour:
   isFull: 0
   isSubmitted: 0
   linked: {fileID: 0}
+  cross: 0
 --- !u!1 &1855041375 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4099294666154683890, guid: 45378113b2c050242ae07f8423ac6876, type: 3}
@@ -7197,6 +7269,7 @@ MonoBehaviour:
   isFull: 0
   isSubmitted: 0
   linked: {fileID: 0}
+  cross: 0
 --- !u!114 &1905811067
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7213,6 +7286,7 @@ MonoBehaviour:
   isFull: 0
   isSubmitted: 0
   linked: {fileID: 0}
+  cross: 0
 --- !u!114 &1921206750
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7229,6 +7303,7 @@ MonoBehaviour:
   isFull: 0
   isSubmitted: 0
   linked: {fileID: 0}
+  cross: 0
 --- !u!114 &1927349796
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7245,6 +7320,7 @@ MonoBehaviour:
   isFull: 0
   isSubmitted: 0
   linked: {fileID: 0}
+  cross: 0
 --- !u!1 &1927628103
 GameObject:
   m_ObjectHideFlags: 0
@@ -7337,6 +7413,7 @@ MonoBehaviour:
   isFull: 0
   isSubmitted: 0
   linked: {fileID: 0}
+  cross: 0
 --- !u!1001 &1948147065
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7635,6 +7712,7 @@ MonoBehaviour:
   isFull: 0
   isSubmitted: 0
   linked: {fileID: 0}
+  cross: 0
 --- !u!1 &1995197452
 GameObject:
   m_ObjectHideFlags: 0
@@ -7767,6 +7845,7 @@ MonoBehaviour:
   isFull: 0
   isSubmitted: 0
   linked: {fileID: 0}
+  cross: 0
 --- !u!1 &2046208630 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2840493011693231749, guid: f43b185014ab52447bfbbef43936e54d, type: 3}
@@ -7851,6 +7930,7 @@ MonoBehaviour:
   isFull: 0
   isSubmitted: 0
   linked: {fileID: 0}
+  cross: 0
 --- !u!1001 &2065580227
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8042,7 +8122,7 @@ MonoBehaviour:
   AIWhenIsStop: 0.2
   DistanceOfMainAndAI: 5
   lerpSpeed: 42
-  speedMainChar: 23.8
+  speedMainChar: 10.7
   speedAIChar: 6.7
   Player: {fileID: 8119462406638492814}
   AI: {fileID: 7198439770701404457}
@@ -8100,6 +8180,7 @@ MonoBehaviour:
   isFull: 0
   isSubmitted: 0
   linked: {fileID: 0}
+  cross: 0
 --- !u!1001 &2098724751
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9221,8 +9302,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b7549f40363da841897f178eca945d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  recallTextWindow: {fileID: 0}
   words: []
   mt: {fileID: 2100000, guid: 7a2f5fdb1bbb98246a7a946ccdd1c6b1, type: 2}
+  allWords: []
 --- !u!4 &943569929983860197
 Transform:
   m_ObjectHideFlags: 0

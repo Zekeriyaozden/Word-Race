@@ -2,17 +2,23 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.IO;
+using System.Linq;
 
 public class ScrableBoardController : MonoBehaviour
 {
+    public GameObject recallTextWindow;
     public List<String> words;
     public Material mt;
+    public List<String> allWords;
     //public GameObject boardDrop;
     
     
     void Start()
     {
-       // boardDrop = null;
+        string readFromFilePath = Application.streamingAssetsPath + "/words" + ".txt";
+        allWords = File.ReadAllLines(readFromFilePath).ToList();
+        Debug.Log(allWords[5]);
     }
 
     public void skip()
@@ -20,6 +26,17 @@ public class ScrableBoardController : MonoBehaviour
         
     }
 
+    private bool controlWords()
+    {
+        for (int i = 0; i < words.Count; i++)
+        {
+            if (!allWords.Contains(words[i].ToLower()))
+            {
+                return false;
+            }
+        }
+        return true;
+    }
     private bool firstLetter(int i,int j)
     {
         int iFirst = i;
@@ -101,6 +118,7 @@ public class ScrableBoardController : MonoBehaviour
                 {
                     if (!GameObject.Find(k.ToString() + "-" + l.ToString()).GetComponent<ScrblDrag>().cross)
                     {
+                        Debug.Log("a");
                         return false;
                     }
                 }
@@ -320,12 +338,18 @@ public class ScrableBoardController : MonoBehaviour
             I++;
         }
 
-        if (control2DFlag)
+        Debug.Log("controlFlag = " + control2DFlag);
+        Debug.Log("firstLetter = " + firstLetter(firstI,firstJ));
+        
+        
+        if (control2DFlag && firstLetter(firstI, firstJ))
+        { 
+            Debug.Log(true);
+        }
+        else
         {
-            if (firstLetter(firstI, firstJ))
-            {
-                Debug.Log(true);
-            }
+            Debug.Log("as");
+            returnLetter();
         }
         
         I = 0;
@@ -349,7 +373,18 @@ public class ScrableBoardController : MonoBehaviour
             }
         }
 
+        if (controlWords())
+        {
+            Debug.Log(true);
+        }
+        else
+        {
+            Debug.Log(false);
+        }
+        
+        
 
+        
         
 
         //controllttr = null;
@@ -379,6 +414,9 @@ public class ScrableBoardController : MonoBehaviour
                 }
             }
         }*/
+        
+        words.Clear();
+        
     }
 
     public void returnLetter()
@@ -388,6 +426,7 @@ public class ScrableBoardController : MonoBehaviour
             for (int j = 0; j < 9; j++)
             {
                 GameObject go = GameObject.Find(i.ToString() + "-" + j.ToString());
+                go.GetComponent<ScrblDrag>().cross = false;
                 if (go.GetComponent<ScrblDrag>().isFull && !go.GetComponent<ScrblDrag>().isSubmitted)
                 {
                     if (go.GetComponent<ScrblDrag>().linked != null)
