@@ -8122,7 +8122,7 @@ MonoBehaviour:
   AIWhenIsStop: 0.2
   DistanceOfMainAndAI: 5
   lerpSpeed: 42
-  speedMainChar: 23.8
+  speedMainChar: 12
   speedAIChar: 6.7
   Player: {fileID: 8119462406638492814}
   AI: {fileID: 7198439770701404457}
