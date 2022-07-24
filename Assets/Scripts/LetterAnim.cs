@@ -16,9 +16,9 @@ public class LetterAnim : MonoBehaviour
     void Start()
     {
         firstAngle = gameObject.transform.eulerAngles;
-        targetAngle = new Vector3(90f, 180f, 0);
         firstPos = gameObject.transform.position;
         firstScale = new Vector3(.4f, .4f, .4f);
+        targetAngle = new Vector3(90f, 180f, 0);
         targetScale = new Vector3(1.8f, 1.8f, 1.8f);
     }
 

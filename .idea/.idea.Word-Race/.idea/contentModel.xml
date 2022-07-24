@@ -4,8 +4,140 @@
     <e p="C:\Users\Maleriya\AppData\Local\JetBrains\Rider2020.3\extResources" t="IncludeRecursive" />
     <e p="C:\Users\Maleriya\AppData\Local\JetBrains\Rider2020.3\resharper-host\Local\Transient\Rider\v203\SolutionCaches\_Word-Race.1914221734.00" t="ExcludeRecursive" />
     <e p="C:\Users\Maleriya\Desktop\Pigeon Gaming\Word-Race" t="IncludeRecursive">
+      <e p="Assembly-CSharp-Editor.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
+        <e p="_MK" t="Include">
+          <e p="MKMeshUtility" t="Include">
+            <e p="MKMeshUtility.cs" t="Include" />
+          </e>
+          <e p="MKRampCreator" t="Include">
+            <e p="MKRampCreator.cs" t="Include" />
+          </e>
+          <e p="MKTextureChannelPacker" t="Include">
+            <e p="MKTextureChannelPacker.cs" t="Include" />
+          </e>
+          <e p="MKToon" t="Include">
+            <e p="Editor" t="Include">
+              <e p="Base" t="Include">
+                <e p="FeatureComponents" t="Include">
+                  <e p="OutlineComponent.cs" t="Include" />
+                  <e p="ParticlesComponent.cs" t="Include" />
+                  <e p="RefractionComponent.cs" t="Include" />
+                </e>
+                <e p="PhysicallyBasedEditorBase.cs" t="Include" />
+                <e p="SimpleEditorBase.cs" t="Include" />
+                <e p="UnlitEditorBase.cs" t="Include" />
+              </e>
+              <e p="Common.cs" t="Include" />
+              <e p="Configuration.cs" t="Include" />
+              <e p="Helper" t="Include">
+                <e p="EditorHelper.cs" t="Include" />
+                <e p="EditorHelper.EditorStyles.cs" t="Include" />
+                <e p="MaterialPropertyDrawer.cs" t="Include" />
+                <e p="MKToonColorHDRRGBDrawer.cs" t="Include" />
+                <e p="MKToonColorRGBDrawer.cs" t="Include" />
+                <e p="MKToonFloatABSDrawer.cs" t="Include" />
+                <e p="MKToonIntSliderDrawer.cs" t="Include" />
+                <e p="MKToonIntVector3Drawer.cs" t="Include" />
+              </e>
+              <e p="InstallWizard.cs" t="Include" />
+              <e p="MaterialUpgrader.cs" t="Include" />
+              <e p="Properties.cs" t="Include" />
+              <e p="UI.cs" t="Include" />
+              <e p="URP" t="Include">
+                <e p="Particles" t="Include">
+                  <e p="ParticlesPBSEditor.cs" t="Include" />
+                  <e p="ParticlesSimpleEditor.cs" t="Include" />
+                  <e p="ParticlesUnlitEditor.cs" t="Include" />
+                </e>
+                <e p="Standard" t="Include">
+                  <e p="StandardPBSEditor.cs" t="Include" />
+                  <e p="StandardSimpleEditor.cs" t="Include" />
+                  <e p="StandardUnlitEditor.cs" t="Include" />
+                </e>
+              </e>
+            </e>
+            <e p="Scripts" t="Include">
+              <e p="Common.cs" t="Include" />
+              <e p="Keywords.cs" t="Include" />
+              <e p="Properties.cs" t="Include" />
+              <e p="Property.cs" t="Include" />
+              <e p="Uniform.cs" t="Include" />
+              <e p="Uniforms.cs" t="Include" />
+            </e>
+            <e p="Shader" t="Include">
+              <e p="Lib" t="Include">
+                <e p="Common.hlsl" t="Include" />
+                <e p="Composite.hlsl" t="Include" />
+                <e p="Config.hlsl" t="Include" />
+                <e p="Core.hlsl" t="Include" />
+                <e p="DepthNormals" t="Include">
+                  <e p="Data.hlsl" t="Include" />
+                  <e p="ProgramDepthNormals.hlsl" t="Include" />
+                  <e p="Setup.hlsl" t="Include" />
+                </e>
+                <e p="DepthOnly" t="Include">
+                  <e p="Data.hlsl" t="Include" />
+                  <e p="ProgramDepthOnly.hlsl" t="Include" />
+                  <e p="Setup.hlsl" t="Include" />
+                </e>
+                <e p="Forward" t="Include">
+                  <e p="AddSetup.hlsl" t="Include" />
+                  <e p="BaseSetup.hlsl" t="Include" />
+                  <e p="Data.hlsl" t="Include" />
+                  <e p="ProgramForward.hlsl" t="Include" />
+                </e>
+                <e p="Lighting.hlsl" t="Include" />
+                <e p="Meta" t="Include">
+                  <e p="Common.hlsl" t="Include" />
+                  <e p="Data.hlsl" t="Include" />
+                  <e p="ProgramMeta.hlsl" t="Include" />
+                  <e p="Setup.hlsl" t="Include" />
+                </e>
+                <e p="Outline" t="Include">
+                  <e p="Data.hlsl" t="Include" />
+                  <e p="ProgramOutline.hlsl" t="Include" />
+                  <e p="Setup.hlsl" t="Include" />
+                </e>
+                <e p="Pipeline.hlsl" t="Include" />
+                <e p="ShadowCaster" t="Include">
+                  <e p="Data.hlsl" t="Include" />
+                  <e p="ProgramShadowCaster.hlsl" t="Include" />
+                  <e p="Setup.hlsl" t="Include" />
+                </e>
+                <e p="Surface.hlsl" t="Include" />
+                <e p="Uniform.hlsl" t="Include" />
+                <e p="Universal2D" t="Include">
+                  <e p="Data.hlsl" t="Include" />
+                  <e p="ProgramUniversal2D.hlsl" t="Include" />
+                  <e p="Setup.hlsl" t="Include" />
+                </e>
+              </e>
+              <e p="URP" t="Include">
+                <e p="Particles" t="Include">
+                  <e p="ParticlesPBS.shader" t="Include" />
+                  <e p="ParticlesPBSRefraction.shader" t="Include" />
+                  <e p="ParticlesSimple.shader" t="Include" />
+                  <e p="ParticlesSimpleRefraction.shader" t="Include" />
+                  <e p="ParticlesUnlit.shader" t="Include" />
+                  <e p="ParticlesUnlitRefraction.shader" t="Include" />
+                </e>
+                <e p="Standard" t="Include">
+                  <e p="StandardPBS.shader" t="Include" />
+                  <e p="StandardPBSOutline.shader" t="Include" />
+                  <e p="StandardPBSRefraction.shader" t="Include" />
+                  <e p="StandardSimple.shader" t="Include" />
+                  <e p="StandardSimpleOutline.shader" t="Include" />
+                  <e p="StandardSimpleRefraction.shader" t="Include" />
+                  <e p="StandardUnlit.shader" t="Include" />
+                  <e p="StandardUnlitOutline.shader" t="Include" />
+                  <e p="StandardUnlitRefraction.shader" t="Include" />
+                </e>
+              </e>
+            </e>
+          </e>
+        </e>
         <e p="BOXOPHOBIC" t="Include">
           <e p="Skybox Cubemap Extended" t="Include">
             <e p="Core" t="Include">
@@ -152,9 +284,11 @@
             <e p="ETFXRotation.cs" t="Include" />
           </e>
         </e>
+        <e p="ScoreController.cs" t="Include" />
         <e p="Scripts" t="Include">
           <e p="AIController.cs" t="Include" />
           <e p="AITarget.cs" t="Include" />
+          <e p="BuyTheLetter.cs" t="Include" />
           <e p="CameraController.cs" t="Include" />
           <e p="CollectAnimations.cs" t="Include" />
           <e p="CollectController.cs" t="Include" />

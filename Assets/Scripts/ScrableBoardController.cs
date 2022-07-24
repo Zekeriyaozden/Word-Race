@@ -12,6 +12,7 @@ public class ScrableBoardController : MonoBehaviour
     public List<GameObject> letters;
     public List<GameObject> buttons;
     public List<bool> AIVert;
+    public GameObject cube;
     //0 = vert , 1 = horiz
     public int turn;
     private GameObject gameManager;
@@ -19,11 +20,17 @@ public class ScrableBoardController : MonoBehaviour
     public Material mt;
     public List<String> allWords;
     public List<String> aiWords;
+    public bool isAIableToText;
+    public bool isPlayerAbleToText;
+    public GameObject canvas;
+    public GameObject scoreBoard;
     //public GameObject boardDrop;
     
     
     void Start()
     {
+        isAIableToText = true;
+        isPlayerAbleToText = true;
         turn = 0;
         gameManager = GameObject.Find("GameManager");
         string readFromFilePath = Application.streamingAssetsPath + "/words" + ".txt";
@@ -34,6 +41,8 @@ public class ScrableBoardController : MonoBehaviour
     }
     public void skip()
     {
+        returnLetter();
+        isPlayerAbleToText = false;
         turn = 1;
         AIGamePlay();
     }
@@ -477,10 +486,19 @@ public class ScrableBoardController : MonoBehaviour
                     controllttr = GameObject.Find(i.ToString() + "-" + j.ToString());
                     if (controllttr.GetComponent<ScrblDrag>().isFull && !controllttr.GetComponent<ScrblDrag>().isSubmitted)
                     {
+                        List<GameObject> ls = cube.GetComponent<ScrblGameEnd>().letterCollectedList;
+                        for (int k = 0; k < ls.Count; k++)
+                        {
+                            if (controllttr.GetComponent<ScrblDrag>().linked == cube.GetComponent<ScrblGameEnd>().letterCollectedList[k].GetComponent<BuyTheLetter>().gObj)
+                            {
+                                cube.GetComponent<ScrblGameEnd>().letterCollectedList[k].GetComponent<BuyTheLetter>().gObj = null;
+                            }
+                        }
                         controllttr.GetComponent<ScrblDrag>().isSubmitted = true;
                     }
                 }
             }
+            increaseToPoint(true);
             turn = 1;
             AIGamePlay();
         }
@@ -512,6 +530,7 @@ public class ScrableBoardController : MonoBehaviour
                         go.GetComponent<ScrblDrag>().linked.GetComponent<LetterReturn>().targetPos = go.GetComponent<ScrblDrag>().linked.GetComponent<DragAndDrop>().posStart;
                         go.GetComponent<ScrblDrag>().linked.GetComponent<LetterReturn>().targetScale = new Vector3(1.8f, 1.8f, 1.8f);
                         go.GetComponent<ScrblDrag>().linked = null;
+                        
                     }
                 }
             }
@@ -766,7 +785,7 @@ public class ScrableBoardController : MonoBehaviour
             }
             
         }
-        StartCoroutine(turnToPlayer(1f));
+        StartCoroutine(turnToPlayer(1f,true));
     }
     private void FindToWord(List<int> startI , List<int> startJ ,int firstI, int firstJ , List<bool> verts)
     {
@@ -810,7 +829,7 @@ public class ScrableBoardController : MonoBehaviour
             }
             else
             {
-                turnToPlayer(1f);
+                turnToPlayer(1f,false);
             }
             
             
@@ -818,7 +837,7 @@ public class ScrableBoardController : MonoBehaviour
         }
         else
         {
-            turnToPlayer(1f);
+            turnToPlayer(1f,false);
         }
         
     
@@ -875,8 +894,18 @@ public class ScrableBoardController : MonoBehaviour
         }
     }
 
-    IEnumerator turnToPlayer(float second)
+    IEnumerator turnToPlayer(float second,bool able)
     {
+        if (!able)
+        {
+            isAIableToText = false;
+        }
+        else
+        {
+            increaseToPoint(false);
+            isAIableToText = true;
+            isPlayerAbleToText = true;
+        }
         yield return new WaitForSeconds(second);
         turn = 0;
         AIVert.Clear();
@@ -888,7 +917,7 @@ public class ScrableBoardController : MonoBehaviour
         int rand = Random.Range(0, 100);
         if (rand < (100-gameManager.GetComponent<GameManager>().probabilityOfAIPlay))
         {
-            StartCoroutine(turnToPlayer(3f));
+            StartCoroutine(turnToPlayer(3f,false));
         }
         else
         {
@@ -914,17 +943,40 @@ public class ScrableBoardController : MonoBehaviour
                     
                 }else
                 {
-                    StartCoroutine(turnToPlayer(3f));
+                    StartCoroutine(turnToPlayer(3f,false));
                 }
                 
             }
             else
             {
-                StartCoroutine(turnToPlayer(3f));
+                StartCoroutine(turnToPlayer(3f,false));
             }
         }
     }
     
+    //------------------------------------------------------------------------------------------------------------------
+
+    public void increaseToPoint(bool isPlayer)
+    {
+        if (isPlayer)
+        {
+            gameManager.GetComponent<GameManager>().playerScore += gameManager.GetComponent<GameManager>().pointForEachLetter;
+        }
+        else
+        {
+            gameManager.GetComponent<GameManager>().aiScore += gameManager.GetComponent<GameManager>().pointForEachLetter;
+        }
+    }
+
+    public void hideToLetters()
+    {
+        int _count = cube.GetComponent<ScrblGameEnd>().letterCollectedList.Count;
+        for (int i = 0; i < _count; i++)
+        {
+            if(cube.GetComponent<ScrblGameEnd>().letterCollectedList[i].GetComponent<BuyTheLetter>().gObj)
+            cube.GetComponent<ScrblGameEnd>().letterCollectedList[i].GetComponent<BuyTheLetter>().gObj.gameObject.SetActive(false);
+        }
+    }
     void Update()
     {
         if (turn == 1)
@@ -934,6 +986,13 @@ public class ScrableBoardController : MonoBehaviour
         else if (turn == 0)
         {
             hideOfButtons(0);
+        }
+
+        if (!isAIableToText && !isPlayerAbleToText)
+        {
+            hideToLetters();
+            canvas.SetActive(false);
+            scoreBoard.SetActive(true);
         }
         
     }

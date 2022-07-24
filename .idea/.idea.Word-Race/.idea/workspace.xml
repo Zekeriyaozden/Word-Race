@@ -22,6 +22,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UIManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/AITarget.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/LetterAnim.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/BuyTheLetter.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ScrableBoardController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/LetterReturn.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" root0="FORCE_HIGHLIGHTING" />
@@ -45,6 +46,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ParentAIController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/LattersEndGame.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/EngGameplay.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/ScoreController.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
@@ -66,7 +68,6 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/LetterMovementEndGame.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/GateController.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/EnvelopeController.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/LattersEndGame.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/DenemeDest.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/ScrableCaseController.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/FailCrossController.cs" />
@@ -88,13 +89,16 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/HintTableController.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/CameraController.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/ScrblBoardCross.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/LetterAnim.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/LetterReturn.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/ScrblDrag.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/ScrblGameEnd.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/DragAndDrop.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/LattersEndGame.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/BuyTheLetter.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/LetterAnim.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/ScrblDrag.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/ScrblGameEnd.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/ScrableBoardController.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/ScoreController.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="2ALaX7nMpAflu6fvhSwVNGOdx6e" />
@@ -164,6 +168,7 @@
       <workItem from="1658400526463" duration="12043000" />
       <workItem from="1658485200618" duration="21753000" />
       <workItem from="1658567208578" duration="20130000" />
+      <workItem from="1658662175671" duration="10586000" />
     </task>
     <servers />
   </component>

@@ -9,6 +9,8 @@ public class GameManager : MonoBehaviour
     public GameObject UIManagerRunner;
     public int playerScore;
     public int aiScore;
+    public int pointForEachLetter;
+    public int pointForLetterBuy;
     public int currentScene;
     public bool inGameEnd;
     public GameObject letterGenerator;
@@ -110,7 +112,6 @@ public class GameManager : MonoBehaviour
             return false;
         }
     }
-    
     
     public float distanceOfMainAndAI()
     {
