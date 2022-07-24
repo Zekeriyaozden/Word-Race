@@ -27,6 +27,10 @@ public class GameManager : MonoBehaviour
     public Vector3 dropAndDrag;
     public int scrblI;
     public int scrblJ;
+    public bool isFirstLevel;
+    public bool isPlayableLetterDrag;
+    public int AIWordSize;
+    public int probabilityOfAIPlay;
     //-------------------------------------------
     public GameObject HintTab;
     [HideInInspector]

@@ -20,6 +20,7 @@ public class ScrblGameEnd : MonoBehaviour
     {
         yield return new WaitForSeconds(3f);
         ui.SetActive(true);
+        gm.GetComponent<GameManager>().isPlayableLetterDrag = true;
     }
 
     private IEnumerator _instant(GameObject go)
