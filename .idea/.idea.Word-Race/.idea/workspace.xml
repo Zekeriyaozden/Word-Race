@@ -88,12 +88,12 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/HintTableController.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/CameraController.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/ScrblBoardCross.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/LetterAnim.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/ScrblGameEnd.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/DragAndDrop.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/LetterReturn.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/ScrblDrag.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/ScrblGameEnd.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/DragAndDrop.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/ScrableBoardController.cs" />
     </changedPaths>
   </component>
@@ -162,7 +162,8 @@
       <workItem from="1658227237427" duration="18001000" />
       <workItem from="1658303230289" duration="19252000" />
       <workItem from="1658400526463" duration="12043000" />
-      <workItem from="1658485200618" duration="1309000" />
+      <workItem from="1658485200618" duration="21753000" />
+      <workItem from="1658567208578" duration="20130000" />
     </task>
     <servers />
   </component>

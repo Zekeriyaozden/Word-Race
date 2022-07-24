@@ -7612,7 +7612,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1979992369}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 919132148907809749}
+        m_TargetAssemblyTypeName: ScrableBoardController, Assembly-CSharp
+        m_MethodName: skip
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1979992369
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8129,8 +8141,12 @@ MonoBehaviour:
   referanceParentPlayer: {fileID: 381984800}
   referanceParentAI: {fileID: 184483150}
   dropAndDrag: {x: 0, y: 0, z: 0}
-  scrblI: 0
-  scrblJ: 0
+  scrblI: 9
+  scrblJ: 9
+  isFirstLevel: 1
+  isPlayableLetterDrag: 0
+  AIWordSize: 4
+  probabilityOfAIPlay: 100
   HintTab: {fileID: 7427065698935270388}
   speedTmp: 0
   gameIsGoing: 0
@@ -9302,10 +9318,43 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b7549f40363da841897f178eca945d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  recallTextWindow: {fileID: 0}
+  letters:
+  - {fileID: 8131385952952447335, guid: 969cc8b407e894242b11ac935376bc5e, type: 3}
+  - {fileID: 6199077535374202478, guid: 65f127cc9517e66408d282ae0135de6f, type: 3}
+  - {fileID: 2675452265881541615, guid: ed6fd689d9897084b82507d15255994f, type: 3}
+  - {fileID: 332834980517669968, guid: a48bbccde47ec114084485f966ea36cb, type: 3}
+  - {fileID: 2183889246324795510, guid: dcb7218f038cc26469ea5d65db521769, type: 3}
+  - {fileID: 2629052248136537908, guid: 3d4b6a678e2a368499bd0df3eff8e851, type: 3}
+  - {fileID: 5104849591675450633, guid: 494a84d436f4cf5418d379af2165dbb9, type: 3}
+  - {fileID: 4099294666154683890, guid: 45378113b2c050242ae07f8423ac6876, type: 3}
+  - {fileID: 128883682932348134, guid: d8fac99dae3bf574eb990d0cc9016774, type: 3}
+  - {fileID: 7975747522493388461, guid: 78152ec9f40b5ff42b832919468e81b1, type: 3}
+  - {fileID: 7914137405120929501, guid: 63a0a04d6f5445741b59a74215840674, type: 3}
+  - {fileID: 9186391031905091690, guid: 7ad25d20bfad12346be2937fc03a2111, type: 3}
+  - {fileID: 8454724743246069134, guid: bfbe579d4c51b3a48a7d2e60ff183266, type: 3}
+  - {fileID: 7902851969380519580, guid: b59e66fd97361844692e5f6a0197ba48, type: 3}
+  - {fileID: 3240791104559247317, guid: 5c1681cf648a9f949b330044b81d4c8e, type: 3}
+  - {fileID: 5160927323617565590, guid: d836a4bc506845646ad3438d174540c8, type: 3}
+  - {fileID: 2820140039376420564, guid: f4c039897d88e7a4395110cff9d2ed0c, type: 3}
+  - {fileID: 3025345854526241228, guid: 26e9275de08294a49b97179212f80f72, type: 3}
+  - {fileID: 2080942416963215889, guid: 89b4f69ee7c8a164183612dc645255a0, type: 3}
+  - {fileID: 153598040686813100, guid: aeb6bfbbe4cd9be499efaaa52bc6e050, type: 3}
+  - {fileID: 7319081031196257809, guid: 12e40a25a7f9d9743ac7327e2607f050, type: 3}
+  - {fileID: 8053463694172074200, guid: c70437411467ce8438e08f44afdcc995, type: 3}
+  - {fileID: 5403742837092591464, guid: 93bc00bf4fd926d4f92eb2b7c612f10e, type: 3}
+  - {fileID: 680718840531063869, guid: 7095c805e181a99429740c836c3e7de3, type: 3}
+  - {fileID: 8307491111754209940, guid: a3f22fb9aa843344d923e895e20a5610, type: 3}
+  - {fileID: 4187395900528290805, guid: 074fdbdfe6b05094a809c0d56802b1b4, type: 3}
+  buttons:
+  - {fileID: 354261454}
+  - {fileID: 1979992366}
+  - {fileID: 225800372}
+  AIVert: 
+  turn: 0
   words: []
   mt: {fileID: 2100000, guid: 7a2f5fdb1bbb98246a7a946ccdd1c6b1, type: 2}
   allWords: []
+  aiWords: []
 --- !u!4 &943569929983860197
 Transform:
   m_ObjectHideFlags: 0
@@ -14233,7 +14282,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9207fe27e41c0d04aad8965b1938b9f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  LatterChar: I
+  LatterChar: i
 --- !u!33 &5702478198313283766
 MeshFilter:
   m_ObjectHideFlags: 0
