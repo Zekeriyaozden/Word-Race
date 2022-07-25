@@ -5345,6 +5345,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: School Chair Obstacle Traffic Cone
       objectReference: {fileID: 0}
+    - target: {fileID: 8316453646139143907, guid: 06467df770fa5bd48b30c3f97817cd49, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: e925756a5c30ecb44a718a81328e005d, type: 2}
+    - target: {fileID: 8316453646139143907, guid: 06467df770fa5bd48b30c3f97817cd49, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 8745876d5d96d3244b872ba415a4afa7, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 06467df770fa5bd48b30c3f97817cd49, type: 3}
 --- !u!1 &1290076460
@@ -6713,6 +6721,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2554280500904066330, guid: 1a7be8035efd8e145aa74c47694ce7c5, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 594520c20b484944fb617a59859c8b45, type: 2}
+    - target: {fileID: 2554280500904066330, guid: 1a7be8035efd8e145aa74c47694ce7c5, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 9e75f6be1dba48b41b1865c81490f537, type: 2}
+    - target: {fileID: 2554280500904066330, guid: 1a7be8035efd8e145aa74c47694ce7c5, type: 3}
+      propertyPath: m_Materials.Array.data[2]
+      value: 
+      objectReference: {fileID: 2100000, guid: 3735644501292204a9e6847588323adb, type: 2}
     - target: {fileID: 5788336143004945737, guid: 1a7be8035efd8e145aa74c47694ce7c5, type: 3}
       propertyPath: m_Name
       value: Speed Up
@@ -7295,7 +7315,7 @@ PrefabInstance:
     - target: {fileID: 8697251897257193127, guid: dc51c2e140cb53c4ca2f49ad516f63b4, type: 3}
       propertyPath: m_Materials.Array.data[2]
       value: 
-      objectReference: {fileID: 2100000, guid: 6e7334b7273523b4db6a0b9e91d18d12, type: 2}
+      objectReference: {fileID: 2100000, guid: 2afc144f472add4459471cc9bbeca2df, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dc51c2e140cb53c4ca2f49ad516f63b4, type: 3}
 --- !u!4 &1738469991 stripped
@@ -15993,7 +16013,7 @@ PrefabInstance:
     - target: {fileID: 3570184486364879076, guid: 74fd82541fc79664094ad41577979fa8, type: 3}
       propertyPath: m_Materials.Array.data[2]
       value: 
-      objectReference: {fileID: 2100000, guid: 0d24d88be9055534db90a4e935d32552, type: 2}
+      objectReference: {fileID: 2100000, guid: 2afc144f472add4459471cc9bbeca2df, type: 2}
     - target: {fileID: 5864936099808330734, guid: 74fd82541fc79664094ad41577979fa8, type: 3}
       propertyPath: m_Name
       value: Saw Obstacle Long
