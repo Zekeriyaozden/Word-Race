@@ -94,11 +94,11 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/BuyTheLetter.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/LetterAnim.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/ScrblDrag.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/SaveLoadManager.cs" />
       <option value="$PROJECT_DIR$/Assets/ScoreController.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/ScrblGameEnd.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/ScrableBoardController.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/SaveLoadManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="2ALaX7nMpAflu6fvhSwVNGOdx6e" />
@@ -169,7 +169,7 @@
       <workItem from="1658485200618" duration="21753000" />
       <workItem from="1658567208578" duration="20130000" />
       <workItem from="1658662175671" duration="10586000" />
-      <workItem from="1658734492705" duration="6401000" />
+      <workItem from="1658734492705" duration="7935000" />
     </task>
     <servers />
   </component>

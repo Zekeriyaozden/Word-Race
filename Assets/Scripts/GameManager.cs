@@ -40,6 +40,7 @@ public class GameManager : MonoBehaviour
     public GameObject turnPlayer;
     public GameObject turnAI;
     public bool isEndGame;
+    public GameObject scr;
     //-------------------------------------------
     public GameObject HintTab;
     [HideInInspector]
@@ -49,8 +50,10 @@ public class GameManager : MonoBehaviour
     private bool onArea;
     private bool flag;
     private bool gameStartBool;
+    private bool ScrFlag;
     void Start()
     {
+        ScrFlag = true;
         isEndGame = false;
         dropAndDrag = new Vector3(0, 0, 0);
         gameStartBool = true;
@@ -63,7 +66,14 @@ public class GameManager : MonoBehaviour
     void Update()
     {
 
-        
+        if (ScrFlag && isEndGame)
+        {
+            for (int i = 0; i < scr.gameObject.transform.childCount; i++)
+            {
+                scr.transform.GetChild(i).gameObject.GetComponent<MeshRenderer>().enabled = true;
+            }
+            ScrFlag = false;
+        }
         HintTab.GetComponent<HintTableController>().findTargetBox();
         
         if (inGameEnd && !gameIsGoing)
