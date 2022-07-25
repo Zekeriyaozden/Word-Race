@@ -1814,6 +1814,10 @@ PrefabInstance:
       value: -24.581781
       objectReference: {fileID: 0}
     - target: {fileID: 7758674555506230187, guid: f43b185014ab52447bfbbef43936e54d, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 15e8f332f2452364d8b91b2eb9551c2b, type: 2}
+    - target: {fileID: 7758674555506230187, guid: f43b185014ab52447bfbbef43936e54d, type: 3}
       propertyPath: m_fontStyle
       value: 1
       objectReference: {fileID: 0}
@@ -1821,6 +1825,10 @@ PrefabInstance:
       propertyPath: m_fontSizeBase
       value: 55.33
       objectReference: {fileID: 0}
+    - target: {fileID: 7758674555506230187, guid: f43b185014ab52447bfbbef43936e54d, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 7003049672772984635, guid: 15e8f332f2452364d8b91b2eb9551c2b, type: 2}
     - target: {fileID: 7758674555506230187, guid: f43b185014ab52447bfbbef43936e54d, type: 3}
       propertyPath: m_characterSpacing
       value: 7.68
