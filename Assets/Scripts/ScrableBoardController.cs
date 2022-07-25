@@ -633,12 +633,26 @@ public class ScrableBoardController : MonoBehaviour
                 }
             }
 
+
+
             int t = 0;
             while (t < size)
             {
                 if (i < 0 || i > 8)
                 {
                     return false;
+                }
+                
+                if (i + 1 <= 8)
+                {
+                    if (i + 1 != _firstI)
+                    {
+                        if (GameObject.Find((i + 1).ToString() + "-" + j.ToString()).GetComponent<ScrblDrag>()
+                            .isSubmitted)
+                        {
+                            return false;
+                        }
+                    }
                 }
 
                 if (j > 0)
@@ -689,6 +703,18 @@ public class ScrableBoardController : MonoBehaviour
                 if (j < 0 || j > 8)
                 {
                     return false;
+                }
+                
+                if (j + 1 <= 8)
+                {
+                    if (j + 1 != _firstJ)
+                    {
+                        if (GameObject.Find((i).ToString() + "-" + (j+1).ToString()).GetComponent<ScrblDrag>()
+                            .isSubmitted)
+                        {
+                            return false;
+                        }
+                    }
                 }
 
                 if (i != 0)
