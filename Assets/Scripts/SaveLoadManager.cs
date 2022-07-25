@@ -21,7 +21,15 @@ public class SaveLoadManager : MonoBehaviour
         }
         
         gm = GameObject.Find("GameManager");
-        PlayerPrefs.SetInt("currentLevel",currentLevel);
+        if (currentLevel != 4)
+        {
+            PlayerPrefs.SetInt("currentLevel",currentLevel);
+        }
+        else
+        {
+            PlayerPrefs.SetInt("currentLevel",0);
+        }
+
         Load();
     }
 
