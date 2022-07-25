@@ -752,7 +752,9 @@ public class ScrableBoardController : MonoBehaviour
 
     IEnumerator TextForAI(int startI,int startJ,int firstI,int firstJ,bool verts,string s)
     {
-        char[] charSet = s.ToCharArray();
+        if (gameManager.GetComponent<GameManager>().isEndGame)
+        {
+                    char[] charSet = s.ToCharArray();
         if (!verts)
         {
             
@@ -813,6 +815,68 @@ public class ScrableBoardController : MonoBehaviour
             
         }
         StartCoroutine(turnToPlayer(1f,true));
+        }
+      /*  char[] charSet = s.ToCharArray();
+        if (!verts)
+        {
+            
+            for (int i = 0; i < gameManager.GetComponent<GameManager>().AIWordSize; i++)
+            {
+                for (int j = 0; j < letters.Count; j++)
+                {
+                    if (startI != firstI)
+                    {
+                        if (letters[j].GetComponent<LattersEndGame>().LatterChar.ToLower().Equals(charSet[i].ToString()))
+                        {
+                            GameObject ltr = Instantiate(letters[j]);
+                            ltr.transform.position = GameObject.Find(startI.ToString() + "-" + startJ.ToString())
+                                .transform.position + new Vector3(0,0,-0.04f);
+                            GameObject.Find(startI.ToString() + "-" + startJ.ToString()).GetComponent<ScrblDrag>()
+                                .isSubmitted = true;
+                            GameObject.Find(startI.ToString() + "-" + startJ.ToString()).GetComponent<ScrblDrag>()
+                                .isFull = true;
+                            GameObject.Find(startI.ToString() + "-" + startJ.ToString()).GetComponent<ScrblDrag>()
+                                .linked = ltr;
+                            ltr.transform.eulerAngles = new Vector3(90, 180, 0);
+                            ltr.transform.localScale = Vector3.one;
+                        }
+                    }
+                }
+                startI++;
+                yield return new WaitForSeconds(.4f);
+            }
+
+        }
+        else
+        {
+            for (int i = 0; i < gameManager.GetComponent<GameManager>().AIWordSize; i++)
+            {
+                for (int j = 0; j < letters.Count; j++)
+                {
+                    if (startJ != firstJ)
+                    {
+                        if (letters[j].GetComponent<LattersEndGame>().LatterChar.ToLower().Equals(charSet[i].ToString()))
+                        {
+                            GameObject ltr = Instantiate(letters[j]);
+                            ltr.transform.position = GameObject.Find(startI.ToString() + "-" + startJ.ToString())
+                                .transform.position + new Vector3(0,0,-0.04f);
+                            GameObject.Find(startI.ToString() + "-" + startJ.ToString()).GetComponent<ScrblDrag>()
+                                .isSubmitted = true;
+                            GameObject.Find(startI.ToString() + "-" + startJ.ToString()).GetComponent<ScrblDrag>()
+                                .isFull = true;
+                            GameObject.Find(startI.ToString() + "-" + startJ.ToString()).GetComponent<ScrblDrag>()
+                                .linked = ltr;
+                            ltr.transform.eulerAngles = new Vector3(90, 180, 0);
+                            ltr.transform.localScale = Vector3.one;
+                        }
+                    }
+                }
+                startJ++;
+                yield return new WaitForSeconds(.4f);
+            }
+            
+        }
+        StartCoroutine(turnToPlayer(1f,true));*/
     }
     private void FindToWord(List<int> startI , List<int> startJ ,int firstI, int firstJ , List<bool> verts)
     {

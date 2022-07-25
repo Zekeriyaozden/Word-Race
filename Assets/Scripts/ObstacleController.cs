@@ -281,6 +281,36 @@ public class ObstacleController : MonoBehaviour
             Debug.Log("empty");
         }
     }
+    
+    if (other.gameObject.tag == "AI")
+    {
+        Debug.Log("isEnter");
+        int size = gm.GetComponent<GameManager>().referanceParentAI.GetComponent<ParentAIController>()
+            .AIStack.Count;
+        if (size > 1)
+        {
+            for (int i=0;i<size/2;i++)
+            {
+                Debug.Log( gm.GetComponent<GameManager>().referanceParentAI.GetComponent<ParentAIController>()
+                    .AIStack.Count);
+                GameObject gObj = gm.GetComponent<GameManager>().referanceParentAI.GetComponent<ParentAIController>()
+                    .AIStack[gm.GetComponent<GameManager>().referanceParentAI
+                        .GetComponent<ParentAIController>()
+                        .AIStack.Count - 1];
+
+                gm.GetComponent<GameManager>().referanceParentAI.GetComponent<ParentAIController>()
+                    .AIStack.Remove(gObj);
+                
+                
+                LetterCollectible(gObj,gObj.transform.position);
+                
+            }
+        }
+        else
+        {
+            Debug.Log("empty");
+        }
+    }
         
    
    /*if (other.gameObject.tag == "Letter")
