@@ -77,7 +77,6 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/RunnerFinishController.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/UIManagerRunner.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/LetterBoardGenerator.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/LattersController.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/SceneController.cs" />
       <option value="$PROJECT_DIR$/Assets/SceneManagement.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/CollectAnimations.cs" />
@@ -99,6 +98,7 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/ScrableBoardController.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/SaveLoadManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/LattersController.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="2ALaX7nMpAflu6fvhSwVNGOdx6e" />

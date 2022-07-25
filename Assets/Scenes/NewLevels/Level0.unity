@@ -10066,7 +10066,7 @@ MonoBehaviour:
   isFirstLevel: 1
   isPlayableLetterDrag: 0
   AIWordSize: 4
-  probabilityOfAIPlay: 100
+  probabilityOfAIPlay: 75
   textMeshBuy: {fileID: 2088256082}
   turnPlayer: {fileID: 2058152220}
   turnAI: {fileID: 597374061}
