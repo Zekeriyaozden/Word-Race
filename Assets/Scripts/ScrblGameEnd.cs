@@ -246,5 +246,20 @@ public class ScrblGameEnd : MonoBehaviour
                 fillTheLetters();
             }    
         }
+
+        if (other.gameObject.tag == "AI")
+        {
+            if (gm.GetComponent<GameManager>().referanceParentAI.GetComponent<ParentAIController>().AIStack
+                .Count > 1)
+            {
+                for (int i = 1;
+                    i < gm.GetComponent<GameManager>().referanceParentAI.GetComponent<ParentAIController>().AIStack
+                        .Count;
+                    i++)
+                {
+                    Destroy(gm.GetComponent<GameManager>().referanceParentAI.GetComponent<ParentAIController>().AIStack[i].gameObject);
+                }
+            }    
+        }
     }
 }

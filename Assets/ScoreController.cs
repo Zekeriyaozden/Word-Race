@@ -11,14 +11,19 @@ public class ScoreController : MonoBehaviour
     public GameObject rankAI;
     public GameObject scorePlayer;
     public GameObject scoreAI;
+    public GameObject canvas;
     private GameObject gm;
-    private Vector3 boardFirst;
-    private Vector3 boardSecond;
+    public Vector3 boardFirst;
+    public Vector3 boardSecond;
     void Start()
     {
+        canvas.SetActive(true);
         boardFirst = boardPlayer.transform.position;
         boardSecond = boardAI.transform.position;
+        canvas.SetActive(false);
         gm = GameObject.Find("GameManager");
+        Debug.Log(gameObject.name);
+        
     }
     
     
