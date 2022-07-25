@@ -1342,6 +1342,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startPosLetters: {x: -17.33, y: 10.64, z: 170.95}
   offset: 4
+  letterCollectedList: []
   letterList:
   - {fileID: 8131385952952447335, guid: 969cc8b407e894242b11ac935376bc5e, type: 3}
   - {fileID: 6199077535374202478, guid: 65f127cc9517e66408d282ae0135de6f, type: 3}
@@ -1370,6 +1371,8 @@ MonoBehaviour:
   - {fileID: 8307491111754209940, guid: a3f22fb9aa843344d923e895e20a5610, type: 3}
   - {fileID: 4187395900528290805, guid: 074fdbdfe6b05094a809c0d56802b1b4, type: 3}
   ui: {fileID: 437707958}
+  button: {fileID: 0}
+  emptyObj: {fileID: 0}
 --- !u!65 &272099614
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5920,19 +5923,19 @@ PrefabInstance:
     - target: {fileID: 8772097394699378028, guid: f142553a814424b499902d12d7de8965, type: 3}
       propertyPath: m_Materials.Array.data[1]
       value: 
-      objectReference: {fileID: 2100000, guid: fec424ede3bf20b4eab4fb46fbcfd5d3, type: 2}
+      objectReference: {fileID: 2100000, guid: 12f1ca40721444e468d00b12f1bc0958, type: 2}
     - target: {fileID: 8772097394699378028, guid: f142553a814424b499902d12d7de8965, type: 3}
       propertyPath: m_Materials.Array.data[2]
       value: 
-      objectReference: {fileID: 2100000, guid: a3bb7e2904a95a446b4ca282434090d3, type: 2}
+      objectReference: {fileID: 2100000, guid: f3499ad370bcaa34d950c0231e297ee1, type: 2}
     - target: {fileID: 8772097394699378028, guid: f142553a814424b499902d12d7de8965, type: 3}
       propertyPath: m_Materials.Array.data[3]
       value: 
-      objectReference: {fileID: 2100000, guid: 5cc751c6b4eca96489fc210396317e7d, type: 2}
+      objectReference: {fileID: 2100000, guid: ed07f2cdf5693dd4e908e9d7b795bc26, type: 2}
     - target: {fileID: 8772097394699378028, guid: f142553a814424b499902d12d7de8965, type: 3}
       propertyPath: m_Materials.Array.data[4]
       value: 
-      objectReference: {fileID: 2100000, guid: 4b663d4b6d60e1546888958264998ac0, type: 2}
+      objectReference: {fileID: 2100000, guid: d07c4921a20902f4c8390b9d1847d2ca, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f142553a814424b499902d12d7de8965, type: 3}
 --- !u!1 &1390236344
@@ -8386,6 +8389,8 @@ MonoBehaviour:
   UIManagerRunner: {fileID: 255678686}
   playerScore: 0
   aiScore: 0
+  pointForEachLetter: 0
+  pointForLetterBuy: 0
   currentScene: 0
   inGameEnd: 0
   letterGenerator: {fileID: 4589386760340947424}
@@ -9682,11 +9687,16 @@ MonoBehaviour:
   letters: []
   buttons: []
   AIVert: 
+  cube: {fileID: 0}
   turn: 0
   words: []
   mt: {fileID: 2100000, guid: 7a2f5fdb1bbb98246a7a946ccdd1c6b1, type: 2}
   allWords: []
   aiWords: []
+  isAIableToText: 0
+  isPlayerAbleToText: 0
+  canvas: {fileID: 0}
+  scoreBoard: {fileID: 0}
 --- !u!4 &943569929983860197
 Transform:
   m_ObjectHideFlags: 0
@@ -13879,12 +13889,12 @@ SkinnedMeshRenderer:
   m_RendererPriority: 0
   m_Materials:
   - {fileID: -6629797300637803691, guid: 6f1bee813557dce4bb6ecb283584aec0, type: 3}
-  - {fileID: 2100000, guid: 3b30d9ae0c391e04a806df82d72bf79c, type: 2}
+  - {fileID: 2100000, guid: 3638d6e9f197af349bba3f9bc4b16d1f, type: 2}
   - {fileID: -8274133419916619345, guid: 6f1bee813557dce4bb6ecb283584aec0, type: 3}
-  - {fileID: 2100000, guid: c629b1f5aee114c4a8d8b55cc3521d0e, type: 2}
+  - {fileID: 2100000, guid: 6b1e5d3e57146314e97121ff4b07bcb0, type: 2}
   - {fileID: 2100000, guid: 5ef73a8971101664a859eda242cf6470, type: 2}
   - {fileID: 2100000, guid: ac4d5ac5d424e004d82fb81e64247249, type: 2}
-  - {fileID: 2100000, guid: 635df6c7f7f75be41b30102083a1dc30, type: 2}
+  - {fileID: 2100000, guid: 046f44ad7547b4044880694367ca035c, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -14716,6 +14726,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LatterChar: I
+  isTexted: 0
+  target: {x: 0, y: 0, z: 0}
 --- !u!33 &5702478198313283766
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -16057,12 +16069,12 @@ SkinnedMeshRenderer:
   m_RendererPriority: 0
   m_Materials:
   - {fileID: -6629797300637803691, guid: 1086f83d4bc872b48bce3ed12c7d0a94, type: 3}
-  - {fileID: 2100000, guid: 37b270952007c784390011270e7c63fd, type: 2}
+  - {fileID: 2100000, guid: 52eee4d4e490bf844b15581909e61135, type: 2}
   - {fileID: -8274133419916619345, guid: 1086f83d4bc872b48bce3ed12c7d0a94, type: 3}
-  - {fileID: 2100000, guid: cfe67927396aab948b05186a64e2b415, type: 2}
+  - {fileID: 2100000, guid: 734f23f5ad974ff4ea8cfe9300043389, type: 2}
   - {fileID: 2100000, guid: ac4d5ac5d424e004d82fb81e64247249, type: 2}
-  - {fileID: 2100000, guid: 5761cc878d0a6a041ba99c1359a647f0, type: 2}
-  - {fileID: 2100000, guid: e00213283fe5c2e47bd61834c64611e6, type: 2}
+  - {fileID: 2100000, guid: 38223dd90c3bacb45bdbdf690604b9f1, type: 2}
+  - {fileID: 2100000, guid: f329e99a7436c13439771739f8de365c, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
