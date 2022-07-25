@@ -55,9 +55,9 @@ public class CollectController : MonoBehaviour
             gameObject.GetComponent<LattersController>().enabled = true;
             gameObject.GetComponent<LattersController>().referance = gm.GetComponent<GameManager>().AI;
             gameObject.GetComponent<LattersController>().ownership = "AI";
-            gameObject.transform.position = (gm.GetComponent<GameManager>().referanceParentAI
-                .GetComponent<ParentAIController>().AIStack.Count) * new Vector3(0f,.2f,0f);
-        
+            gameObject.transform.position = ((gm.GetComponent<GameManager>().referanceParentAI
+                .GetComponent<ParentAIController>().AIStack.Count) * new Vector3(0f, .2f, 0f) + gm.GetComponent<GameManager>().referanceParentAI.GetComponent<ParentAIController>().AIStack[0].transform.position);
+            gameObject.transform.localScale = new Vector3(.4f, .4f, .4f);
             gm.GetComponent<GameManager>().referanceParentAI.GetComponent<ParentAIController>().AIStack
                 .Add(gameObject);
             gameObject.GetComponent<LattersController>().node = gm.GetComponent<GameManager>().referanceParentAI
