@@ -43,7 +43,8 @@ public class ScrblGameEnd : MonoBehaviour
     
     public void spawnNewObject()
     {
-        gm.GetComponent<GameManager>().playerScore -= gm.GetComponent<GameManager>().pointForLetterBuy;
+        gm.GetComponent<GameManager>().playerScore -= gm.GetComponent<GameManager>().pointForLetterBuy[0];
+        gm.GetComponent<GameManager>().pointForLetterBuy.Remove(gm.GetComponent<GameManager>().pointForLetterBuy[0]);
         int count = letterList.Count;
         int rand = Random.Range(0, 26);
         if (!isListFull())
@@ -218,7 +219,7 @@ public class ScrblGameEnd : MonoBehaviour
     public void btnControl()
     {
 
-        if (isListFull() || gm.GetComponent<GameManager>().playerScore < gm.GetComponent<GameManager>().pointForLetterBuy)
+        if (isListFull() || gm.GetComponent<GameManager>().playerScore < gm.GetComponent<GameManager>().pointForLetterBuy[0] || gm.GetComponent<GameManager>().pointForLetterBuy.Count <= 1)
         {
             button.GetComponent<Button>().interactable = false;
         }
@@ -239,6 +240,7 @@ public class ScrblGameEnd : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
+            gm.GetComponent<GameManager>().isEndGame = true;
             StartCoroutine(scrabbleUI());
             if (gm.GetComponent<GameManager>().referanceParentPlayer.GetComponent<ParentPlayerController>().PlayerStack
                 .Count > 1)

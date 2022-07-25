@@ -986,11 +986,11 @@ public class ScrableBoardController : MonoBehaviour
     {
         if (isPlayer)
         {
-            gameManager.GetComponent<GameManager>().playerScore += gameManager.GetComponent<GameManager>().pointForEachLetter;
+            gameManager.GetComponent<GameManager>().playerScore += gameManager.GetComponent<GameManager>().playerPointForEachLetter;
         }
         else
         {
-            gameManager.GetComponent<GameManager>().aiScore += gameManager.GetComponent<GameManager>().pointForEachLetter;
+            gameManager.GetComponent<GameManager>().aiScore += gameManager.GetComponent<GameManager>().AIPointForEachLetter;
         }
     }
 
@@ -1007,15 +1007,28 @@ public class ScrableBoardController : MonoBehaviour
     {
         if (turn == 1)
         {
+            if (gameManager.GetComponent<GameManager>().isEndGame)
+            {
+                gameManager.GetComponent<GameManager>().turnAI.SetActive(true);
+                gameManager.GetComponent<GameManager>().turnPlayer.SetActive(false);   
+            }
             hideOfButtons(1);
         }
         else if (turn == 0)
         {
+            if (gameManager.GetComponent<GameManager>().isEndGame)
+            {
+                gameManager.GetComponent<GameManager>().turnAI.SetActive(false);
+                gameManager.GetComponent<GameManager>().turnPlayer.SetActive(true);
+            }
             hideOfButtons(0);
         }
 
         if (!isAIableToText && !isPlayerAbleToText)
         {
+            gameManager.GetComponent<GameManager>().isEndGame = false;
+            gameManager.GetComponent<GameManager>().turnPlayer.SetActive(false);
+            gameManager.GetComponent<GameManager>().turnAI.SetActive(false);
             hideToLetters();
             canvas.SetActive(false);
             scoreBoard.SetActive(true);

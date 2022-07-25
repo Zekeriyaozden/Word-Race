@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
@@ -9,8 +10,9 @@ public class GameManager : MonoBehaviour
     public GameObject UIManagerRunner;
     public int playerScore;
     public int aiScore;
-    public int pointForEachLetter;
-    public int pointForLetterBuy;
+    public int AIPointForEachLetter;
+    public int playerPointForEachLetter;
+    public List<int> pointForLetterBuy;
     public int currentScene;
     public bool inGameEnd;
     public GameObject letterGenerator;
@@ -33,6 +35,11 @@ public class GameManager : MonoBehaviour
     public bool isPlayableLetterDrag;
     public int AIWordSize;
     public int probabilityOfAIPlay;
+    public GameObject textMeshBuy;
+    //-------------------------------------------
+    public GameObject turnPlayer;
+    public GameObject turnAI;
+    public bool isEndGame;
     //-------------------------------------------
     public GameObject HintTab;
     [HideInInspector]
@@ -44,6 +51,7 @@ public class GameManager : MonoBehaviour
     private bool gameStartBool;
     void Start()
     {
+        isEndGame = false;
         dropAndDrag = new Vector3(0, 0, 0);
         gameStartBool = true;
         gameIsGoing = false;
@@ -76,7 +84,9 @@ public class GameManager : MonoBehaviour
             flag = false;
             speedAIChar = tempSpeedOfAI;
         }
-        
+
+        textMeshBuy.GetComponent<TextMeshProUGUI>().text = pointForLetterBuy[0].ToString();
+
     }
 
     public void Hint()
