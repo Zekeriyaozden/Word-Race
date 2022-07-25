@@ -9,6 +9,7 @@ using Random = UnityEngine.Random;
 
 public class ScrableBoardController : MonoBehaviour
 {
+    public GameObject yourTurnCanvas;
     public List<GameObject> letters;
     public List<GameObject> buttons;
     public List<bool> AIVert;
@@ -920,6 +921,12 @@ public class ScrableBoardController : MonoBehaviour
         }
     }
 
+    IEnumerator turnSign()
+    {
+        yourTurnCanvas.SetActive(true);
+        yield return new WaitForSeconds(2f);
+        yourTurnCanvas.SetActive(false);
+    }
     IEnumerator turnToPlayer(float second,bool able)
     {
         if (!able)
@@ -934,6 +941,7 @@ public class ScrableBoardController : MonoBehaviour
         }
         yield return new WaitForSeconds(second);
         turn = 0;
+        StartCoroutine(turnSign());
         AIVert.Clear();
     }
     private void AIGamePlay()

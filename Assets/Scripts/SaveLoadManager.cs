@@ -25,6 +25,18 @@ public class SaveLoadManager : MonoBehaviour
         Load();
     }
 
+    public void sceneManageControl()
+    {
+        if (currentLevel == 4)
+        {
+            SceneManager.LoadScene(0);
+        }
+        else
+        {
+            SceneManager.LoadScene(currentLevel + 1);
+        }
+    }
+
     private void OnApplicationQuit()
     {
         Save();
