@@ -104,13 +104,17 @@ public class PlayerController : MonoBehaviour
 
     private void Control()
     {
+        Vector3 objPos;
+        Vector3 mousePos;
         if (Input.GetMouseButtonDown(0))
         {
+            objPos = gameObject.transform.position;
             _mousePosStart = Input.mousePosition;
         }
 
         if (Input.GetMouseButtonUp(0))
         {
+            objPos = new Vector3(0, 0, 0);
             _mousePosStart = Vector3.zero;
             xCordinate = 0;
         }

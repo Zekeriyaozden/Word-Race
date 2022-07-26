@@ -36,8 +36,25 @@ public class ScrableBoardController : MonoBehaviour
         gameManager = GameObject.Find("GameManager");
         string readFromFilePath = Application.streamingAssetsPath + "/words" + ".txt";
         string readFromFilePathAI = Application.streamingAssetsPath + "/wordlist" + ".txt";
-        allWords = File.ReadAllLines(readFromFilePath).ToList();
-        aiWords = File.ReadAllLines(readFromFilePathAI).ToList();
+        
+        if (Application.platform == RuntimePlatform.Android)
+        {
+            WWW reader = new WWW(readFromFilePath);
+            while (!reader.isDone) { }
+     
+            allWords = reader.text.Split("\n").ToList();
+            
+            WWW readerAI = new WWW(readFromFilePathAI);
+            while (!readerAI.isDone) { }
+            aiWords = reader.text.Split("\n").ToList();
+        }
+        else
+        {
+            allWords = File.ReadAllLines(readFromFilePath).ToList();
+            aiWords = File.ReadAllLines(readFromFilePathAI).ToList();
+        }
+        
+        
 
     }
     public void skip()

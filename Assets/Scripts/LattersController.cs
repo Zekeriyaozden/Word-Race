@@ -54,11 +54,7 @@ public class LattersController : MonoBehaviour
         isJumping = false;
         gameObject.GetComponent<Rigidbody>().useGravity = true;
     }
-    /*public void distancer()
-    {
-        distanceZ = gameObject.transform.position.z - referance.gameObject.transform.position.z;
-    }*/
-    private void LateUpdate()
+    private void Update()
     {
         lerpSpeed = GameObject.Find("GameManager").GetComponent<GameManager>().lerpSpeed;
         yPos = gameObject.transform.position.y;
