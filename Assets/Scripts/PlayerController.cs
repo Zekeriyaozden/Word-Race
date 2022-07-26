@@ -18,9 +18,15 @@ public class PlayerController : MonoBehaviour
     public GameObject speedTrailer;
     public bool isTrailer;
     private bool gameIsGoing;
+    private float mousePos;
+    private Vector3 objPos;
+    private float startPosY;
     //private Vector3 _lookAtV3;
     void Start()
     {
+        startPosY = transform.position.y;
+        objPos = Vector3.zero;
+        mousePos = 0;
         isTrailer = false;
         isJumping = false;
         gameManager = GameObject.Find("GameManager");
@@ -104,8 +110,7 @@ public class PlayerController : MonoBehaviour
 
     private void Control()
     {
-        Vector3 objPos;
-        Vector3 mousePos;
+
         if (Input.GetMouseButtonDown(0))
         {
             objPos = gameObject.transform.position;
@@ -114,12 +119,41 @@ public class PlayerController : MonoBehaviour
 
         if (Input.GetMouseButtonUp(0))
         {
+            mousePos = 0;
             objPos = new Vector3(0, 0, 0);
             _mousePosStart = Vector3.zero;
             xCordinate = 0;
         }
 
-        if (_mousePosStart != Vector3.zero)
+        if (objPos != Vector3.zero)
+        {
+            if (Input.mousePosition.x > _mousePosStart.x)
+            {
+                mousePos = Input.mousePosition.x - _mousePosStart.x;
+            }
+            else
+            {
+                mousePos = Input.mousePosition.x - _mousePosStart.x;
+            }
+        }
+        if (gameObject.transform.position.x < maxXLeft)
+        {
+            mousePos = 0f;
+        }else if (gameObject.transform.position.x > maxXRight)
+        {
+            mousePos = 0f;
+        }
+
+        float tr = mousePos * 0.04f;
+        if (objPos.x + tr > maxXLeft && objPos.x + tr < maxXRight)
+        {
+            gameObject.transform.position = new Vector3(objPos.x + tr, startPosY , transform.position.z);
+        }
+
+        
+        
+        
+        /*if (_mousePosStart != Vector3.zero)
         {
             if (Input.mousePosition.x > _mousePosStart.x)
             {
@@ -148,12 +182,14 @@ public class PlayerController : MonoBehaviour
         {
             xCordinate = 0f;
         }
-        //gameObject.transform.Translate(0,0,0 * _speed * Time.deltaTime,Space.Self);
+        //gameObject.transform.Translate(0,0,0 * _speed * Time.deltaTime,Space.Self);*/
+        
+        
+        
+        gameObject.transform.eulerAngles = new Vector3(0, 0, 0);
+        
 
-
-        gameObject.transform.eulerAngles = new Vector3(gameObject.transform.eulerAngles.x, 0, 0);
-        xCordinate = xCordinate * 0.01f;
-        gameObject.transform.Translate(new Vector3(xCordinate, 0, 1f) * _speed * Time.deltaTime,Space.Self);
+        gameObject.transform.Translate(new Vector3(0, 0, 1f) * _speed * Time.deltaTime,Space.Self);
         
     }
 

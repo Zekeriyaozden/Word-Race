@@ -8659,10 +8659,10 @@ Rigidbody:
   m_Mass: 3
   m_Drag: 0
   m_AngularDrag: 0.35
-  m_UseGravity: 1
-  m_IsKinematic: 0
+  m_UseGravity: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
-  m_Constraints: 64
+  m_Constraints: 116
   m_CollisionDetection: 0
 --- !u!1 &1979992366
 GameObject:
@@ -13006,7 +13006,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8119462406638492814}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 0.72539425, y: 0.18988454, z: 1}
@@ -17251,9 +17251,61 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2251785343661307199, guid: 8f9727a6f4e774343a23e6f68bb2e6fc, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2251785343908032894, guid: 8f9727a6f4e774343a23e6f68bb2e6fc, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6184668097228025240, guid: 8f9727a6f4e774343a23e6f68bb2e6fc, type: 3}
       propertyPath: m_Name
       value: Competition Platform with Watchers
+      objectReference: {fileID: 0}
+    - target: {fileID: 6419092970525062114, guid: 8f9727a6f4e774343a23e6f68bb2e6fc, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6419092970584072031, guid: 8f9727a6f4e774343a23e6f68bb2e6fc, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6419092970614406740, guid: 8f9727a6f4e774343a23e6f68bb2e6fc, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6419092970640264676, guid: 8f9727a6f4e774343a23e6f68bb2e6fc, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6419092970865721129, guid: 8f9727a6f4e774343a23e6f68bb2e6fc, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6419092971076166352, guid: 8f9727a6f4e774343a23e6f68bb2e6fc, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6419092971551275093, guid: 8f9727a6f4e774343a23e6f68bb2e6fc, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6419092971614016751, guid: 8f9727a6f4e774343a23e6f68bb2e6fc, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6419092971645526477, guid: 8f9727a6f4e774343a23e6f68bb2e6fc, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6419092971706683210, guid: 8f9727a6f4e774343a23e6f68bb2e6fc, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6419092972406863604, guid: 8f9727a6f4e774343a23e6f68bb2e6fc, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6818320579977279266, guid: 8f9727a6f4e774343a23e6f68bb2e6fc, type: 3}
       propertyPath: m_RootOrder
@@ -17298,6 +17350,10 @@ PrefabInstance:
     - target: {fileID: 6818320579977279266, guid: 8f9727a6f4e774343a23e6f68bb2e6fc, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9163307130489044312, guid: 8f9727a6f4e774343a23e6f68bb2e6fc, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8f9727a6f4e774343a23e6f68bb2e6fc, type: 3}
@@ -18448,10 +18504,10 @@ Rigidbody:
   m_Mass: 3
   m_Drag: 0
   m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 0
+  m_UseGravity: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
-  m_Constraints: 64
+  m_Constraints: 116
   m_CollisionDetection: 0
 --- !u!95 &7543017525383250837
 Animator:
