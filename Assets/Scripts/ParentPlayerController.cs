@@ -17,6 +17,6 @@ public class ParentPlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        //gameObject.transform.position = transform.GetChild(0).transform.position;
     }
 }
