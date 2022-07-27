@@ -17,43 +17,77 @@ public class ScrableBoardController : MonoBehaviour
     //0 = vert , 1 = horiz
     public int turn;
     private GameObject gameManager;
-    public List<String> words;
+    public List<string> words;
     public Material mt;
-    public List<String> allWords;
-    public List<String> aiWords;
+    public List<string> allWords;
+    public List<string> aiWords;
     public bool isAIableToText;
     public bool isPlayerAbleToText;
     public GameObject canvas;
     public GameObject scoreBoard;
-    //public GameObject boardDrop;
-    
-    
+    private string readFromFilePath;
+    private string readFromFilePathAI;
+    public TextAsset txtAll;
+    public TextAsset txtAI;
     void Start()
     {
         isAIableToText = true;
         isPlayerAbleToText = true;
         turn = 0;
         gameManager = GameObject.Find("GameManager");
-        string readFromFilePath = Application.streamingAssetsPath + "/words" + ".txt";
-        string readFromFilePathAI = Application.streamingAssetsPath + "/wordlist" + ".txt";
-        
+
+        string alls = txtAll.text;
+        string ai = txtAI.text;
+        allWords = alls?.Split('\n').ToList();
+        for (int i = 0; i < allWords.Count; i++)
+        {
+            allWords[i] = allWords[i].Trim();
+        }
+        aiWords = ai?.Split('\n').ToList();
+        for (int i = 0; i < aiWords.Count; i++)
+        {
+            aiWords[i] = aiWords[i].Trim();
+        }
+
+/*
         if (Application.platform == RuntimePlatform.Android)
         {
-            WWW reader = new WWW(readFromFilePath);
-            while (!reader.isDone) { }
-     
-            allWords = reader.text.Split("\n").ToList();
-            
-            WWW readerAI = new WWW(readFromFilePathAI);
-            while (!readerAI.isDone) { }
-            aiWords = reader.text.Split("\n").ToList();
+            readFromFilePath = "jar:file://" + Application.dataPath + "!/assets/words.txt";
+            readFromFilePathAI = "jar:file://" + Application.dataPath + "!/assets/wordlist.txt";
+            allWords = File.ReadAllLines(readFromFilePath).ToList();
+            aiWords = File.ReadAllLines(readFromFilePathAI).ToList();
         }
-        else
+        else if (Application.platform == RuntimePlatform.IPhonePlayer)
         {
+            readFromFilePath =  Application.dataPath + "/words.txt";
+            readFromFilePathAI =  Application.dataPath+ "/wordlist.txt";
             allWords = File.ReadAllLines(readFromFilePath).ToList();
             aiWords = File.ReadAllLines(readFromFilePathAI).ToList();
         }
         
+        else
+        {
+#if UNITY_IOS
+            readFromFilePath =  Application.dataPath + "/words.txt";
+            readFromFilePathAI =  Application.dataPath+ "/wordlist.txt";
+            allWords = File.ReadAllLines(readFromFilePath).ToList();
+            aiWords = File.ReadAllLines(readFromFilePathAI).ToList();
+#elif UNITY_ANDROID
+
+            readFromFilePath = "jar:file://" + Application.dataPath + "!/assets/words.txt";
+            readFromFilePathAI = "jar:file://" + Application.dataPath + "!/assets/wordlist.txt";
+            allWords = File.ReadAllLines(readFromFilePath).ToList();
+            aiWords = File.ReadAllLines(readFromFilePathAI).ToList();
+#else
+            readFromFilePath =  Application.dataPath + "/words.txt";
+            readFromFilePathAI =  Application.dataPath+ "/wordlist.txt";
+            allWords = File.ReadAllLines(readFromFilePath).ToList();
+            aiWords = File.ReadAllLines(readFromFilePathAI).ToList();
+#endif
+        }
+*/
+        Debug.Log(readFromFilePath + "-" + readFromFilePathAI);
+
         
 
     }
@@ -121,11 +155,13 @@ public class ScrableBoardController : MonoBehaviour
         {
             return false;
         }
-        Debug.Log("wordsCount:" + words.Count);
+        
         for (int i = 0; i < words.Count; i++)
         {
             Debug.Log(words[i].ToLower());
-            if (!allWords.Contains(words[i].ToLower()))
+            string s = words[i].ToLower();
+            s = s.Trim();
+            if (!allWords.Contains(s))
             {
                 return false;
             }

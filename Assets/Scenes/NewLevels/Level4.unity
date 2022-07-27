@@ -7716,11 +7716,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5586717419512375323, guid: f142553a814424b499902d12d7de8965, type: 3}
       propertyPath: zMax
-      value: 20
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 5586717419512375323, guid: f142553a814424b499902d12d7de8965, type: 3}
       propertyPath: zMin
-      value: 10
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5586717420193595438, guid: f142553a814424b499902d12d7de8965, type: 3}
       propertyPath: m_ApplyRootMotion
@@ -7745,6 +7745,10 @@ PrefabInstance:
     - target: {fileID: 7338460896495513635, guid: f142553a814424b499902d12d7de8965, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 13.31
+      objectReference: {fileID: 0}
+    - target: {fileID: 8772097394699378028, guid: f142553a814424b499902d12d7de8965, type: 3}
+      propertyPath: m_CastShadows
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8772097394699378028, guid: f142553a814424b499902d12d7de8965, type: 3}
       propertyPath: m_Materials.Array.data[1]
@@ -12233,6 +12237,8 @@ MonoBehaviour:
   isPlayerAbleToText: 1
   canvas: {fileID: 437707958}
   scoreBoard: {fileID: 968846604}
+  txtAll: {fileID: 4900000, guid: d17c5c8651edf2a449effed2fd524b2f, type: 3}
+  txtAI: {fileID: 4900000, guid: ed2ff12b329ecc44c9eee6b14f386b51, type: 3}
 --- !u!4 &943569929983860197
 Transform:
   m_ObjectHideFlags: 0

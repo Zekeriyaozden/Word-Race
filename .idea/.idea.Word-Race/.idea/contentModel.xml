@@ -5,6 +5,7 @@
     <e p="C:\Users\Maleriya\AppData\Local\JetBrains\Rider2020.3\resharper-host\Local\Transient\Rider\v203\SolutionCaches\_Word-Race.1914221734.00" t="ExcludeRecursive" />
     <e p="C:\Users\Maleriya\Desktop\Pigeon Gaming\Word-Race" t="IncludeRecursive">
       <e p="Assembly-CSharp-Editor.csproj" t="IncludeRecursive" />
+      <e p="Assembly-CSharp-firstpass.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
         <e p="_MK" t="Include">
@@ -578,6 +579,20 @@
             </e>
           </e>
         </e>
+        <e p="Plugins" t="Include">
+          <e p="BetterStreamingAssets" t="Include">
+            <e p="BSA_BetterStreamingAssets.cs" t="Include" />
+            <e p="BSA_PathUtil.cs" t="Include" />
+            <e p="BSA_SubReadOnlyStream.cs" t="Include" />
+            <e p="BSA_TestSceneGUI.cs" t="Include" />
+            <e p="BSA_ZipArchive.cs" t="Include" />
+            <e p="README.txt" t="Include" />
+          </e>
+        </e>
+        <e p="Resources" t="Include">
+          <e p="wordlist.txt" t="Include" />
+          <e p="words.txt" t="Include" />
+        </e>
         <e p="ScoreController.cs" t="Include" />
         <e p="Scripts" t="Include">
           <e p="AIController.cs" t="Include" />
@@ -657,6 +672,8 @@
             <e p="EmojiOne.json" t="Include" />
           </e>
         </e>
+        <e p="wordlist.txt" t="Include" />
+        <e p="words.txt" t="Include" />
       </e>
       <e p="Boxophobic.SkyboxCubemapExtended.Editor.csproj" t="IncludeRecursive" />
       <e p="Boxophobic.Utils.Editor.csproj" t="IncludeRecursive" />

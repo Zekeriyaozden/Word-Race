@@ -92,13 +92,13 @@
       <option value="$PROJECT_DIR$/Assets/ScoreController.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/ScrblGameEnd.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/CollectController.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/LattersController.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/ParentPlayerController.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/ObstacleController.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/ScrableBoardController.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/LattersController.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/SaveLoadManager.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/ParentPlayerController.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/SaveLoadManager.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="2ALaX7nMpAflu6fvhSwVNGOdx6e" />
@@ -111,6 +111,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
@@ -170,6 +171,8 @@
       <workItem from="1658567208578" duration="20130000" />
       <workItem from="1658662175671" duration="10586000" />
       <workItem from="1658734492705" duration="8572000" />
+      <workItem from="1658846996199" duration="6522000" />
+      <workItem from="1658906700148" duration="5871000" />
     </task>
     <servers />
   </component>

@@ -53,7 +53,8 @@ public class GameManager : MonoBehaviour
     private bool ScrFlag;
     void Start()
     {
-        Application.targetFrameRate = Screen.currentResolution.refreshRate;
+        probabilityOfAIPlay = 100;
+        Application.targetFrameRate = 240;
         ScrFlag = true;
         isEndGame = false;
         dropAndDrag = new Vector3(0, 0, 0);

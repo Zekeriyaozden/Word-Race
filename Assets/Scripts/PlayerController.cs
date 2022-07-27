@@ -144,7 +144,7 @@ public class PlayerController : MonoBehaviour
             mousePos = 0f;
         }
 
-        float tr = mousePos * 0.04f;
+        float tr = mousePos * 0.02f;
         if (objPos.x + tr > maxXLeft && objPos.x + tr < maxXRight)
         {
             gameObject.transform.position = new Vector3(objPos.x + tr, startPosY , transform.position.z);

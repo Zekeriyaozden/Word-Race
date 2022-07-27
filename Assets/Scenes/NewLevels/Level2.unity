@@ -11883,6 +11883,8 @@ MonoBehaviour:
   isPlayerAbleToText: 1
   canvas: {fileID: 437707958}
   scoreBoard: {fileID: 968846604}
+  txtAll: {fileID: 4900000, guid: d17c5c8651edf2a449effed2fd524b2f, type: 3}
+  txtAI: {fileID: 4900000, guid: ed2ff12b329ecc44c9eee6b14f386b51, type: 3}
 --- !u!4 &943569929983860197
 Transform:
   m_ObjectHideFlags: 0
