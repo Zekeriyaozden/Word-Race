@@ -14,7 +14,7 @@ public class ScrblDrag : MonoBehaviour
     public bool isSubmitted;
     public GameObject linked;
     public bool cross;
-
+    public bool is44;
     void Start()
     {
         cross = false;
@@ -78,7 +78,11 @@ public class ScrblDrag : MonoBehaviour
                 gameManager.GetComponent<GameManager>().scrblJ = 9;
                 flagEnter = true;
             }
-            gameObject.GetComponent<MeshRenderer>().materials = first;
+
+            if (!is44)
+            {
+                gameObject.GetComponent<MeshRenderer>().materials = first;
+            }
         }
 
         if (isFull)

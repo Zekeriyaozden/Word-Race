@@ -41,6 +41,7 @@ public class GameManager : MonoBehaviour
     public GameObject turnAI;
     public bool isEndGame;
     public GameObject scr;
+    public bool isFirst;
     //-------------------------------------------
     public GameObject HintTab;
     [HideInInspector]
@@ -51,8 +52,13 @@ public class GameManager : MonoBehaviour
     private bool flag;
     private bool gameStartBool;
     private bool ScrFlag;
+    //--------------------------------------------
+    public Material[] shaderP;
+    private Material[] shaderLast;
     void Start()
     {
+        shaderLast = GameObject.Find("4-4").GetComponent<MeshRenderer>().materials;
+        isFirst = true;
         probabilityOfAIPlay = 100;
         Application.targetFrameRate = 240;
         ScrFlag = true;
@@ -100,6 +106,27 @@ public class GameManager : MonoBehaviour
         textMeshBuy.GetComponent<TextMeshProUGUI>().text = pointForLetterBuy[0].ToString();
 
     }
+
+    public void firstLet(bool s)
+    {
+        if (s)
+        {
+            if (!GameObject.Find("4-4").GetComponent<ScrblDrag>().isFull)
+            {
+                GameObject.Find("4-4").GetComponent<MeshRenderer>().materials = shaderP;
+            }
+            else
+            {
+                GameObject.Find("4-4").GetComponent<MeshRenderer>().materials = shaderLast;
+            }
+        }
+        else
+        {
+            GameObject.Find("4-4").GetComponent<MeshRenderer>().materials = shaderLast;
+        }
+
+    }
+
 
     public void Hint()
     {

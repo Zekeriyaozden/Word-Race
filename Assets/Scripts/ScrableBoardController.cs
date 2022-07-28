@@ -29,6 +29,7 @@ public class ScrableBoardController : MonoBehaviour
     private string readFromFilePathAI;
     public TextAsset txtAll;
     public TextAsset txtAI;
+    public bool isFirst;
     void Start()
     {
         isAIableToText = true;
@@ -168,6 +169,76 @@ public class ScrableBoardController : MonoBehaviour
         }
         return true;
     }
+
+    private bool isCorrectLoc()
+    {
+        if (isFirst)
+        {
+            for (int i = 0; i < 9; i++)
+            {
+                for (int j = 0; j < 9; j++)
+                {
+                    if (!GameObject.Find(i.ToString() + "-" + (j).ToString()).GetComponent<ScrblDrag>()
+                        .isSubmitted && GameObject.Find(i.ToString() + "-" + (j).ToString())
+                        .GetComponent<ScrblDrag>().isFull)
+                    {
+                        if (i == 4 && j == 4)
+                        {
+                            gameManager.GetComponent<GameManager>().isFirst = false;
+                            return true;
+                        }
+                    }
+                }
+            }
+        }
+        else
+        {
+            for (int i = 0; i < 9; i++)
+            {
+                for (int j = 0; j < 9; j++)
+                {
+                    if (!GameObject.Find(i.ToString() + "-" + (j).ToString()).GetComponent<ScrblDrag>()
+                        .isSubmitted && GameObject.Find(i.ToString() + "-" + (j).ToString())
+                        .GetComponent<ScrblDrag>().isFull)
+                    {
+                        if (j < 8)
+                        {
+                            if (GameObject.Find(i.ToString() + "-" + (j+1).ToString()).GetComponent<ScrblDrag>().isSubmitted)
+                            {
+                                return true;
+                            } 
+                        }
+                        if (j > 0)
+                        {
+                            if (GameObject.Find(i.ToString() + "-" + (j - 1).ToString()).GetComponent<ScrblDrag>()
+                                .isSubmitted)
+                            {
+                                return true;
+                            }
+                        }
+                        if(i > 0)
+                        {
+                            if (GameObject.Find((i - 1).ToString() + "-" + (j).ToString()).GetComponent<ScrblDrag>()
+                                .isSubmitted)
+                            {
+                                return true;
+                            }
+                        }
+                        if (i < 8)
+                        {
+                            if (GameObject.Find((i + 1).ToString() + "-" + (j).ToString()).GetComponent<ScrblDrag>()
+                                .isSubmitted)
+                            {
+                                return true;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        return false;
+    }
+
     private bool firstLetter(int i,int j)
     {
         int iFirst = i;
@@ -364,7 +435,7 @@ public class ScrableBoardController : MonoBehaviour
         
         while (iFirst >= 0 && flagVertUp)
         {
-            if (jFirst-1 >= 0 && GameObject.Find((iFirst - 1).ToString() + "-" + j.ToString()).GetComponent<ScrblDrag>().isFull)
+            if (iFirst-1 >= 0 && GameObject.Find((iFirst - 1).ToString() + "-" + j.ToString()).GetComponent<ScrblDrag>().isFull)
             {
                 iFirst = iFirst - 1;
             }
@@ -474,7 +545,7 @@ public class ScrableBoardController : MonoBehaviour
         Debug.Log(firstLetter(firstI,firstJ));
         
         
-        if (control2DFlag && firstLetter(firstI, firstJ) )
+        if (control2DFlag && firstLetter(firstI, firstJ) && isCorrectLoc())
         {
             ControlBeforeWord = true;
         }
@@ -1130,6 +1201,7 @@ public class ScrableBoardController : MonoBehaviour
     }
     void Update()
     {
+        isFirst = gameManager.GetComponent<GameManager>().isFirst;
         if (turn == 1)
         {
             if (gameManager.GetComponent<GameManager>().isEndGame)

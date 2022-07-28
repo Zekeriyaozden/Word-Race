@@ -37,6 +37,7 @@ public class DragAndDrop : MonoBehaviour
 
     private void OnMouseUp()
     {
+        gameManager.GetComponent<GameManager>().firstLet(false);
         if (gameManager.GetComponent<GameManager>().isPlayableLetterDrag)
         {
             if (isPlayable)
@@ -73,6 +74,15 @@ public class DragAndDrop : MonoBehaviour
 
     private void OnMouseDrag()
     {
+        if (gameManager.GetComponent<GameManager>().isFirst)
+        {
+            Debug.Log("ens");
+            gameManager.GetComponent<GameManager>().firstLet(true);
+        }
+        else
+        {
+            gameManager.GetComponent<GameManager>().firstLet(false);
+        }
         if (gameManager.GetComponent<GameManager>().isPlayableLetterDrag)
         {
             if (isPlayable)
