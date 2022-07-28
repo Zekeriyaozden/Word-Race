@@ -21,23 +21,18 @@ public class SaveLoadManager : MonoBehaviour
         }
         
         gm = GameObject.Find("GameManager");
-        if (currentLevel != 4)
-        {
-            PlayerPrefs.SetInt("currentLevel",currentLevel);
-        }
-        else
-        {
-            PlayerPrefs.SetInt("currentLevel",0);
-        }
+
+        PlayerPrefs.SetInt("currentLevel",currentLevel);
+
 
         Load();
     }
 
     public void sceneManageControl()
     {
-        if (currentLevel == 4)
+        if (currentLevel == 5)
         {
-            SceneManager.LoadScene(0);
+            SceneManager.LoadScene(1);
         }
         else
         {
@@ -53,14 +48,14 @@ public class SaveLoadManager : MonoBehaviour
 
     public void Save()
     {
-        ///*
-        //PlayerPrefs.SetInt("playerScore",gm.gameObject.GetComponent<GameManager>().playerScore);
-        //PlayerPrefs.SetInt("aiScore",gm.gameObject.GetComponent<GameManager>().aiScore);
-       //*/
         
+        PlayerPrefs.SetInt("playerScore",gm.gameObject.GetComponent<GameManager>().playerScore);
+        PlayerPrefs.SetInt("aiScore",gm.gameObject.GetComponent<GameManager>().aiScore);
+      
+        /*
        PlayerPrefs.SetInt("currentLevel",0); 
        PlayerPrefs.SetInt("playerScore",0);
-       PlayerPrefs.SetInt("aiScore", 0);
+       PlayerPrefs.SetInt("aiScore", 0);*/
     }
 
     public void Load()

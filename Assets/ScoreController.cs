@@ -22,7 +22,6 @@ public class ScoreController : MonoBehaviour
         boardSecond = boardAI.transform.position;
         canvas.SetActive(false);
         gm = GameObject.Find("GameManager");
-        Debug.Log(gameObject.name);
         
     }
     

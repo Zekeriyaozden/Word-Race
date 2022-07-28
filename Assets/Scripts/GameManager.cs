@@ -53,11 +53,14 @@ public class GameManager : MonoBehaviour
     private bool gameStartBool;
     private bool ScrFlag;
     //--------------------------------------------
-    public Material[] shaderP;
-    private Material[] shaderLast;
+    //public Material[] shaderP;
+    //private Material[] shaderLast;
+    public bool isTutorialLevel;
+    public bool runnerEnd;
     void Start()
     {
-        shaderLast = GameObject.Find("4-4").GetComponent<MeshRenderer>().materials;
+        runnerEnd = false;
+        //shaderLast = GameObject.Find("4-4").GetComponent<MeshRenderer>().materials;
         isFirst = true;
         probabilityOfAIPlay = 100;
         Application.targetFrameRate = 240;
@@ -107,25 +110,7 @@ public class GameManager : MonoBehaviour
 
     }
 
-    public void firstLet(bool s)
-    {
-        if (s)
-        {
-            if (!GameObject.Find("4-4").GetComponent<ScrblDrag>().isFull)
-            {
-                GameObject.Find("4-4").GetComponent<MeshRenderer>().materials = shaderP;
-            }
-            else
-            {
-                GameObject.Find("4-4").GetComponent<MeshRenderer>().materials = shaderLast;
-            }
-        }
-        else
-        {
-            GameObject.Find("4-4").GetComponent<MeshRenderer>().materials = shaderLast;
-        }
 
-    }
 
 
     public void Hint()

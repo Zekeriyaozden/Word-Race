@@ -87,7 +87,6 @@ public class ScrableBoardController : MonoBehaviour
 #endif
         }
 */
-        Debug.Log(readFromFilePath + "-" + readFromFilePathAI);
 
         
 
@@ -96,8 +95,7 @@ public class ScrableBoardController : MonoBehaviour
     {
         returnLetter();
         isPlayerAbleToText = false;
-        turn = 1;
-        AIGamePlay();
+        isAIableToText = false;
     }
     private bool isCorrectLocation(int i,int j)
     {
@@ -134,7 +132,7 @@ public class ScrableBoardController : MonoBehaviour
             }
         }
 
-        Debug.Log(isCorrect);
+
 
         if (gameManager.GetComponent<GameManager>().isFirstLevel)
         {
@@ -159,7 +157,7 @@ public class ScrableBoardController : MonoBehaviour
         
         for (int i = 0; i < words.Count; i++)
         {
-            Debug.Log(words[i].ToLower());
+
             string s = words[i].ToLower();
             s = s.Trim();
             if (!allWords.Contains(s))
@@ -461,8 +459,7 @@ public class ScrableBoardController : MonoBehaviour
 
         //--------------------------------------------------------------------------------------------------------------
 
-        Debug.Log("horiz:"+horiz);
-        Debug.Log("vert:"+vertical);
+
         
         for (int k = 0; k < words.Count; k++)
         {
@@ -541,8 +538,8 @@ public class ScrableBoardController : MonoBehaviour
             I++;
         }
 
-        Debug.Log(control2DFlag);
-        Debug.Log(firstLetter(firstI,firstJ));
+
+
         
         
         if (control2DFlag && firstLetter(firstI, firstJ) && isCorrectLoc())
@@ -569,13 +566,13 @@ public class ScrableBoardController : MonoBehaviour
                     controllttr = GameObject.Find(I.ToString() + "-" + J.ToString());
                     if (controllttr.GetComponent<ScrblDrag>().isFull && !controllttr.GetComponent<ScrblDrag>().isSubmitted)
                     {
-                        Debug.Log("-----" + isCorrectLocation(I,J) + "---" + correctLocation);
+
                         if (!correctLocation && isCorrectLocation(I, J))
                         {
-                            Debug.Log("-----------s------------");
+
                             correctLocation = true;
                         }
-                        Debug.Log("controlLetter");
+
                         controlLetter(I, J);
                     }
                     J++;
@@ -624,8 +621,13 @@ public class ScrableBoardController : MonoBehaviour
                 }
             }
             increaseToPoint(true);
-            turn = 1;
-            AIGamePlay();
+            if (!gameManager.GetComponent<GameManager>().isTutorialLevel)
+            {
+                turn = 1;
+                AIGamePlay();
+            }
+            
+
         }
         else
         {
@@ -655,11 +657,14 @@ public class ScrableBoardController : MonoBehaviour
                         go.GetComponent<ScrblDrag>().linked.GetComponent<LetterReturn>().targetPos = go.GetComponent<ScrblDrag>().linked.GetComponent<DragAndDrop>().posStart;
                         go.GetComponent<ScrblDrag>().linked.GetComponent<LetterReturn>().targetScale = new Vector3(1.8f, 1.8f, 1.8f);
                         go.GetComponent<ScrblDrag>().linked = null;
+                        go.GetComponent<ScrblDrag>().is44 = false;
                         
                     }
                 }
             }
         }
+        endGameControlsc();
+        
     }
     private void hideOfButtons(int _turn)
     {
@@ -1038,7 +1043,7 @@ public class ScrableBoardController : MonoBehaviour
             if (indexOfWord.Count > 0)
             {
                 int randInd = Random.Range(0, (indexOfWord.Count - 1));
-                Debug.Log(aiWords[indexOfWord[randInd]]);
+
                 StartCoroutine(TextForAI(startI[rand], startJ[rand], firstI, firstJ, verts[rand],
                     aiWords[indexOfWord[randInd]]));
             }
@@ -1199,6 +1204,23 @@ public class ScrableBoardController : MonoBehaviour
             cube.GetComponent<ScrblGameEnd>().letterCollectedList[i].GetComponent<BuyTheLetter>().gObj.gameObject.SetActive(false);
         }
     }
+
+    private void endGameControlsc()
+    {
+        if(gameManager.GetComponent<GameManager>().isTutorialLevel && gameManager.GetComponent<GameManager>().runnerEnd)
+        for (int i = 0; i < 9; i++)
+        {
+            for (int j = 0; j < 9; j++)
+            {
+                GameObject tempGobj = GameObject.Find(i.ToString() + "-" + j.ToString());
+                if (true)
+                {
+                    tempGobj.GetComponent<ScrblDrag>().is44 = false;
+                }
+            }
+        }
+    }
+    
     void Update()
     {
         isFirst = gameManager.GetComponent<GameManager>().isFirst;

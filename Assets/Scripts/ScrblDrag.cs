@@ -81,7 +81,7 @@ public class ScrblDrag : MonoBehaviour
 
             if (!is44)
             {
-                gameObject.GetComponent<MeshRenderer>().materials = first;
+               gameObject.GetComponent<MeshRenderer>().materials = first;
             }
         }
 

@@ -22,7 +22,7 @@ public class DragAndDrop : MonoBehaviour
     {
         //offset =transform.position - Camera.main.ScreenToWorldPoint((Input.mousePosition));
         //Debug.Log("Offset = "+offset);
-        if (gameManager.GetComponent<GameManager>().isPlayableLetterDrag)
+        if (gameManager.GetComponent<GameManager>().isPlayableLetterDrag && gameManager.GetComponent<GameManager>().runnerEnd)
         {
             if (isPlayable)
             {
@@ -37,8 +37,8 @@ public class DragAndDrop : MonoBehaviour
 
     private void OnMouseUp()
     {
-        gameManager.GetComponent<GameManager>().firstLet(false);
-        if (gameManager.GetComponent<GameManager>().isPlayableLetterDrag)
+
+        if (gameManager.GetComponent<GameManager>().isPlayableLetterDrag && gameManager.GetComponent<GameManager>().runnerEnd)
         {
             if (isPlayable)
             {
@@ -74,16 +74,8 @@ public class DragAndDrop : MonoBehaviour
 
     private void OnMouseDrag()
     {
-        if (gameManager.GetComponent<GameManager>().isFirst)
-        {
-            Debug.Log("ens");
-            gameManager.GetComponent<GameManager>().firstLet(true);
-        }
-        else
-        {
-            gameManager.GetComponent<GameManager>().firstLet(false);
-        }
-        if (gameManager.GetComponent<GameManager>().isPlayableLetterDrag)
+
+        if (gameManager.GetComponent<GameManager>().isPlayableLetterDrag && gameManager.GetComponent<GameManager>().runnerEnd)
         {
             if (isPlayable)
             {

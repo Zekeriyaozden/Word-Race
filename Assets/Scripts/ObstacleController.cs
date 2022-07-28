@@ -261,8 +261,7 @@ public class ObstacleController : MonoBehaviour
         {
             for (int i=0;i<size/2;i++)
             {
-                Debug.Log( gm.GetComponent<GameManager>().referanceParentPlayer.GetComponent<ParentPlayerController>()
-                    .PlayerStack.Count);
+
                 GameObject gObj = gm.GetComponent<GameManager>().referanceParentPlayer.GetComponent<ParentPlayerController>()
                     .PlayerStack[gm.GetComponent<GameManager>().referanceParentPlayer
                         .GetComponent<ParentPlayerController>()
@@ -278,13 +277,13 @@ public class ObstacleController : MonoBehaviour
         }
         else
         {
-            Debug.Log("empty");
+
         }
     }
     
     if (other.gameObject.tag == "AI")
     {
-        Debug.Log("isEnter");
+
         int size = gm.GetComponent<GameManager>().referanceParentAI.GetComponent<ParentAIController>()
             .AIStack.Count;
         if (size > 1)
@@ -308,7 +307,7 @@ public class ObstacleController : MonoBehaviour
         }
         else
         {
-            Debug.Log("empty");
+
         }
     }
         

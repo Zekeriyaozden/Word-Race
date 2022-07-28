@@ -15,8 +15,17 @@ public class ScrblGameEnd : MonoBehaviour
     public GameObject ui;
     public GameObject button;
     public GameObject emptyObj;
+    public GameObject[] gObjList;
+    public List<GameObject> objLoveList;
+    public List<GameObject> scrBoardLove;
+    public Material[] active;
+    public Material[] firstScr;
+    public Material[] firstLetter;
+    private bool tutorialUI;
+    public GameObject tutorialUIObj;
     void Start()
     {
+        tutorialUI = true;
         gm = GameObject.Find("GameManager");
         fillTheEmptyObjects();
     }
@@ -70,9 +79,10 @@ public class ScrblGameEnd : MonoBehaviour
 
     IEnumerator scrabbleUI()
     {
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(3.2f);
         ui.SetActive(true);
         gm.GetComponent<GameManager>().isPlayableLetterDrag = true;
+        gm.GetComponent<GameManager>().runnerEnd = true;
     }
 
     private IEnumerator _instant(GameObject go)
@@ -125,6 +135,65 @@ public class ScrblGameEnd : MonoBehaviour
                     .GetComponent<LattersEndGame>().target = target;
                 gObj.GetComponent<BuyTheLetter>().gObj = gm.GetComponent<GameManager>().referanceParentPlayer
                     .GetComponent<ParentPlayerController>().PlayerStack[i];
+                if (i == 1 && gm.GetComponent<GameManager>().isTutorialLevel)
+                {
+                    gm.GetComponent<GameManager>().referanceParentPlayer.GetComponent<ParentPlayerController>()
+                        .PlayerStack[i].GetComponent<LattersEndGame>().LatterChar = "V";
+                    Destroy(gm.GetComponent<GameManager>().referanceParentPlayer.GetComponent<ParentPlayerController>()
+                        .PlayerStack[i].transform.GetChild(1).gameObject);
+                    GameObject inst = Instantiate(gObjList[0], gm.GetComponent<GameManager>().referanceParentPlayer.GetComponent<ParentPlayerController>()
+                        .PlayerStack[i].transform);
+                    inst.transform.localPosition = new Vector3(0.243559524f, 0.302322954f, 0.314476222f);
+                    inst.transform.localEulerAngles = new Vector3(270f, 0, 0);
+                    inst.transform.localScale = new Vector3(100f, 100f, 100f);
+                    objLoveList.Add(gm.GetComponent<GameManager>().referanceParentPlayer.GetComponent<ParentPlayerController>().PlayerStack[i].gameObject);
+                    
+                }
+                if (i == 2 && gm.GetComponent<GameManager>().isTutorialLevel)
+                {
+                    gm.GetComponent<GameManager>().referanceParentPlayer.GetComponent<ParentPlayerController>()
+                        .PlayerStack[i].GetComponent<LattersEndGame>().LatterChar = "O";
+                    Destroy(gm.GetComponent<GameManager>().referanceParentPlayer.GetComponent<ParentPlayerController>()
+                        .PlayerStack[i].transform.GetChild(1).gameObject);
+                    GameObject inst = Instantiate(gObjList[1], gm.GetComponent<GameManager>().referanceParentPlayer.GetComponent<ParentPlayerController>()
+                        .PlayerStack[i].transform);
+                    inst.transform.localPosition = new Vector3(0.243559524f, 0.302322954f, 0.314476222f);
+                    inst.transform.localEulerAngles = new Vector3(270f, 0, 0);
+                    inst.transform.localScale = new Vector3(100f, 100f, 100f);
+                    objLoveList.Add(gm.GetComponent<GameManager>().referanceParentPlayer.GetComponent<ParentPlayerController>()
+                        .PlayerStack[i]);
+                    
+                }
+                if (i == 3 && gm.GetComponent<GameManager>().isTutorialLevel)
+                {
+                    gm.GetComponent<GameManager>().referanceParentPlayer.GetComponent<ParentPlayerController>()
+                        .PlayerStack[i].GetComponent<LattersEndGame>().LatterChar = "E";
+                    Destroy(gm.GetComponent<GameManager>().referanceParentPlayer.GetComponent<ParentPlayerController>()
+                        .PlayerStack[i].transform.GetChild(1).gameObject);
+                    GameObject inst = Instantiate(gObjList[2], gm.GetComponent<GameManager>().referanceParentPlayer.GetComponent<ParentPlayerController>()
+                        .PlayerStack[i].transform);
+                    inst.transform.localPosition = new Vector3(0.243559524f, 0.302322954f, 0.314476222f);
+                    inst.transform.localEulerAngles = new Vector3(270f, 0, 0);
+                    inst.transform.localScale = new Vector3(100f, 100f, 100f);
+                    objLoveList.Add(gm.GetComponent<GameManager>().referanceParentPlayer.GetComponent<ParentPlayerController>()
+                        .PlayerStack[i]);
+                    
+                }
+                if (i == 4 && gm.GetComponent<GameManager>().isTutorialLevel)
+                {
+                    gm.GetComponent<GameManager>().referanceParentPlayer.GetComponent<ParentPlayerController>()
+                        .PlayerStack[i].GetComponent<LattersEndGame>().LatterChar = "L";
+                    Destroy(gm.GetComponent<GameManager>().referanceParentPlayer.GetComponent<ParentPlayerController>()
+                        .PlayerStack[i].transform.GetChild(1).gameObject);
+                    GameObject inst = Instantiate(gObjList[3], gm.GetComponent<GameManager>().referanceParentPlayer.GetComponent<ParentPlayerController>()
+                        .PlayerStack[i].transform);
+                    inst.transform.localPosition = new Vector3(0.243559524f, 0.302322954f, 0.314476222f);
+                    inst.transform.localEulerAngles = new Vector3(270f, 0, 0);
+                    inst.transform.localScale = new Vector3(100f, 100f, 100f);
+                    objLoveList.Add(gm.GetComponent<GameManager>().referanceParentPlayer.GetComponent<ParentPlayerController>()
+                        .PlayerStack[i]);
+
+                }
             }
             else
             {
@@ -198,13 +267,12 @@ public class ScrblGameEnd : MonoBehaviour
         int _count = 0;
         for (int i = 0; i < letterCollectedList.Count; i++)
         {
-            Debug.Log(i);
+
             if (letterCollectedList[i].GetComponent<BuyTheLetter>().gObj)
             {
                 _count++;
             }
         }
-        Debug.Log("-->-->"+_count);
         if (_count < 10)
         {
             return false;
@@ -228,12 +296,111 @@ public class ScrblGameEnd : MonoBehaviour
             button.GetComponent<Button>().interactable = true;
         }
     }    
+    
+    
+    private void loveController()
+    {
+        if (gm.GetComponent<GameManager>().isTutorialLevel)
+        {
+            if (!scrBoardLove[0].GetComponent<ScrblDrag>().isFull)
+            {
+                scrBoardLove[0].GetComponent<MeshRenderer>().materials = active;
+                scrBoardLove[0].GetComponent<ScrblDrag>().is44 = true;
+                for (int i = 0; i < objLoveList.Count; i++)
+                {
+                    if (objLoveList[i].GetComponent<LattersEndGame>().LatterChar == "L")
+                    {
+                        objLoveList[i].transform.GetChild(0).GetComponent<MeshRenderer>().materials = active;
+                    }
+                    else
+                    {
+                        objLoveList[i].transform.GetChild(0).GetComponent<MeshRenderer>().materials = firstLetter;
+                    }
+                }
+            }
+            else if (!scrBoardLove[1].GetComponent<ScrblDrag>().isFull)
+            {
+                scrBoardLove[1].GetComponent<MeshRenderer>().materials = active;
+                scrBoardLove[1].GetComponent<ScrblDrag>().is44 = true;
+                scrBoardLove[0].GetComponent<MeshRenderer>().materials = firstScr;
+                for (int i = 0; i < objLoveList.Count; i++)
+                {
+                    if (objLoveList[i].GetComponent<LattersEndGame>().LatterChar == "O")
+                    {
+                        objLoveList[i].transform.GetChild(0).GetComponent<MeshRenderer>().materials = active;
+                    }
+                    else
+                    {
+                        objLoveList[i].transform.GetChild(0).GetComponent<MeshRenderer>().materials = firstLetter;
+                    }
+                }
+            }else if (!scrBoardLove[2].GetComponent<ScrblDrag>().isFull)
+            {
+                scrBoardLove[2].GetComponent<MeshRenderer>().materials = active;
+                scrBoardLove[2].GetComponent<ScrblDrag>().is44 = true;
+                scrBoardLove[0].GetComponent<MeshRenderer>().materials = firstScr;
+                scrBoardLove[1].GetComponent<MeshRenderer>().materials = firstScr;
+                for (int i = 0; i < objLoveList.Count; i++)
+                {
+                    if (objLoveList[i].GetComponent<LattersEndGame>().LatterChar == "V")
+                    {
+                        objLoveList[i].transform.GetChild(0).GetComponent<MeshRenderer>().materials = active;
+                    }
+                    else
+                    {
+                        objLoveList[i].transform.GetChild(0).GetComponent<MeshRenderer>().materials = firstLetter;
+                    }
+                }
+            }else if (!scrBoardLove[3].GetComponent<ScrblDrag>().isFull)
+            {
+                scrBoardLove[3].GetComponent<MeshRenderer>().materials = active;
+                scrBoardLove[3].GetComponent<ScrblDrag>().is44 = true;
+                scrBoardLove[0].GetComponent<MeshRenderer>().materials = firstScr;
+                scrBoardLove[1].GetComponent<MeshRenderer>().materials = firstScr;
+                scrBoardLove[2].GetComponent<MeshRenderer>().materials = firstScr;
+                for (int i = 0; i < objLoveList.Count; i++)
+                {
+                    if (objLoveList[i].GetComponent<LattersEndGame>().LatterChar == "E")
+                    {
+                        objLoveList[i].transform.GetChild(0).GetComponent<MeshRenderer>().materials = active;
+                    }
+                    else
+                    {
+                        objLoveList[i].transform.GetChild(0).GetComponent<MeshRenderer>().materials = firstLetter;
+                    }
+                }
+            }
+            else
+            {
+                if (tutorialUI)
+                {
+                    tutorialUIObj.SetActive(false);
+                }
+                scrBoardLove[3].GetComponent<MeshRenderer>().materials = firstScr;
+                scrBoardLove[0].GetComponent<MeshRenderer>().materials = firstScr;
+                scrBoardLove[1].GetComponent<MeshRenderer>().materials = firstScr;
+                scrBoardLove[2].GetComponent<MeshRenderer>().materials = firstScr;
+                for (int i = 0; i < objLoveList.Count; i++)
+                {
+                    objLoveList[i].transform.GetChild(0).GetComponent<MeshRenderer>().materials = firstLetter;
+                }
+            }
+        }
+    }
+    
 
     // Update is called once per frame
     void Update()
     {
+        if (gm.GetComponent<GameManager>().isTutorialLevel && tutorialUI && gm.GetComponent<GameManager>().runnerEnd)
+        {
+            tutorialUIObj.SetActive(true);
+        }
         btnControl();
-        
+        if (gm.GetComponent<GameManager>().runnerEnd && gm.GetComponent<GameManager>().isTutorialLevel)
+        {
+            loveController();
+        }
     }
 
     private void OnTriggerEnter(Collider other)
