@@ -703,8 +703,7 @@ public class ScrableBoardController : MonoBehaviour
                     }
                     else
                     {
-                        Debug.Log(i);
-                        Debug.Log(j);
+
                         if (GameObject.Find((i - 1).ToString() + "-" + (j-1).ToString()).GetComponent<ScrblDrag>()
                                 .isSubmitted
                             || GameObject.Find((i - 1).ToString() + "-" + (j + 1).ToString()).GetComponent<ScrblDrag>()
@@ -723,7 +722,7 @@ public class ScrableBoardController : MonoBehaviour
                                 .isSubmitted && !GameObject.Find((i - 1).ToString() + "-" + (j).ToString()).GetComponent<ScrblDrag>()
                                 .isSubmitted)
                             {
-                                Debug.Log(i*10+j + "->" + false);
+
                                 list.Add((i * 10) + j);
                                 AIVert.Add(false);
                             }
@@ -732,7 +731,7 @@ public class ScrableBoardController : MonoBehaviour
                                 .isSubmitted && !GameObject.Find((i).ToString() + "-" + (j-1).ToString()).GetComponent<ScrblDrag>()
                                 .isSubmitted)
                             {
-                                Debug.Log(i*10+j + "->" + true);
+
                                 list.Add((i * 10) + j);
                                 AIVert.Add(true);
                             }
@@ -803,7 +802,7 @@ public class ScrableBoardController : MonoBehaviour
                         return false;
                     }
                 }
-                Debug.Log(i + "<-->" + j);
+
                 if (_firstI != i)
                 {
                     if (GameObject.Find(i.ToString() + "-" + j.ToString()).GetComponent<ScrblDrag>().isSubmitted)
@@ -1013,7 +1012,6 @@ public class ScrableBoardController : MonoBehaviour
         {
             List<int> indexOfWord = new List<int>();
             int rand = Random.Range(0, (startI.Count - 1));
-            Debug.Log(startI[rand] + "-" + startJ[rand]);
             for (int i = 0; i < aiWords.Count; i++)
             {
 
@@ -1160,7 +1158,6 @@ public class ScrableBoardController : MonoBehaviour
                     int _i = ls[rnd]/10;
                     int _j = ls[rnd] % 10;
                     bool _vert = AIVert[rnd];
-                    Debug.Log(_i + "-" + _j + "-" + _vert);
                     success = checkToWord(_i, _j, _vert);
 
                 } while (_count > 3 && !success);

@@ -71,9 +71,7 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/ScrableCaseController.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/FailCrossController.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Speeder.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/AIController.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/UIManager.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/RunnerFinishController.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/UIManagerRunner.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/LetterBoardGenerator.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/SceneController.cs" />
@@ -88,17 +86,19 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/LetterAnim.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/LattersController.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/ParentPlayerController.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/DragAndDrop.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/ScrblDrag.cs" />
       <option value="$PROJECT_DIR$/Assets/ScoreController.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/ObstacleController.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/CollectController.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/ScrableBoardController.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/SaveLoadManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/EndGameMechanics.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/ScrblGameEnd.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/RunnerFinishController.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/ObstacleController.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/ScrableBoardController.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/SaveLoadManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/AIController.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="2ALaX7nMpAflu6fvhSwVNGOdx6e" />

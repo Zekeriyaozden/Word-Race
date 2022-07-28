@@ -22,7 +22,7 @@ public class AIController : MonoBehaviour
     public bool flagTrailer;
     void Start()
     {
-        if (distanceCl == null || distanceCl == 0)
+        if (distanceCl == 0)
         {
             distanceCl = 40f;
         }

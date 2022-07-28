@@ -290,8 +290,7 @@ public class ObstacleController : MonoBehaviour
         {
             for (int i=0;i<size/2;i++)
             {
-                Debug.Log( gm.GetComponent<GameManager>().referanceParentAI.GetComponent<ParentAIController>()
-                    .AIStack.Count);
+
                 GameObject gObj = gm.GetComponent<GameManager>().referanceParentAI.GetComponent<ParentAIController>()
                     .AIStack[gm.GetComponent<GameManager>().referanceParentAI
                         .GetComponent<ParentAIController>()
