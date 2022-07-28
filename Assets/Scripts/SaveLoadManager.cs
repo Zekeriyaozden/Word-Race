@@ -52,7 +52,7 @@ public class SaveLoadManager : MonoBehaviour
         PlayerPrefs.SetInt("playerScore",gm.gameObject.GetComponent<GameManager>().playerScore);
         PlayerPrefs.SetInt("aiScore",gm.gameObject.GetComponent<GameManager>().aiScore);
       
-        /*
+       /* 
        PlayerPrefs.SetInt("currentLevel",0); 
        PlayerPrefs.SetInt("playerScore",0);
        PlayerPrefs.SetInt("aiScore", 0);*/

@@ -375,6 +375,7 @@ public class ScrblGameEnd : MonoBehaviour
                 if (tutorialUI)
                 {
                     tutorialUIObj.SetActive(false);
+                    tutorialUI = false;
                 }
                 scrBoardLove[3].GetComponent<MeshRenderer>().materials = firstScr;
                 scrBoardLove[0].GetComponent<MeshRenderer>().materials = firstScr;
@@ -385,6 +386,14 @@ public class ScrblGameEnd : MonoBehaviour
                     objLoveList[i].transform.GetChild(0).GetComponent<MeshRenderer>().materials = firstLetter;
                 }
             }
+        }
+    }
+
+    public void submitTutorial()
+    {
+        if (!tutorialUI)
+        {
+            GameObject.Find("SaveLoadManager").GetComponent<SaveLoadManager>().sceneManageControl();
         }
     }
     
