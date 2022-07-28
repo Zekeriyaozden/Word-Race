@@ -13,7 +13,6 @@ public class PlayerController : MonoBehaviour
     public float speedTmp;
     public bool isJumping;
     private bool isTouched;
-    private float xCordinate;
     public Quaternion lookAt;
     public GameObject speedTrailer;
     public bool isTrailer;
@@ -31,7 +30,7 @@ public class PlayerController : MonoBehaviour
         isJumping = false;
         gameManager = GameObject.Find("GameManager");
         _speed = gameManager.GetComponent<GameManager>().speedMainChar;
-        xCordinate = 0;
+
     }
 
     public void idleAnim()
@@ -122,7 +121,7 @@ public class PlayerController : MonoBehaviour
             mousePos = 0;
             objPos = new Vector3(0, 0, 0);
             _mousePosStart = Vector3.zero;
-            xCordinate = 0;
+
         }
 
         if (objPos != Vector3.zero)

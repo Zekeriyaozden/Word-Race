@@ -204,8 +204,8 @@ public class ScrblGameEnd : MonoBehaviour
             }
         }
 
-        int count = 0;
-        int letterCount = 25;
+        //int count = 0;
+        //int letterCount = 25;
         /*while (true)
         {
             Debug.Log(gm.GetComponent<GameManager>().referanceParentPlayer.GetComponent<ParentPlayerController>().PlayerStack

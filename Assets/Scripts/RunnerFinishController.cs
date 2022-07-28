@@ -10,10 +10,10 @@ public class RunnerFinishController : MonoBehaviour
     public float speed;
     public GameObject MainChar;
     private Vector3 mainCharStart;
-    private bool MainFinish;
+
     public GameObject AIChar;
     private Vector3 AICharStart;
-    private bool AIFinish;
+
     public bool isFinished;
     private float k;
     private float f;
@@ -27,8 +27,8 @@ public class RunnerFinishController : MonoBehaviour
     {
         mainCharBool = false;
         AIcharBool = false;
-        MainFinish = false;
-        AIFinish = false;
+
+
         isFinished = false;
         k = 0;
         f = 0;
@@ -94,7 +94,7 @@ public class RunnerFinishController : MonoBehaviour
         if (other.gameObject.tag == "Player")
         {
             mainCharBool = true;
-            MainFinish = true;
+
             mainCharStart = MainChar.transform.position;
             mainCharTrig = true;
             gameManager.GetComponent<GameManager>().Player.GetComponent<PlayerController>().idleAnim();
@@ -102,7 +102,7 @@ public class RunnerFinishController : MonoBehaviour
         else if (other.gameObject.tag == "AI")
         {
             AIcharBool = true;
-            AIFinish = true;
+
             AICharStart = AIChar.transform.position;
             AICharTrig = true;
             gameManager.GetComponent<GameManager>().AI.GetComponent<AIController>().idleAnim();

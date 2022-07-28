@@ -505,13 +505,13 @@ public class ScrableBoardController : MonoBehaviour
         int firstI = 0;
         int firstJ = 0;
         bool control2DFlag = true;
-        bool flag = true;
+        //bool flag = true;
         GameObject controllttr;
         int I, J;
         I = 0;
         J = 0;
-        int controlI = 9;
-        int contrelJ = 9;
+        //int controlI = 9;
+        //int contrelJ = 9;
         
         while (I < 9)
         {
@@ -751,7 +751,7 @@ public class ScrableBoardController : MonoBehaviour
         int size,bool vert)
     {
 
-        bool _control = true;
+        //bool _control = true;
         if (!vert)
         {
             if (i - 1 >= 0)

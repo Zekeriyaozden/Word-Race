@@ -74,7 +74,7 @@ public class EndGameMechanics : MonoBehaviour
         {
             if (Input.GetMouseButtonDown(0))
             {
-                RaycastHit hitInfo = new RaycastHit();
+     
                 /*if (Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out hitInfo) && hitInfo.transform.tag == "Letter")
                 {
                     if (gameObject.GetComponent<HintTableController>().findTargetBox() != null)

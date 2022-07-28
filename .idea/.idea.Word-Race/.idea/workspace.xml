@@ -79,7 +79,6 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/SceneController.cs" />
       <option value="$PROJECT_DIR$/Assets/SceneManagement.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/CollectAnimations.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/EndGameMechanics.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/HintTableController.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/CameraController.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/ScrblBoardCross.cs" />
@@ -93,11 +92,12 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/DragAndDrop.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/ScrblDrag.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/SaveLoadManager.cs" />
       <option value="$PROJECT_DIR$/Assets/ScoreController.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/ObstacleController.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/CollectController.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/ScrableBoardController.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/SaveLoadManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/EndGameMechanics.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/ScrblGameEnd.cs" />
     </changedPaths>
   </component>
