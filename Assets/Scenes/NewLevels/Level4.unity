@@ -1717,6 +1717,7 @@ MonoBehaviour:
   active: []
   firstScr: []
   firstLetter: []
+  tutorialUIObj: {fileID: 0}
 --- !u!65 &272099614
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9382,6 +9383,22 @@ PrefabInstance:
       propertyPath: m_sharedMaterial
       value: 
       objectReference: {fileID: -1263670869880767076, guid: 06c13cd22bdde7641a6fb058ef3545e3, type: 2}
+    - target: {fileID: 3822831828371224236, guid: df40085ffec413347b8c7a6af91e6081, type: 3}
+      propertyPath: m_UiScaleMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3822831828371224236, guid: df40085ffec413347b8c7a6af91e6081, type: 3}
+      propertyPath: m_ScreenMatchMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3822831828371224236, guid: df40085ffec413347b8c7a6af91e6081, type: 3}
+      propertyPath: m_ReferenceResolution.x
+      value: 828
+      objectReference: {fileID: 0}
+    - target: {fileID: 3822831828371224236, guid: df40085ffec413347b8c7a6af91e6081, type: 3}
+      propertyPath: m_ReferenceResolution.y
+      value: 1792
+      objectReference: {fileID: 0}
     - target: {fileID: 3822831828371224238, guid: df40085ffec413347b8c7a6af91e6081, type: 3}
       propertyPath: m_Name
       value: ScoreBoardCanvas
