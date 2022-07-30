@@ -19,7 +19,9 @@ public class ScrableBoardController : MonoBehaviour
     private GameObject gameManager;
     public List<string> words;
     public Material mt;
+    [HideInInspector]
     public List<string> allWords;
+    [HideInInspector]
     public List<string> aiWords;
     public bool isAIableToText;
     public bool isPlayerAbleToText;
@@ -97,6 +99,22 @@ public class ScrableBoardController : MonoBehaviour
         isPlayerAbleToText = false;
         isAIableToText = false;
     }
+
+    private bool everyBoard()
+    {
+        for (int i = 0; i < 9; i++)
+        {
+            for (int j = 0; j < 9; j++)
+            {
+                GameObject gObj = GameObject.Find(i.ToString() + "-" + j.ToString());
+                if (gObj.GetComponent<ScrblDrag>().isSubmitted)
+                {
+                    return false;
+                }
+            }
+        }
+        return true;
+    }
     private bool isCorrectLocation(int i,int j)
     {
         bool isCorrect = false;
@@ -162,6 +180,10 @@ public class ScrableBoardController : MonoBehaviour
             s = s.Trim();
             if (!allWords.Contains(s))
             {
+                if (everyBoard())
+                {
+                    gameManager.GetComponent<GameManager>().isFirst = true;
+                }
                 return false;
             }
         }

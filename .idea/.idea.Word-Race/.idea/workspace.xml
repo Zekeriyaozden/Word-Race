@@ -95,10 +95,10 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/RunnerFinishController.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/ObstacleController.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/ScrableBoardController.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/AIController.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/ScrblGameEnd.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/SaveLoadManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/ScrableBoardController.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="2ALaX7nMpAflu6fvhSwVNGOdx6e" />
@@ -173,6 +173,7 @@
       <workItem from="1658734492705" duration="8572000" />
       <workItem from="1658846996199" duration="6522000" />
       <workItem from="1658906700148" duration="5871000" />
+      <workItem from="1659168730783" duration="715000" />
     </task>
     <servers />
   </component>
