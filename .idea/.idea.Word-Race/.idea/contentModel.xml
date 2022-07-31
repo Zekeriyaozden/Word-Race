@@ -139,6 +139,64 @@
             </e>
           </e>
         </e>
+        <e p="ATT" t="Include">
+          <e p="iOSAdvertisingSupport" t="Include">
+            <e p="Editor" t="Include">
+              <e p="AssemblyInfo.cs" t="Include" />
+              <e p="Parser" t="Include">
+                <e p="ISkAdNetworkParser.cs" t="Include" />
+                <e p="SkAdNetworkFileExtension.cs" t="Include" />
+                <e p="SkAdNetworkJsonParser.cs" t="Include" />
+                <e p="SkAdNetworkParser.cs" t="Include" />
+                <e p="SkAdNetworkUrlParser.cs" t="Include" />
+                <e p="SkAdNetworkXmlParser.cs" t="Include" />
+              </e>
+              <e p="PostProcessBuildPlist.cs" t="Include" />
+              <e p="Source" t="Include">
+                <e p="ISkAdNetworkSource.cs" t="Include" />
+                <e p="SkAdNetworkLocalSource.cs" t="Include" />
+                <e p="SkAdNetworkLocalSourceProvider.cs" t="Include" />
+                <e p="SkAdNetworkRemoteSource.cs" t="Include" />
+              </e>
+              <e p="Unity.Advertisement.IosSupport.Editor.asmdef" t="Include" />
+            </e>
+            <e p="Runtime" t="Include">
+              <e p="AssemblyInfo.cs" t="Include" />
+              <e p="iOSTransparency" t="Include">
+                <e p="ATTrackingStatusBinding.cs" t="Include" />
+              </e>
+              <e p="SkAdNetwork" t="Include">
+                <e p="SkAdNetworkBinding.cs" t="Include" />
+              </e>
+              <e p="Unity.Advertisement.IosSupport.asmdef" t="Include" />
+            </e>
+            <e p="Tests" t="Include">
+              <e p="Editor" t="Include">
+                <e p="PListTests.cs" t="Include" />
+                <e p="SkAdNetworkParserTests.cs" t="Include" />
+                <e p="SkAdNetworkSourceTests.cs" t="Include" />
+                <e p="Unity.Advertisement.IosSupport.Editor.Tests.asmdef" t="Include" />
+              </e>
+              <e p="Runtime" t="Include">
+                <e p="RuntimeTests.cs" t="Include" />
+                <e p="Unity.Advertisement.IosSupport.Tests.asmdef" t="Include" />
+              </e>
+            </e>
+          </e>
+          <e p="NativePopup" t="Include">
+            <e p="iOSNativePopup.cs" t="Include" />
+          </e>
+          <e p="Scripts" t="Include">
+            <e p="ATTHelper.cs" t="Include" />
+            <e p="ATTInit.cs" t="Include" />
+            <e p="ATTSettings.cs" t="Include" />
+            <e p="Editor" t="Include">
+              <e p="ATTPostBuild.cs" t="Include" />
+              <e p="SKAdIdentifiers.json" t="Include" />
+            </e>
+            <e p="SKAdParser.cs" t="Include" />
+          </e>
+        </e>
         <e p="BOXOPHOBIC" t="Include">
           <e p="Skybox Cubemap Extended" t="Include">
             <e p="Core" t="Include">
@@ -288,6 +346,7 @@
         <e p="ExternalDependencyManager" t="Include">
           <e p="Editor" t="Include">
             <e p="external-dependency-manager_version-1.2.166_manifest.txt" t="Include" />
+            <e p="external-dependency-manager_version-1.2.169_manifest.txt" t="Include" />
           </e>
         </e>
         <e p="FacebookInit.cs" t="Include" />
@@ -333,6 +392,113 @@
               <e p="Dependencies.xml" t="Include" />
             </e>
           </e>
+        </e>
+        <e p="GAInitializer.cs" t="Include" />
+        <e p="GameAnalytics" t="Include">
+          <e p="Editor" t="Include">
+            <e p="Android" t="Include">
+              <e p="Dependencies.xml" t="Include" />
+            </e>
+            <e p="GA_AssetPostprocessor.cs" t="Include" />
+            <e p="GA_AutoRun.cs" t="Include" />
+            <e p="GA_ContinuationManager.cs" t="Include" />
+            <e p="GA_EditorUtilities.cs" t="Include" />
+            <e p="GA_Menu.cs" t="Include" />
+            <e p="GA_PostprocessBuild.cs" t="Include" />
+            <e p="GA_SettingsInspector.cs" t="Include" />
+            <e p="GA_SignUp.cs" t="Include" />
+            <e p="GA_UpdateWindow.cs" t="Include" />
+            <e p="GameAnalyticsInspector.cs" t="Include" />
+            <e p="Playmaker" t="Include">
+              <e p="PlayMakerPresenceCheck.cs" t="Include" />
+              <e p="SendProgressionEventActionEditor.cs" t="Include" />
+              <e p="SendResourceEventActionEditor.cs" t="Include" />
+            </e>
+          </e>
+          <e p="Plugins" t="Include">
+            <e p="Playmaker" t="Include">
+              <e p="GAInitialize.cs" t="Include" />
+              <e p="GetABTestingId.cs" t="Include" />
+              <e p="GetABTestingVariantId.cs" t="Include" />
+              <e p="GetRemoteConfigsValueAsString.cs" t="Include" />
+              <e p="IsRemoteConfigsReady.cs" t="Include" />
+              <e p="SendAdEvent.cs" t="Include" />
+              <e p="SendBusinessEvent.cs" t="Include" />
+              <e p="SendDesignEvent.cs" t="Include" />
+              <e p="SendErrorEvent.cs" t="Include" />
+              <e p="SendProgressionEvent.cs" t="Include" />
+              <e p="SendResourceEvent.cs" t="Include" />
+              <e p="SetCustomDimension.cs" t="Include" />
+            </e>
+            <e p="Scripts" t="Include">
+              <e p="ATT" t="Include">
+                <e p="GameAnalyticsATTClient.cs" t="Include" />
+                <e p="GameAnalyticsATTObjCBridge.cs" t="Include" />
+              </e>
+              <e p="Enums.cs" t="Include" />
+              <e p="Events" t="Include">
+                <e p="GA_Ads.cs" t="Include" />
+                <e p="GA_Business.cs" t="Include" />
+                <e p="GA_Debug.cs" t="Include" />
+                <e p="GA_Design.cs" t="Include" />
+                <e p="GA_Error.cs" t="Include" />
+                <e p="GA_Progression.cs" t="Include" />
+                <e p="GA_Resource.cs" t="Include" />
+                <e p="GA_Setup.cs" t="Include" />
+                <e p="GA_SpecialEvents.cs" t="Include" />
+                <e p="GAValidator.cs" t="Include" />
+              </e>
+              <e p="GameAnalytics.cs" t="Include" />
+              <e p="IGameAnalyticsATTListener.cs" t="Include" />
+              <e p="ILRD" t="Include">
+                <e p="AdMob" t="Include">
+                  <e p="GAAdMobIntegration.cs" t="Include" />
+                </e>
+                <e p="Aequus" t="Include">
+                  <e p="GAAequusIntegration.cs" t="Include" />
+                </e>
+                <e p="Fyber" t="Include">
+                  <e p="GAFyberIntegration.cs" t="Include" />
+                </e>
+                <e p="GameAnalyticsILRD.cs" t="Include" />
+                <e p="HyperBid" t="Include">
+                  <e p="GAHyperBidIntegration.cs" t="Include" />
+                </e>
+                <e p="IronSource" t="Include">
+                  <e p="GAIronSourceIntegration.cs" t="Include" />
+                </e>
+                <e p="Max" t="Include">
+                  <e p="GAMaxIntegration.cs" t="Include" />
+                </e>
+                <e p="Mopub" t="Include">
+                  <e p="GAMopubIntegration.cs" t="Include" />
+                </e>
+                <e p="TopOn" t="Include">
+                  <e p="GATopOnIntegration.cs" t="Include" />
+                </e>
+              </e>
+              <e p="Setup" t="Include">
+                <e p="Settings.cs" t="Include" />
+              </e>
+              <e p="State" t="Include">
+                <e p="GAState.cs" t="Include" />
+              </e>
+              <e p="Utilities" t="Include">
+                <e p="GA_MiniJson.cs" t="Include" />
+              </e>
+              <e p="Wrapper" t="Include">
+                <e p="GA_AndroidWrapper.cs" t="Include" />
+                <e p="GA_iOSWrapper.cs" t="Include" />
+                <e p="GA_MonoWrapper.cs" t="Include" />
+                <e p="GA_TizenWrapper.cs" t="Include" />
+                <e p="GA_tvOSWrapper.cs" t="Include" />
+                <e p="GA_UWPWrapper.cs" t="Include" />
+                <e p="GA_WebGLWrapper.cs" t="Include" />
+                <e p="GA_Wrapper.cs" t="Include" />
+              </e>
+            </e>
+          </e>
+          <e p="README.txt" t="Include" />
         </e>
         <e p="HyperCasualBase" t="Include">
           <e p="Shaders" t="Include">
@@ -738,6 +904,10 @@
       <e p="ToonyColorsPro.Editor.csproj" t="IncludeRecursive" />
       <e p="ToonyColorsPro.Runtime.csproj" t="IncludeRecursive" />
       <e p="ToonyColorsPro2.Demo.csproj" t="IncludeRecursive" />
+      <e p="Unity.Advertisement.IosSupport.csproj" t="IncludeRecursive" />
+      <e p="Unity.Advertisement.IosSupport.Editor.csproj" t="IncludeRecursive" />
+      <e p="Unity.Advertisement.IosSupport.Editor.Tests.csproj" t="IncludeRecursive" />
+      <e p="Unity.Advertisement.IosSupport.Tests.csproj" t="IncludeRecursive" />
       <e p="Word-Race.sln" t="IncludeFlat" />
     </e>
   </component>
