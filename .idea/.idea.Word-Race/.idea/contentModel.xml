@@ -285,6 +285,55 @@
             <e p="ETFXRotation.cs" t="Include" />
           </e>
         </e>
+        <e p="ExternalDependencyManager" t="Include">
+          <e p="Editor" t="Include">
+            <e p="external-dependency-manager_version-1.2.166_manifest.txt" t="Include" />
+          </e>
+        </e>
+        <e p="FacebookInit.cs" t="Include" />
+        <e p="FacebookSDK" t="Include">
+          <e p="Examples" t="Include">
+            <e p="Scripts" t="Include">
+              <e p="ConsoleBase.cs" t="Include" />
+              <e p="LogView.cs" t="Include" />
+              <e p="MenuBase.cs" t="Include" />
+              <e p="SubMenus" t="Include">
+                <e p="AccessTokenMenu.cs" t="Include" />
+                <e p="AppEvents.cs" t="Include" />
+                <e p="AppLinks.cs" t="Include" />
+                <e p="AppRequests.cs" t="Include" />
+                <e p="DialogShare.cs" t="Include" />
+                <e p="GraphRequest.cs" t="Include" />
+                <e p="MainMenu.cs" t="Include" />
+                <e p="Pay.cs" t="Include" />
+                <e p="TournamentsMenu.cs" t="Include" />
+                <e p="UploadToMediaLibrary.cs" t="Include" />
+              </e>
+            </e>
+            <e p="Windows" t="Include">
+              <e p="FBWindowsA2UNotificationsManager.cs" t="Include" />
+              <e p="FBWindowsADSManager.cs" t="Include" />
+              <e p="FBWindowsExampleTabsManager.cs" t="Include" />
+              <e p="FBWindowsFriendsManager.cs" t="Include" />
+              <e p="FBWindowsGraphAPIManager.cs" t="Include" />
+              <e p="FBWindowsInitManager.cs" t="Include" />
+              <e p="FBWindowsLoginManager.cs" t="Include" />
+              <e p="FBWindowsLogsManager.cs" t="Include" />
+              <e p="FBWindowsPhysicalGamepadManager.cs" t="Include" />
+              <e p="FBWindowsPurchaseManager.cs" t="Include" />
+              <e p="FBWindowsShareManager.cs" t="Include" />
+              <e p="FBWindowsSoftKeyboardManager.cs" t="Include" />
+              <e p="FBWindowsTournamentsManager.cs" t="Include" />
+              <e p="FBWindowsVirtualGamepadManager.cs" t="Include" />
+            </e>
+          </e>
+          <e p="link.xml" t="Include" />
+          <e p="Plugins" t="Include">
+            <e p="Editor" t="Include">
+              <e p="Dependencies.xml" t="Include" />
+            </e>
+          </e>
+        </e>
         <e p="HyperCasualBase" t="Include">
           <e p="Shaders" t="Include">
             <e p="blur_shader" t="Include">
@@ -580,6 +629,9 @@
           </e>
         </e>
         <e p="Plugins" t="Include">
+          <e p="Android" t="Include">
+            <e p="AndroidManifest.xml" t="Include" />
+          </e>
           <e p="BetterStreamingAssets" t="Include">
             <e p="BSA_BetterStreamingAssets.cs" t="Include" />
             <e p="BSA_PathUtil.cs" t="Include" />
